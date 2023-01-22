@@ -1,2 +1,3 @@
 # nef-shopify
-Nefarious Industries Shopify theme: https://www.nefariousindustries.com/
+Shopify theme for Nefarious Industries store based on the Debut theme. 
+https://www.nefariousindustries.com/
