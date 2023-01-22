@@ -1,0 +1,27 @@
+{
+  "name": "nef-shopify",
+  "version": "1.0.0",
+  "description": "Nefarious Industries Shopify theme",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gmeisenberg@github.com/gmeisenberg/nef-shopify.git"
+  },
+  "author": "Greg Meisenberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmeisenberg/nef-shopify/issues"
+  },
+  "homepage": "https://github.com/gmeisenberg/nef-shopify#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^8.0.0"
+  }
+}
