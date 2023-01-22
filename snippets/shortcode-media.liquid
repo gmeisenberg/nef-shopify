@@ -1,0 +1,10 @@
+{% capture sc_media %}
+  {%- for keys in key  -%}
+    {%- assign template = keys | prepend: 'shortcode-' -%}
+    {%- include template sc_param: variable[forloop.index0] -%}
+  {%- endfor -%}
+{% endcapture %}
+
+{% if echo == true %}
+  {{ sc_media }}
+{% endif %}

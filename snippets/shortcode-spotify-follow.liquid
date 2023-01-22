@@ -1,0 +1,16 @@
+{% if sc_param != blank %}
+  {% assign id = sc_param %}
+{% else %}
+  {% capture id %}{% include 'shortcode-render' render:'artist' default:'' %}{% endcapture %}
+{% endif %}
+
+{% assign theme = 'light' %}
+{% if request.page_type == 'collection' and collection.template_suffix == 'release' %}
+  {% assign theme = 'dark' %}
+{% endif %}
+
+{% comment %}
+<figure class="media-container media-container__spotify-follow">
+  <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:{{ id }}&size=detail&theme={{ theme }}" width="300" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+</figure>
+{% endcomment %}

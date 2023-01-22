@@ -1,0 +1,164 @@
+{% comment %}
+  The contents of the collection.liquid template can be found in /sections/collection-template.liquid
+{% endcomment %}
+
+{%- assign catalog_id = collection.products[0].metafields.nef.catalog_number -%}
+{%- assign release_date = collection.products[0].metafields.nef.release_date -%}
+{% assign today_date = 'now' | date: '%s' | plus: 0 %}
+{% assign pre_date = release_date | date: '%s' | plus: 0 %}
+{% assign pre_order = false %}
+{% if pre_date > today_date %}
+	{% assign pre_order = true %}
+{% endif %}
+
+{% assign separator = ' - ' %}
+{% assign collection_title = collection.title | split: separator %}
+{% assign release_artist = collection_title.first %}
+{% assign release_title = collection.title | remove_first: release_artist | remove_first: separator %}
+
+{% if collection.description != blank %}
+  {% include 'shortcode', load: collection.description %}
+{% endif %}
+
+{% include 'header-release' %}
+
+{% if sc_hero_image != blank %}
+  {%- assign featured_image = images[sc_hero_image] -%}
+{% elsif collection.image != blank %}
+  {%- assign featured_image = collection.image -%}
+{% else %}
+  {%- assign featured_image = collection.products[0].featured_image -%}
+{% endif %}
+{%- assign max_height = 195 -%}
+{%- assign limit = 100 -%}
+
+{% if collection.image != blank %}
+ <div class="collection-release__bg" style="background-image: url('{{ collection.image | img_url: '2048x' }});"></div>
+{% endif %}
+
+<div class="collection--{{ catalog_id | handleize }}" data-section-type="collection-template">
+  <header class="collection-header">
+    <div class="collection-hero">
+      <div class="collection-hero__image ratio-container lazyload js{% if featured_image.aspect_ratio > 2 %} wide{% endif %}{% if sc_hero_image == blank %} blur{% endif %}"
+           data-bgset="{% include 'bgset', image: featured_image %}"
+           data-sizes="auto"
+           data-parent-fit="cover"
+           style="background-image: url('{{ featured_image | img_url: '2048x' }});"></div>
+      <noscript>
+        <div class="collection-hero__image" style="background-image: url({{ featured_image | img_url: '2048x' }});"></div>
+      </noscript>
+      {% if sc_hero_image == blank %}
+        <div class="collection-hero__title-wrapper">
+          <h1 class="collection-hero__title page-width">
+            <img src="{{ featured_image | img_url: '300x300' }}" alt="{{ featured_image.alt }}" />
+            <span>
+              <span class="visually-hidden">{{ 'collections.general.collection_label' | t }}: </span>
+              {{ release_artist }}<br />{{ release_title }}
+            </span>
+          </h1>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="collection-header__nav smooth-scroll">
+      {% if collection.products.size > 0 or sc_shop_digital != blank %}
+        <a class="collection-header__nav-link btn" href="#buy">Buy{% if sc_shop_partner__nav_nef != blank %} ({{ sc_shop_partner__nav_nef }}){% endif %}</a>
+      {% endif %}
+      {% if sc_shop_partner__nav != blank %}
+        <a class="collection-header__nav-link btn" href="#partner">Buy ({{ sc_shop_partner__nav }})</a>
+      {% endif %}
+      {% if sc_media != blank %}
+        <a class="collection-header__nav-link btn" href="#media">Watch // Listen</a>
+      {% endif %}
+      {% if sc_digital != blank %}
+        <a class="collection-header__nav-link btn" href="#stream">Stream</a>
+      {% endif %}
+      {% if sc_read != blank or sc_description != blank %}
+        <a class="collection-header__nav-link btn" href="#read">Read</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <section class="release-products">
+    {% if collection.products.size > 0 or sc_shop_digital != blank %}
+    <div id="buy" class="section-container page-width">
+      <div class="section-header text-center">
+        <h2>{% if pre_order == true %}Pre-{%endif%}Order Now!</h2>
+      </div>
+      <ul class="grid grid--flex grid--uniform">
+        {% if sc_shop_digital != blank %}
+          {{ sc_shop_digital }}
+        {% endif %}
+        {% for product in collection.products %}
+        <li class="grid__item medium-up--one-third">
+          {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: true %}
+        </li>
+        {% endfor %}
+        {% if sc_shop_merch != blank %}
+          {{ sc_shop_merch }}
+        {% endif %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if sc_shop_partner != blank %}
+    <div id="partner" class="section-container page-width">
+      {{ sc_shop_partner }}
+    </div>
+    {% endif %}
+  </section>
+  
+  {% if sc_media != blank %}
+    <section class="dark release-media">
+      <div id="media" class="section-container page-width">
+        <div class="grid grid--flex">
+          <div class="grid__item medium-up--three-fifths">
+            <div class="section-header text-center">
+              <h2>Watch // Listen</h2>
+            </div>
+            {{ sc_media }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if sc_digital != blank %}
+    <section class="dark{% if collection.image != blank %} transparent{% endif %} release-digital-links">
+      <div id="stream" class="section-container page-width">
+        <div class="grid grid--flex">
+          <div class="grid__item medium-up--one-half">
+            <div class="section-header text-center">
+              <h2>Stream</h2>
+            </div>
+            {{ sc_digital }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {% if sc_read != blank or sc_description != blank %}
+    <section class="release-read">
+      <div id="read" class="section-container page-width">
+        {% if sc_description != blank %}
+          {{ sc_description }}
+        {% endif %}
+        {% if sc_read != blank %}
+          {% assign sc_read_col = sc_read | strip | split: '<p>' %}
+          <div class="release-reviews">
+            {% if sc_read_col.size > 3 %}
+              <div class="grid--masonry" data-masonry='{ "percentPosition": true, "itemSelector": "p", "columnWidth": ".grid-sizer", "gutter": ".gutter-sizer" }'>
+                <div class="grid-sizer"></div>
+                <div class="gutter-sizer"></div>
+                {{ sc_read }}
+              </div>
+            {% else %}
+              {{ sc_read }}
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </section>
+  {% endif %}
+</div>

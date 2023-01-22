@@ -1,0 +1,7 @@
+{% capture sc_release_obj %}
+  {%- for keys in key -%}
+    {%- assign handle = variable[forloop.index0] -%}
+    {{ collections[handle].metafields.nef.release_date }}|{{ handle }}
+    {%- if forloop.last == false -%}::{%- endif -%}
+  {%- endfor -%}
+{% endcapture %}

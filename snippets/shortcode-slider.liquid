@@ -1,0 +1,57 @@
+{% assign featured_image = [request.page_type].image %}
+
+{% capture sc_slider %} 
+  <div class="carousel"
+       data-flickity='{
+      "imagesLoaded": true,
+          "wrapAround": true,
+          "pageDots": true,
+          "prevNextButtons": false }'>
+    {%- if featured_image != blank -%}
+      <div class="grid-view-item__image-wrapper">
+        <div class="grid-view-item__outer">
+          <div class="grid-view-item__inner">
+            {%- capture img_id -%}ArtistImage-{{ featured_image.id }}{%- endcapture -%} 
+            {%- include 'image-style', image: featured_image, img_id: img_id -%} 
+            <img id="{{ img_id }}"
+                 class="grid-view-item__image lazyload"
+                 alt="{{ featured_image.alt }}"
+                 data-src="{{ featured_image | img_url: '800x800' }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ featured_image.aspect_ratio }}"
+                 data-sizes="auto"
+                 data-image />
+          </div>
+        </div>
+      </div>
+    {%- endif -%} 
+    
+    {%- for keys in key  -%}
+      {%- assign image = images[variable[forloop.index0]] -%}
+      <div class="grid-view-item__image-wrapper">
+        <div class="grid-view-item__outer">
+          <div class="grid-view-item__inner">
+            {%- if image != blank -%} 
+              {%- capture img_id -%}ArtistImage-{{ image.id }}{%- endcapture -%} 
+              {%- include 'image-style', image: image, img_id: img_id -%} 
+              <img id="{{ img_id }}"
+                   class="grid-view-item__image lazyload"
+                   alt="{{ image.alt }}"
+                   data-src="{{ image | img_url: '800x800' }}"
+                   data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                   data-aspectratio="{{ image.aspect_ratio }}"
+                   data-sizes="auto"
+                   data-image />
+            {%- else -%} 
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%} 
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+{% endcapture %} 
+
+{% if echo == true %} 
+  {{ sc_slider }}
+{% endif %} 

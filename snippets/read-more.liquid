@@ -1,0 +1,14 @@
+{% assign truncate = 120 %}
+{% assign limit = truncate | times: 1.5 %}
+{%- if content != blank -%}
+  {% assign word_count = content | split: ' ' %}
+  {% if word_count.size > limit %}
+    <div class="readmore">
+      <div class="readmore__short">{{ content | truncatewords: truncate }}</div>
+      <a class="readmore__toggle" href="#">read more</a>
+      <div class="readmore__full" style="display: none;">{{ content }}</div>
+    </div>
+  {% else %}
+    {{ content }}
+  {% endif %}
+{%- endif -%}

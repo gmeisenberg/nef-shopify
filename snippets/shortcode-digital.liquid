@@ -1,0 +1,32 @@
+{% assign ll = 'bc|Bandcamp,bc2|Bandcamp,sp|Spotify,ap|Apple Music,td|Tidal,ym|YouTube Music,am|Amazon Music,dz|Deezer' | split: ',' %}
+
+{% assign links_list = '' %}
+{% for l in ll %}
+  {% assign link = l | split: '|' %}
+  {% capture url %}{% include 'shortcode-render' render: link[0] default:'' %}{% endcapture %}
+  {% if url != blank %}
+    {% assign links_list = links_list | append: link[1] | append: '||' | append: url %}
+    {% if forloop.last == false %}
+      {% assign links_list = links_list | append: '::' %}
+    {% endif%}
+  {% endif%}
+{% endfor %}
+
+{%- if links_list != blank -%}
+  {% assign links_array = links_list | split: '::' %}
+
+  {% capture sc_digital %}
+    <div>
+      {%- for links in links_array -%}
+        {%- assign link = links | split: '||' %}
+        {%- assign icon_link = link[0] | handleize | prepend: 'icon-' | downcase -%}
+        {%- assign url = link[1] -%}
+        {%- assign title = link[0] -%}
+        <a class="btn btn--secondary" href="{{ url }}" target="_blank" rel="noopener noreferrer nofollow">
+          <div class="icon-wrapper">{% include icon_link %}</div>
+          <div>{{ title | upcase }}</div>
+        </a>
+      {%- endfor -%}
+    </div>
+  {% endcapture %}
+{%- endif -%}

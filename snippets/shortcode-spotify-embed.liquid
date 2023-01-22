@@ -1,0 +1,11 @@
+{% if sc_param != blank %}
+  {% assign url = sc_param %}
+{% else %}
+  {% capture url %}{% include 'shortcode-render' render:'url' default:'' %}{% endcapture %}
+{% endif %}
+
+{% assign embed_url = url | split: 'spotify.com/' %}
+
+<figure class="media-container media-container__spotify-embed">
+  <iframe src="https://open.spotify.com/embed/{{ embed_url[1] }}" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</figure> 

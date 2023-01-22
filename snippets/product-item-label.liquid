@@ -1,0 +1,34 @@
+{% if release %}
+  {%- assign release_date = release.metafields.nef.release_date -%}
+{% else %}
+  {%- assign release_date = product.metafields.nef.release_date -%}
+{% endif %}
+
+{% assign today_date = 'now' | date: '%s' | plus: 0 %}
+{% assign pre_date = release_date | date: '%s' | plus: 0 %}
+{% assign new_date = today_date | minus: 10368000 %}
+{% assign pre_order = false %}
+{% assign new_release = false %}
+{% if pre_date > today_date %}
+	{% assign pre_order = true %}
+{% elsif pre_date > new_date %}
+	{% assign new_release = true %}
+{% endif %}
+
+{% if pre_order %}
+  <span class="product-item__label pre-order">Pre-Order</span>
+{% endif %}
+
+{% if new_release and product.available %}
+  <span class="product-item__label new-release">New Release</span>
+{% endif %}
+
+{% unless release or product.available %}
+  <span class="product-item__label sold-out">Sold Out</span>
+{% endunless %}
+
+{% if product.available and product.compare_at_price > product.price %}
+  {% unless release %}
+  	<span class="product-item__label on-sale">On Sale</span>
+  {% endunless %}
+{% endif %}

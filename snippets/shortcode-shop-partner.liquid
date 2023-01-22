@@ -1,0 +1,51 @@
+{% capture sc_shop_partner__img %}{% include 'shortcode-render' render:'img' default:'' %}{% endcapture %}
+{% capture sc_shop_partner__nav %}{% include 'shortcode-render' render:'nav' default:'' %}{% endcapture %}
+{% capture sc_shop_partner__nav_nef %}{% include 'shortcode-render' render:'nav_nef' default:'' %}{% endcapture %}
+{% capture sc_shop_partner__heading %}{% include 'shortcode-render' render:'heading' default:'' %}{% endcapture %}
+{% capture sc_shop_partner %} 
+  {% if sc_shop_partner__heading != blank %}
+    <div class="section-header text-center">
+      <h2>{{ sc_shop_partner__heading }}</h2>
+    </div>
+  {% endif %}
+  <ul class="grid grid--flex grid--uniform">
+    {%- for keys in key  -%}
+      {% if keys != 'img' and keys != 'heading' and keys != 'nav' and keys != 'nav_nef' %}
+        {% assign title = keys | replace: '-', ' ' %}
+        {% assign url = variable[forloop.index0] %}
+        <li class="grid__item medium-up--one-fifth">
+          <div class="grid-view-item product-card text-center">
+            <a target="_blank" class="grid-view-item__link grid-view-item__image-container full-width-link" 
+               href="{{ url }}">
+              <span class="visually-hidden">{{ product.title }}</span>
+            </a>
+            
+            {% if sc_shop_partner__img != blank %}
+	            {%- assign preview_image = images[sc_shop_partner__img] -%}
+            {% else %}
+	            {%- assign preview_image = collection.image -%}
+            {% endif %}
+            {%- assign img_url = preview_image | img_url: '600x600' | replace: '_1x1.', '_{width}x.' -%}
+            <div class="product-card__image-with-placeholder-wrapper" data-image-with-placeholder-wrapper>
+              <div class="grid-view-item__image-wrapper product-card__image-wrapper js">
+                <div class="grid-view-item__outer">
+                  <div class="grid-view-item__inner">
+                    <img class="grid-view-item__image lazyload"
+                         alt="{{ preview_image.alt }}"
+                         data-src="{{ img_url }}"
+                         data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                         data-aspectratio="{{ preview_image.aspect_ratio }}"
+                         data-sizes="auto"
+                         data-image />
+                  </div>
+                </div>
+              </div>
+              <div class="placeholder-background placeholder-background--animation" data-image-placeholder></div>
+            </div>
+            <div class="h4 grid-view-item__title product-card__title" aria-hidden="true">{{ title }}</div>
+          </div>
+        </li>
+      {% endif %}
+    {%- endfor -%}
+  </ul>
+{% endcapture %} 

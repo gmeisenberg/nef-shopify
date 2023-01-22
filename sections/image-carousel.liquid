@@ -1,0 +1,76 @@
+{% assign featured_image = [template.name].image %}
+
+{%- assign page_dots = false -%}
+{% if section.blocks.size > 1 %}
+  {%- assign page_dots = true -%}
+{% endif %}
+
+<div class="carousel"
+     data-flickity='{
+		"imagesLoaded": true,
+        "wrapAround": true,
+        "pageDots": {{ page_dots }},
+        "prevNextButtons": false }'>
+  {% if featured_image != blank %}
+    <div class="grid-view-item__image-wrapper">
+      <div class="grid-view-item__outer">
+        <div class="grid-view-item__inner">
+          {% capture img_id %}ArtistImage-{{ featured_image.id }}{% endcapture %}
+          {% include 'image-style', image: featured_image, img_id: img_id %}
+          <img id="{{ img_id }}"
+               class="grid-view-item__image lazyload"
+               alt="{{ featured_image.alt }}"
+               data-src="{{ featured_image | img_url: '800x800' }}"
+               data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+               data-aspectratio="{{ featured_image.aspect_ratio }}"
+               data-sizes="auto"
+               data-image />
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  
+  {% for block in section.blocks %}
+    <div class="grid-view-item__image-wrapper">
+      <div class="grid-view-item__outer">
+        <div class="grid-view-item__inner">
+          {% if block.settings.image != blank %}
+            {% capture img_id %}ArtistImage-{{ block.settings.image.id }}{% endcapture %}
+            {% include 'image-style', image: block.settings.image, img_id: img_id %}
+            <img id="{{ img_id }}"
+                 class="grid-view-item__image lazyload"
+                 alt="{{ block.settings.image.alt }}"
+                 data-src="{{ block.settings.image | img_url: '800x800' }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                 data-sizes="auto"
+                 data-image />
+          {% else %}
+          	{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+
+{% schema %}
+{
+  "name": "Image Carousel",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

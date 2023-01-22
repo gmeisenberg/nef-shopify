@@ -1,0 +1,13 @@
+{% assign min_ratio = 1 %}
+{%- if request.page_type == 'page' and collection.template_suffix == 'artist' -%}
+  {% assign min_ratio = 1.3333333 %}
+{%- endif -%}
+
+{%- if image.aspect_ratio > min_ratio -%}
+<style>
+  #{{ img_id }} {
+    max-width: unset;
+    height: 100%;
+  }
+</style>
+{%- endif -%}

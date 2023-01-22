@@ -1,0 +1,87 @@
+{% comment %}
+    Renders a product card using "Grid" style
+    Accepts:
+    - product: {Object} Product Liquid object (required)
+    - release: {Object} Collection Liquid object (required when included from page.releases.liquid)
+    - max_height: {Number} Maximum height of the product's image
+    - show_vendor: {Boolean} Show the product's vendor depending on the section setting (optional)
+
+    Usage:
+    {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+
+{% assign product_vendor = product.vendor %}
+{% assign product_title = product.title %}
+{% if release.title %}
+  {% assign separator = ' - ' %}
+  {% assign release_title = release.title | split: separator %}
+  {% assign product_vendor = release_title.first %}
+  {% assign product_title = release.title | remove_first: product_vendor | remove_first: separator %}
+{% endif %}
+
+<div class="grid-view-item{% unless product.available %} grid-view-item--sold-out{% endunless %} product-card text-center">
+  <a class="grid-view-item__link grid-view-item__image-container full-width-link" 
+     href="{% if release %}{{ release.url }}{% else %}{{ product.url | within: collection }}{% endif %}">
+    <span class="visually-hidden">{{ product_title }}</span>
+  </a>
+  
+  {% include 'product-item-label', product: product, release: release %}
+  
+  {% capture img_id %}ProductCardImage-{{ section.id }}-{% if product.id %}{{ product.id }}{% else %}{{ release.id }}{% endif %}{% endcapture %}
+  {% capture wrapper_id %}ProductCardImageWrapper-{{ section.id }}-{% if product.id %}{{ product.id }}{% else %}{{ release.id }}{% endif %}{% endcapture %}
+  {%- assign preview_image = product.featured_media.preview_image -%}
+  {% if release.image != blank %}
+    {%- assign preview_image = release.image -%}
+  {% endif %}
+  {%- assign img_url = preview_image | img_url: '600x600' | replace: '_1x1.', '_{width}x.' -%}
+
+  {% unless preview_image == blank %}
+    {% include 'image-style', image: preview_image, height: max_height, wrapper_id: wrapper_id, img_id: img_id %}
+  {% endunless %}
+
+  <div class="product-card__image-with-placeholder-wrapper" data-image-with-placeholder-wrapper>
+    <div id="{{ wrapper_id }}" class="grid-view-item__image-wrapper product-card__image-wrapper js">
+      <div class="grid-view-item__outer">
+        <div class="grid-view-item__inner">
+          <img id="{{ img_id }}"
+               class="grid-view-item__image lazyload"
+               alt="{{ preview_image.alt }}"
+               data-src="{{ img_url }}"
+               data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+               data-aspectratio="{{ preview_image.aspect_ratio }}"
+               data-sizes="auto"
+               data-image />
+        </div>
+      </div>
+    </div>
+    <div class="placeholder-background placeholder-background--animation" data-image-placeholder></div>
+  </div>
+
+  <noscript>
+    {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
+    <img class="grid-view-item__image" src="{{ preview_image | img_url: image_size, scale: 2 }}" alt="{{ preview_image.alt }}" style="max-width: {{ max_height | times: preview_image.aspect_ratio }}px;">
+  </noscript>
+  
+  {% if release or show_vendor and product %}
+    <div class="grid-view-item__vendor">
+      {{ product_vendor }}
+    </div>
+  {% endif %}
+
+  <div class="h4 grid-view-item__title product-card__title" aria-hidden="true">{{ product_title }}</div>
+  
+  {% if release %}
+  	<p class="grid-view-item__meta">{% if release.metafields.nef.catalog_number %}{{ release.metafields.nef.catalog_number }}{% else %}{{ product.metafields.nef.catalog_number }}{% endif %}</p>
+  {% endif %}
+  
+  {% unless release %}
+    {% if product.type %}
+      <p class="grid-view-item__product-type">{{ product.type }}</p>
+    {% endif %}
+  {% endunless %}
+
+  {% unless release %}
+  	{% include 'product-price-listing', product: product, show_vendor: false %}
+  {% endunless %}
+
+</div>

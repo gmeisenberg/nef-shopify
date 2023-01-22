@@ -1,0 +1,30 @@
+{% if sc_param != blank %}
+  {% assign bc_media_id = sc_param %}
+  {% assign bc_param = sc_param | split: ":" %}
+  {% if bc_param.size > 1 %}
+	{% assign bc_media = bc_param.first %}
+	{% assign bc_media_id = bc_param.last %}
+  {% endif %}
+{% else %}
+  {% capture album %}{% include 'shortcode-render' render:'album' default:'' %}{% endcapture %}
+  {% capture track %}{% include 'shortcode-render' render:'track' default:'' %}{% endcapture %}
+  {% capture height %}{% include 'shortcode-render' render:'height' default:'472' %}{% endcapture %}
+{% endif %}
+
+{% assign theme = 'bgcol=ffffff/linkcol=333333' %}
+{% if request.page_type == 'collection' and collection.template_suffix == 'release' %}
+  {% assign theme = 'bgcol=333333/linkcol=ffffff' %}
+{% endif %}
+{% if track != blank %}
+  {% assign bc_media = 'track' %}
+  {% assign bc_media_id = track %}
+{% endif %}
+{% if bc_media == 'track' %}
+  {% assign height = '120' %}
+  {% assign theme = 'bgcol=333333/linkcol=ffffff/tracklist=false' %}
+{% endif %}
+
+<figure class="media-container media-container__bandcamp">
+  <iframe style="border: 0; width: 100%; height: {{ height | default: 406 }}px;" src="https://bandcamp.com/EmbeddedPlayer/{{ bc_media | default: "album" }}={{ bc_media_id | default: album }}/size=large/{{ theme }}/artwork=small/transparent=true/" seamless></iframe>
+</figure>
+  

@@ -1,0 +1,49 @@
+<div class="page-width">
+  <div class="text-center">
+    <h1>{{ 'general.404.title' | t }}</h1>
+    {% comment %}
+    <p>{{ 'general.404.subtext' | t }}</p>
+    {% endcomment %}
+    
+    {% for block in section.blocks %}
+      {% if block.settings.image != blank %}
+        <img id="{{ img_id }}"
+             class="feature-row__image lazyload"
+             style="max-height:50vh;"
+             src="{{ block.settings.image | img_url: '600x' }}"
+             data-src="{{ img_url }}"
+             data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+             data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+             data-sizes="auto"
+             alt="{{ block.settings.image.alt | escape }}">
+      {% else %}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    {% endfor %}
+    
+    <p>
+      <a href="{{ routes.root_url }}" class="btn btn--has-icon-after">{{ 'general.404.link' | t }}{% include 'icon-arrow-right' %}</a>
+    </p>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "404 Image",
+  "max_blocks": 1,
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

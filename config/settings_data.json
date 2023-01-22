@@ -1,0 +1,1051 @@
+{
+  "current": {
+    "color_text": "#000000",
+    "color_body_text": "#000000",
+    "color_sale_text": "#009900",
+    "color_body_bg": "#ffffff",
+    "color_borders": "#000000",
+    "color_header_bg": "#ffffff",
+    "color_header_text": "#000000",
+    "color_footer_bg": "#ffffff",
+    "color_footer_text": "#000000",
+    "color_button": "#000000",
+    "color_button_text": "#ffffff",
+    "color_small_button_text_border": "#000000",
+    "color_text_field_text": "#000000",
+    "color_text_field_border": "#000000",
+    "color_text_field": "#ffffff",
+    "color_image_overlay_text": "#ffffff",
+    "color_image_overlay": "#000000",
+    "image_overlay_opacity": 40,
+    "type_header_font": "montserrat_n5",
+    "type_header_base_size": 26,
+    "type_base_font": "montserrat_n5",
+    "type_base_size": 16,
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": true,
+    "predictive_search_show_price": true,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_facebook_link": "https:\/\/www.facebook.com\/NefariousIndustries",
+    "social_twitter_link": "https:\/\/twitter.com\/NefariousInd",
+    "social_instagram_link": "https:\/\/www.instagram.com\/nefarious_industries",
+    "social_youtube_link": "https:\/\/www.youtube.com\/NefariousIndustries",
+    "social_bandcamp_link": "https:\/\/nefariousindustries.bandcamp.com",
+    "social_spotify_link": "",
+    "favicon": "shopify:\/\/shop_images\/nef_circles_outlined.png",
+    "message": false,
+    "home_page_only": false,
+    "message_text": "<p><strong>40% OFF EVERYTHING extended through Jan 04!<br\/><\/strong>Discount applied automatically at checkout. Excludes Pre-Orders & Grab Bags.<\/p>",
+    "message_bg_color": "#990000",
+    "message_text_color": "#ffffff",
+    "enable_ajax": true,
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/nef_circles_outlined_logo_100px-01.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "message_link": "",
+    "cta_text": "Sign Up Now",
+    "social_pinterest_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_vimeo_link": "",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "align_logo": "left",
+          "logo": "shopify:\/\/shop_images\/NEF-logo-dark.png",
+          "logo_max_width": 250,
+          "main_linklist": "main-menu"
+        }
+      },
+      "collection": {
+        "type": "collection",
+        "settings": {
+          "title": "New Items",
+          "collection": "new-items",
+          "grid": 3,
+          "rows": 2,
+          "show_vendor": true,
+          "show_view_all": false
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "9a4ba4ae-8bd7-445d-bd73-6a58fe1e5c8d": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "menu": "footer"
+            }
+          },
+          "24f45257-1a18-4a4e-8785-b8fa82ce9b6e": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "menu": "footer-music"
+            }
+          },
+          "a72376d3-a2f2-4fc2-a1cf-da79753575d2": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "menu": "footer-merch"
+            }
+          },
+          "c9ef1215-0b3c-47f9-84b6-9643a4cb8055": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Sick deals, cool swag, new releases - be the first to know!"
+            }
+          }
+        },
+        "block_order": [
+          "9a4ba4ae-8bd7-445d-bd73-6a58fe1e5c8d",
+          "24f45257-1a18-4a4e-8785-b8fa82ce9b6e",
+          "a72376d3-a2f2-4fc2-a1cf-da79753575d2",
+          "c9ef1215-0b3c-47f9-84b6-9643a4cb8055"
+        ],
+        "settings": {
+          "show_payment_icons": true,
+          "show_locale_selector": false,
+          "show_currency_selector": true
+        }
+      },
+      "1599935624432": {
+        "type": "slideshow",
+        "blocks": {
+          "99186bf0-570c-450b-a904-26c22db9a87f": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF-103-banner-1600x535.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/eyes-congratulations"
+            }
+          },
+          "f180616d-e423-40f6-ae39-e45b6c5050c2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2023-sub-club-ID4-1600x535.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/products\/2023-subscription-club"
+            }
+          },
+          "c49cbc1b-932b-4d0a-aef0-c554c2286b86": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF-96-banner-out-now-1600x535.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/laces-out-here-at-the-ashram"
+            }
+          },
+          "5d1bb0f9-11da-4c36-9b9a-ce50a9a72e0f": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF-80-banner-out-now-1600x535.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/sarattma-escape-velocity"
+            }
+          },
+          "91efeb3b-8298-425e-b84c-292a29259fd2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF-83-banner-out-now-1600x535.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/anxious-wave-live-from-the-poison-factory"
+            }
+          },
+          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF-90-banner-out-now_1600x535_5f53ee81-5647-4a09-9f49-df4ef48e8833.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/brian-the-cataclysmic-engine"
+            }
+          },
+          "85e8b3a5-34e2-4a0a-88eb-486eb8ba4522": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF-67-banner-out-now-1600x535.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/contemplator-morphose"
+            }
+          },
+          "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF-84-banner-out-now-1600x535.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/gematria-the-spindle-of-necessity"
+            }
+          }
+        },
+        "block_order": [
+          "99186bf0-570c-450b-a904-26c22db9a87f",
+          "f180616d-e423-40f6-ae39-e45b6c5050c2",
+          "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
+          "5d1bb0f9-11da-4c36-9b9a-ce50a9a72e0f",
+          "91efeb3b-8298-425e-b84c-292a29259fd2",
+          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d",
+          "85e8b3a5-34e2-4a0a-88eb-486eb8ba4522",
+          "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c"
+        ],
+        "settings": {
+          "slideshow_height": "adapt",
+          "text_size": "medium",
+          "text_alignment": "center center",
+          "show_overlay": false,
+          "autorotate": true,
+          "autorotate_speed": 3
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 5,
+          "rows": 8,
+          "show_collection_image": true,
+          "show_vendor": true,
+          "sort_enable": false,
+          "tags_enable": false
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "Related items",
+          "show_vendor": true
+        }
+      },
+      "password-header": {
+        "type": "password-header",
+        "settings": {
+          "logo": "",
+          "logo_max_width": 250,
+          "header": "Coming Soon"
+        }
+      },
+      "password-content": {
+        "type": "password-content",
+        "settings": {
+          "newsletter_enable": true,
+          "newsletter_form_heading": "Be the first to know when we launch.",
+          "newsletter_form_subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
+          "newsletter_placeholder": "Email address",
+          "newsletter_button_text": "Notify me"
+        }
+      },
+      "password-footer": {
+        "type": "password-footer",
+        "settings": {
+          "show_share_buttons": false,
+          "social_message": "Spread the word"
+        }
+      },
+      "1599944739126": {
+        "type": "collection",
+        "settings": {
+          "title": "Featured Releases",
+          "collection": "featured-releases",
+          "grid": 4,
+          "rows": 4,
+          "show_vendor": true,
+          "show_view_all": false
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "blocks": {
+          "1600803208560": {
+            "type": "collection",
+            "settings": {
+              "collection": "featured-releases"
+            }
+          },
+          "1600803237411": {
+            "type": "collection",
+            "settings": {
+              "collection": "new-items"
+            }
+          },
+          "1600803243240": {
+            "type": "collection",
+            "settings": {
+              "collection": "vinyl"
+            }
+          },
+          "1600803254388": {
+            "type": "collection",
+            "settings": {
+              "collection": "cd"
+            }
+          },
+          "1602267054102": {
+            "type": "collection",
+            "settings": {
+              "collection": "cassette"
+            }
+          },
+          "1600803260175": {
+            "type": "collection",
+            "settings": {
+              "collection": "digital"
+            }
+          }
+        },
+        "block_order": [
+          "1600803208560",
+          "1600803237411",
+          "1600803243240",
+          "1600803254388",
+          "1602267054102",
+          "1600803260175"
+        ],
+        "settings": {
+          "display_type": "selected",
+          "sort": "alphabetical",
+          "grid": 3
+        }
+      },
+      "image-carousel": {
+        "type": "image-carousel",
+        "blocks": {
+          "1601927333345": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/BANGLADEAFY_-_window_01_-_photo_by_Jayden_Spano.jpg"
+            }
+          },
+          "1601927375973": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bangladeafy_2018_Promos_NVS8.jpg"
+            }
+          },
+          "1601928489987": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bangladeafy_2018_Promos_NVS1.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1601927333345",
+          "1601927375973",
+          "1601928489987"
+        ],
+        "settings": {
+        }
+      },
+      "404-template": {
+        "type": "404-template",
+        "blocks": {
+          "1602025470406": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/SP-404.png"
+            }
+          }
+        },
+        "block_order": [
+          "1602025470406"
+        ],
+        "settings": {
+        }
+      },
+      "162558419088ef5f22": {
+        "type": "collection",
+        "settings": {
+          "title": "Merch",
+          "collection": "merch",
+          "grid": 5,
+          "rows": 1,
+          "show_vendor": true,
+          "show_view_all": false
+        }
+      },
+      "product-sub-club-template": {
+        "type": "product-sub-club-template",
+        "settings": {
+          "show_quantity_selector": false,
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "media_size": "medium",
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "16554976101df50d3e": {
+        "type": "collection-list",
+        "blocks": {
+          "c7bc433c-6f2d-4fd9-9bcf-e4a8f1aae68c": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "eyes-congratulations"
+            }
+          },
+          "4afb37c7-e5f1-45ae-b1e6-0273ffc5cb7f": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "gematria-the-spindle-of-necessity"
+            }
+          },
+          "16554976101df50d3e-1": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "laces-out-here-at-the-ashram"
+            }
+          },
+          "16554976101df50d3e-0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "sarattma-escape-velocity"
+            }
+          },
+          "16554976101df50d3e-2": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "nequient-darker-than-death-or-night"
+            }
+          }
+        },
+        "block_order": [
+          "c7bc433c-6f2d-4fd9-9bcf-e4a8f1aae68c",
+          "4afb37c7-e5f1-45ae-b1e6-0273ffc5cb7f",
+          "16554976101df50d3e-1",
+          "16554976101df50d3e-0",
+          "16554976101df50d3e-2"
+        ],
+        "settings": {
+          "title": "",
+          "grid": 5
+        }
+      },
+      "1655499220c04ccc6c": {
+        "type": "collection",
+        "settings": {
+          "title": "10th Anniversary Collection",
+          "collection": "a-fucking-elephant-el-drugstore-dope-soaked-and-wow-silver-medals-for-everyone",
+          "grid": 4,
+          "rows": 2,
+          "show_vendor": true,
+          "show_view_all": false
+        }
+      },
+      "1655500218dc123d94": {
+        "type": "collection",
+        "settings": {
+          "title": "Swag",
+          "collection": "swag",
+          "grid": 4,
+          "rows": 1,
+          "show_vendor": false,
+          "show_view_all": false
+        }
+      }
+    },
+    "content_for_index": [
+      "1599935624432",
+      "16554976101df50d3e",
+      "1655500218dc123d94",
+      "collection",
+      "162558419088ef5f22",
+      "1655499220c04ccc6c",
+      "1599944739126"
+    ]
+  },
+  "presets": {
+    "Light": {
+      "color_text": "#000000",
+      "color_body_text": "#000000",
+      "color_sale_text": "#990000",
+      "color_body_bg": "#ffffff",
+      "color_borders": "#000000",
+      "color_header_bg": "#ffffff",
+      "color_header_text": "#000000",
+      "color_footer_bg": "#ffffff",
+      "color_footer_text": "#000000",
+      "color_button": "#000000",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#000000",
+      "color_text_field_text": "#000000",
+      "color_text_field_border": "#000000",
+      "color_text_field": "#ffffff",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#685858",
+      "image_overlay_opacity": 40,
+      "type_header_font": "montserrat_n5",
+      "type_header_base_size": 26,
+      "type_base_font": "montserrat_n5",
+      "type_base_size": 16,
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": true,
+      "predictive_search_show_price": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "https:\/\/twitter.com\/NefariousInd",
+      "social_facebook_link": "https:\/\/www.facebook.com\/NefariousIndustries",
+      "social_pinterest_link": "",
+      "social_instagram_link": "https:\/\/www.instagram.com\/nefarious_industries\/",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "https:\/\/www.youtube.com\/user\/NefariousIndustries",
+      "social_vimeo_link": "",
+      "favicon": "shopify:\/\/shop_images\/nef-logo-120-inverse-64x64.png",
+      "message": false,
+      "home_page_only": true,
+      "message_text": "Announce something here",
+      "message_link": "",
+      "message_bg_color": "#3a3a3a",
+      "message_text_color": "#ffffff",
+      "enable_ajax": true,
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#197bbd",
+      "checkout_button_color": "#197bbd",
+      "checkout_error_color": "#e32c2b",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "align_logo": "left",
+            "logo_max_width": 250,
+            "main_linklist": "main-menu"
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "title": "New Releases",
+            "collection": "new-releases",
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {
+                "title": "",
+                "menu": "footer"
+              }
+            },
+            "footer-1": {
+              "type": "newsletter",
+              "settings": {
+                "title": ""
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1"
+          ],
+          "settings": {
+            "show_payment_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "1599935624432": {
+          "type": "slideshow",
+          "blocks": {
+            "1599935624432-0": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/NEF-64_banner-1600x535.jpg",
+                "alignment": "center center",
+                "slide_title": "",
+                "subheading": "",
+                "button_label": "",
+                "button_link": "https:\/\/bangladeafy.bandcamp.com\/album\/housefly"
+              }
+            },
+            "1599945692488": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/NEF-60_banner-1600x535.jpg",
+                "alignment": "center center",
+                "slide_title": "",
+                "subheading": "",
+                "button_label": "",
+                "button_link": "shopify:\/\/collections\/psychosomatic-the-invisible-prison"
+              }
+            },
+            "1600052549916": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/NEF-61-banner-1600x535-2.jpg",
+                "alignment": "center center",
+                "slide_title": "",
+                "subheading": "",
+                "button_label": "",
+                "button_link": "shopify:\/\/products\/cactides"
+              }
+            },
+            "1600052894819": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/UNDERER-SITE-BANNER-01.jpg",
+                "alignment": "center center",
+                "slide_title": "",
+                "subheading": "",
+                "button_label": "",
+                "button_link": "https:\/\/underer.bandcamp.com\/album\/the-code"
+              }
+            },
+            "1600052970890": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/NEF-57-banner-1600.jpg",
+                "alignment": "center center",
+                "slide_title": "",
+                "subheading": "",
+                "button_label": "",
+                "button_link": "shopify:\/\/products\/the-golden-age-of-bad-ideas"
+              }
+            },
+            "1600053000757": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/NEF-44-banner-1600-2.jpg",
+                "alignment": "center center",
+                "slide_title": "",
+                "subheading": "",
+                "button_label": "",
+                "button_link": "shopify:\/\/collections\/oxx-the-skeleton-is-just-a-coat-hanger-these-are-the-black-strings-that-make-you-dance"
+              }
+            }
+          },
+          "block_order": [
+            "1599935624432-0",
+            "1599945692488",
+            "1600052549916",
+            "1600052894819",
+            "1600052970890",
+            "1600053000757"
+          ],
+          "settings": {
+            "slideshow_height": "adapt",
+            "text_size": "medium",
+            "text_alignment": "center center",
+            "show_overlay": false,
+            "autorotate": true,
+            "autorotate_speed": 3
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 5,
+            "rows": 6,
+            "show_collection_image": false,
+            "show_vendor": true,
+            "sort_enable": false,
+            "tags_enable": false
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": true,
+            "enable_payment_button": true,
+            "show_share_buttons": false,
+            "media_size": "medium",
+            "enable_image_zoom": true,
+            "enable_video_looping": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "heading": "You may also like",
+            "show_vendor": true
+          }
+        },
+        "password-header": {
+          "type": "password-header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": 250,
+            "header": "Coming Soon"
+          }
+        },
+        "password-content": {
+          "type": "password-content",
+          "settings": {
+            "newsletter_enable": true,
+            "newsletter_form_heading": "Be the first to know when we launch.",
+            "newsletter_form_subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
+            "newsletter_placeholder": "Email address",
+            "newsletter_button_text": "Notify me"
+          }
+        },
+        "password-footer": {
+          "type": "password-footer",
+          "settings": {
+            "show_share_buttons": false,
+            "social_message": "Spread the word"
+          }
+        },
+        "1599944739126": {
+          "type": "collection",
+          "settings": {
+            "title": "Featured Releases",
+            "collection": "featured-releases",
+            "grid": 4,
+            "rows": 3,
+            "show_vendor": true,
+            "show_view_all": false
+          }
+        }
+      },
+      "content_for_index": [
+        "1599935624432",
+        "collection",
+        "1599944739126"
+      ]
+    },
+    "Dark": {
+      "color_text": "#ffffff",
+      "color_body_text": "#ffffff",
+      "color_sale_text": "#990000",
+      "color_body_bg": "#000000",
+      "color_borders": "#ffffff",
+      "color_header_bg": "#000000",
+      "color_header_text": "#ffffff",
+      "color_footer_bg": "#000000",
+      "color_footer_text": "#ffffff",
+      "color_button": "#ffffff",
+      "color_button_text": "#000000",
+      "color_small_button_text_border": "#ffffff",
+      "color_text_field_text": "#ffffff",
+      "color_text_field_border": "#ffffff",
+      "color_text_field": "#000000",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#685858",
+      "image_overlay_opacity": 40,
+      "type_header_font": "montserrat_n5",
+      "type_header_base_size": 26,
+      "type_base_font": "montserrat_n5",
+      "type_base_size": 16,
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": true,
+      "predictive_search_show_price": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "https:\/\/twitter.com\/NefariousInd",
+      "social_facebook_link": "https:\/\/www.facebook.com\/NefariousIndustries",
+      "social_pinterest_link": "",
+      "social_instagram_link": "https:\/\/www.instagram.com\/nefarious_industries\/",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "https:\/\/www.youtube.com\/user\/NefariousIndustries",
+      "social_vimeo_link": "",
+      "favicon": "shopify:\/\/shop_images\/nef-logo-120-inverse-64x64.png",
+      "message": false,
+      "home_page_only": true,
+      "message_text": "Announce something here",
+      "message_link": "",
+      "message_bg_color": "#3a3a3a",
+      "message_text_color": "#ffffff",
+      "enable_ajax": true,
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "medium",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#fff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fafafa",
+      "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "checkout_accent_color": "#197bbd",
+      "checkout_button_color": "#197bbd",
+      "checkout_error_color": "#e32c2b",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "align_logo": "left",
+            "logo_max_width": 250,
+            "main_linklist": "main-menu"
+          }
+        },
+        "collection": {
+          "type": "collection",
+          "settings": {
+            "title": "New Releases",
+            "collection": "new-releases",
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {
+                "title": "",
+                "menu": "footer"
+              }
+            },
+            "footer-1": {
+              "type": "newsletter",
+              "settings": {
+                "title": ""
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1"
+          ],
+          "settings": {
+            "show_payment_icons": true,
+            "show_locale_selector": true,
+            "show_currency_selector": true
+          }
+        },
+        "1599935624432": {
+          "type": "slideshow",
+          "blocks": {
+            "1599935624432-0": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/NEF-64_banner-1600x535.jpg",
+                "alignment": "center center",
+                "slide_title": "",
+                "subheading": "",
+                "button_label": "",
+                "button_link": "https:\/\/bangladeafy.bandcamp.com\/album\/housefly"
+              }
+            },
+            "1599945692488": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/NEF-60_banner-1600x535.jpg",
+                "alignment": "center center",
+                "slide_title": "",
+                "subheading": "",
+                "button_label": "",
+                "button_link": "shopify:\/\/collections\/psychosomatic-the-invisible-prison"
+              }
+            },
+            "1600052549916": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/NEF-61-banner-1600x535-2.jpg",
+                "alignment": "center center",
+                "slide_title": "",
+                "subheading": "",
+                "button_label": "",
+                "button_link": "shopify:\/\/products\/cactides"
+              }
+            },
+            "1600052894819": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/UNDERER-SITE-BANNER-01.jpg",
+                "alignment": "center center",
+                "slide_title": "",
+                "subheading": "",
+                "button_label": "",
+                "button_link": "https:\/\/underer.bandcamp.com\/album\/the-code"
+              }
+            },
+            "1600052970890": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/NEF-57-banner-1600.jpg",
+                "alignment": "center center",
+                "slide_title": "",
+                "subheading": "",
+                "button_label": "",
+                "button_link": "shopify:\/\/products\/the-golden-age-of-bad-ideas"
+              }
+            },
+            "1600053000757": {
+              "type": "image",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/NEF-44-banner-1600-2.jpg",
+                "alignment": "center center",
+                "slide_title": "",
+                "subheading": "",
+                "button_label": "",
+                "button_link": "shopify:\/\/collections\/oxx-the-skeleton-is-just-a-coat-hanger-these-are-the-black-strings-that-make-you-dance"
+              }
+            }
+          },
+          "block_order": [
+            "1599935624432-0",
+            "1599945692488",
+            "1600052549916",
+            "1600052894819",
+            "1600052970890",
+            "1600053000757"
+          ],
+          "settings": {
+            "slideshow_height": "adapt",
+            "text_size": "medium",
+            "text_alignment": "center center",
+            "show_overlay": false,
+            "autorotate": true,
+            "autorotate_speed": 3
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 5,
+            "rows": 6,
+            "show_collection_image": false,
+            "show_vendor": true,
+            "sort_enable": false,
+            "tags_enable": false
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": true,
+            "enable_payment_button": true,
+            "show_share_buttons": false,
+            "media_size": "medium",
+            "enable_image_zoom": true,
+            "enable_video_looping": false
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "heading": "You may also like",
+            "show_vendor": true
+          }
+        },
+        "password-header": {
+          "type": "password-header",
+          "settings": {
+            "logo": "",
+            "logo_max_width": 100,
+            "header": "Coming Soon"
+          }
+        },
+        "password-content": {
+          "type": "password-content",
+          "settings": {
+            "newsletter_enable": true,
+            "newsletter_form_heading": "Be the first to know when we launch.",
+            "newsletter_form_subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
+            "newsletter_placeholder": "Email address",
+            "newsletter_button_text": "Notify me"
+          }
+        },
+        "password-footer": {
+          "type": "password-footer",
+          "settings": {
+            "show_share_buttons": false,
+            "social_message": "Spread the word"
+          }
+        },
+        "1599944739126": {
+          "type": "collection",
+          "settings": {
+            "title": "Featured Releases",
+            "collection": "featured-releases",
+            "grid": 4,
+            "rows": 3,
+            "show_vendor": true,
+            "show_view_all": false
+          }
+        }
+      },
+      "content_for_index": [
+        "1599935624432",
+        "collection",
+        "1599944739126"
+      ]
+    }
+  }
+}

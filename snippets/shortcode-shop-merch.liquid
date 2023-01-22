@@ -1,0 +1,59 @@
+{% capture sc_shop_merch__img %}{% include 'shortcode-render' render:'img' default:'' %}{% endcapture %}
+
+{% if collection.title %}
+  {% assign separator = ' - ' %}
+  {% assign collection_title = collection.title | split: separator %}
+  {% assign product_vendor = collection_title.first %}
+  {% assign product_title = collection.title | remove_first: product_vendor | remove_first: separator %}
+{% endif %}
+
+{% capture sc_shop_merch %} 
+  {%- for keys in key  -%}
+    {% if keys != 'img' %}
+      {% assign service = keys | replace: '-', ' ' %}
+      {% assign url = variable[forloop.index0] %}
+      <li class="grid__item medium-up--one-third">
+        <div class="grid-view-item product-card text-center">
+          
+          <a target="_blank" class="grid-view-item__link grid-view-item__image-container full-width-link" 
+             href="{{ url }}">
+            <span class="visually-hidden">{{ product_title }}</span>
+          </a>
+          
+          {% if sc_shop_merch__img != blank %}
+              {%- assign preview_image = images[sc_shop_merch__img] -%}
+          {% else %}
+              {%- assign preview_image = collection.image -%}
+          {% endif %}
+          {%- assign img_url = preview_image | img_url: '600x600' | replace: '_1x1.', '_{width}x.' -%}
+  
+          <div class="product-card__image-with-placeholder-wrapper" data-image-with-placeholder-wrapper>
+            <div class="grid-view-item__image-wrapper product-card__image-wrapper js">
+              <div class="grid-view-item__outer">
+                <div class="grid-view-item__inner">
+                  <img class="grid-view-item__image lazyload"
+                       alt="{{ preview_image.alt }}"
+                       data-src="{{ img_url }}"
+                       data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                       data-aspectratio="{{ preview_image.aspect_ratio }}"
+                       data-sizes="auto"
+                       data-image />
+                </div>
+              </div>
+            </div>
+            <div class="placeholder-background placeholder-background--animation" data-image-placeholder></div>
+          </div>
+          
+          <div class="grid-view-item__vendor">
+            {{ product_vendor }}
+          </div>
+          
+          <div class="h4 grid-view-item__title product-card__title" aria-hidden="true">{{ product_title }}</div>
+          
+          <p class="grid-view-item__product-type">Shop at {{ service }}</p>
+  
+        </div>
+      </li>
+    {% endif %}
+  {%- endfor -%}
+{% endcapture %} 

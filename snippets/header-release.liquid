@@ -1,0 +1,140 @@
+{% comment %}
+  Alternate header template based on /sections/header.liquid
+{% endcomment %}
+
+{%- assign logo = 'NEF-logo-light.png' -%}
+
+<div id="shopify-section-header" class="shopify-section">
+  {% include 'search-drawer' %}
+
+  <div data-section-id="header" data-section-type="header-section" data-header-section>
+    <header class="site-header logo--left" role="banner">
+      <div class="grid grid--no-gutters grid--table site-header__mobile-nav">
+        <div class="grid__item medium-up--one-quarter large-up--one-fifth logo-align--left">
+          <div class="h2 site-header__logo">
+            {%- assign img_url = logo | file_img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <a href="{{ routes.root_url }}" class="site-header__logo-image">
+              <img class="lazyload js"
+                   src="{{ logo | file_img_url: '300x300' }}"
+                   data-src="{{ img_url }}"
+                   data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                   data-aspectratio="{{ logo.aspect_ratio }}"
+                   data-sizes="auto"
+                   alt="{{ shop.name }}"
+                   style="max-width: 100px;" />
+            </a>
+          </div>
+        </div>
+
+        <nav class="grid__item medium-up--three-quarters large-up--three-fifths small--hide" id="AccessibleNav" role="navigation">
+          <ul class="site-nav list--inline smooth-scroll" id="SiteNav">
+            <li>
+              <a href="#PageContainer" class="site-nav__link site-nav__link--main">
+                <span class="site-nav__label alt">Shut Up and</span>
+              </a>
+            </li>
+
+            {% if collection.products.size > 0 or sc_shop_digital != blank %}
+            <li>
+              <a href="#buy" class="site-nav__link site-nav__link--main">
+                <span class="site-nav__label">Buy{% if sc_shop_partner__nav_nef != blank %} ({{ sc_shop_partner__nav_nef }}){% endif %}</span>
+              </a>
+            </li>
+            {% endif %}
+
+            {% if sc_shop_partner__nav != blank %}
+            <li>
+              <a href="#partner" class="site-nav__link site-nav__link--main">
+                <span class="site-nav__label">Buy ({{ sc_shop_partner__nav }})</span>
+              </a>
+            </li>
+            {% endif %}
+
+            {% if sc_media != blank %}
+            <li>
+              <a href="#media" class="site-nav__link site-nav__link--main">
+                <span class="site-nav__label">Watch // Listen</span>
+              </a>
+            </li>
+            {% endif %}
+
+            {% if sc_digital != blank %}
+            <li>
+              <a href="#stream" class="site-nav__link site-nav__link--main">
+                <span class="site-nav__label">Stream</span>
+              </a>
+            </li>
+            {% endif %}
+
+            {% if sc_read != blank or sc_description != blank %}
+            <li>
+              <a href="#read" class="site-nav__link site-nav__link--main">
+                <span class="site-nav__label">Read</span>
+              </a>
+            </li>
+            {% endif %}
+          </ul>
+        </nav>
+
+        <div class="grid__item medium-up--hide text-right site-header__icons">
+          <div class="site-header__icons-wrapper">
+            <button type="button" class="btn--link site-header__icon site-header__menu js-mobile-nav-toggle mobile-nav--open" aria-controls="MobileNav"  aria-expanded="false" aria-label="{{ 'layout.navigation.menu' | t }}">
+              {% include 'icon-hamburger' %}
+              {% include 'icon-close' %}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <nav class="mobile-nav-wrapper medium-up--hide" role="navigation">
+        <ul id="MobileNav" class="mobile-nav smooth-scroll">
+          <li class="mobile-nav__item">
+            <a href="#PageContainer" class="mobile-nav__link">
+              <span class="mobile-nav__label alt">Shut Up and</span>
+            </a>
+          </li>
+          
+          {% if collection.products.size > 0 or sc_shop_digital != blank %}
+          <li class="mobile-nav__item">
+            <a href="#buy" class="mobile-nav__link">
+              <span class="mobile-nav__label">Buy{% if sc_shop_partner__nav_nef != blank %} ({{ sc_shop_partner__nav_nef }}){% endif %}</span>
+            </a>
+          </li>
+          {% endif %}
+          
+          {% if sc_shop_partner__nav != blank %}
+          <li class="mobile-nav__item">
+            <a href="#partner" class="mobile-nav__link">
+              <span class="mobile-nav__label">Buy ({{ sc_shop_partner__nav }})</span>
+            </a>
+          </li>
+          {% endif %}
+
+          {% if sc_media != blank %}
+          <li class="mobile-nav__item">
+            <a href="#media" class="mobile-nav__link">
+              <span class="mobile-nav__label">Watch // Listen</span>
+            </a>
+          </li>
+          {% endif %}
+          
+          {% if sc_digital != blank %}
+          <li class="mobile-nav__item">
+            <a href="#stream" class="mobile-nav__link">
+              <span class="mobile-nav__label">Stream</span>
+            </a>
+          </li>
+          {% endif %}
+          
+          {% if sc_read != blank or sc_description != blank %}
+          <li class="mobile-nav__item">
+            <a href="#read" class="mobile-nav__link">
+              <span class="mobile-nav__label">Read</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+  </div>
+</div>

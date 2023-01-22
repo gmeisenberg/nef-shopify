@@ -1,0 +1,38 @@
+{% assign ll = 'fb|Facebook,ig|Instagram,tw|Twitter,yt|YouTube,bc|Bandcamp,sp|Spotify' | split: ',' %}
+
+{% assign links_list = '' %}
+{% for l in ll %}
+  {% assign link = l | split: '|' %}
+  {% capture url %}{% include 'shortcode-render' render: link[0] default:'' %}{% endcapture %}
+  {% if url != blank %}
+    {% assign links_list = links_list | append: link[1] | append: '||' | append: url %}
+    {% if forloop.last == false %}
+      {% assign links_list = links_list | append: '::' %}
+    {% endif%}
+  {% endif%}
+{% endfor %}
+
+{%- if links_list != blank -%}
+  {% assign links_array = links_list | split: '::' %}
+
+  {% capture sc_links %}
+    <ul class="list--inline social-icons">
+      {%- for links in links_array -%}
+        {%- assign link = links | split: '||' %}
+        {%- assign icon_link = link[0] | prepend: 'icon-' | downcase -%}
+        {%- assign url = link[1] -%}
+        {%- assign title = link[0] -%}
+        <li class="social-icons__item">
+          <a class="social-icons__link" href="{{ url }}" title="{% if collection.title != blank %}{{ collection.title}} on {% endif %}{{ title }}">
+            {%- include icon_link -%}
+            <span class="icon__fallback-text">{{ title }}</span>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {% endcapture %}
+
+  {% if echo == true %}
+    {{ sc_links }}
+  {% endif %}
+{%- endif -%}

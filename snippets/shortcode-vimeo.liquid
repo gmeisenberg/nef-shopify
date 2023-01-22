@@ -1,0 +1,9 @@
+{% if sc_param != blank %}
+  {% assign id = sc_param %}
+{% else %}
+  {% capture id %}{% include 'shortcode-render' render:'id' default:'' %}{% endcapture %}
+{% endif %}
+
+<figure class="media-container media-container__vimeo">
+  <iframe src="https://player.vimeo.com/video/{{ id }}" frameborder="0" allowfullscreen></iframe>
+</figure>
