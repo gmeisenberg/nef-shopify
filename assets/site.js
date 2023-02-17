@@ -2,6 +2,12 @@
 
 var _nef = window._nef || {};
 
+_nef.utils = (() => {
+  document.onkeydown((e) => {
+    alert(e)
+  })
+})
+
 var $grid = $('.grid--masonry');
 
 _nef.masonry = function() {
@@ -94,11 +100,12 @@ _nef.carousel = function() {
 };
 
 $(function() {
-  _nef.masonry();
-  _nef.stickyHeader();
-  _nef.readMore();
-  _nef.smoothScroll();
-  _nef.carousel();
-});
+  _nef.utils()
+  _nef.masonry()
+  _nef.stickyHeader()
+  _nef.readMore()
+  _nef.smoothScroll()
+  _nef.carousel()
+})
 
-})(jQuery);
+})(jQuery)
