@@ -34,6 +34,8 @@
       {%- assign contentAfterClosingTag = shortcodeEndings[1] -%}
 
       {%- capture shortcodeFull -%}{{-shortcodeEndings[0]-}}{%- endcapture -%}
+      
+      <script>console.log('{{ shortcodeFull }}')</script>
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
       {%- assign variables = '' -%}
@@ -162,7 +164,3 @@
     {{ sc_description }}
   {% endif %}
 {%- endif -%}
-
-<script>
-  console.log('{{ shortcodeFull }}')
-</script>
