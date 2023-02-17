@@ -3,7 +3,7 @@
 var _nef = window._nef || {};
 
 _nef.utils = (() => {
-  document.onkeydown((e) => {
+  document.addEventListener('keydown', (e) => {
     console.log(e)
   })
 })
