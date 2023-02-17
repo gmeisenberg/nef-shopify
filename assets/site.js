@@ -4,7 +4,9 @@ var _nef = window._nef || {};
 
 _nef.utils = (() => {
   document.addEventListener('keydown', (e) => {
-    console.log(e)
+    if (e.keyAlt && e.key === '`') {
+      console.log('fuck')
+    }
   })
 })
 
