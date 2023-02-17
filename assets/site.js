@@ -4,7 +4,7 @@ var _nef = window._nef || {};
 
 _nef.utils = (() => {
   document.onkeydown((e) => {
-    alert(e)
+    console.log(e)
   })
 })
 
