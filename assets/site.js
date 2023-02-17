@@ -2,14 +2,6 @@
 
 var _nef = window._nef || {};
 
-_nef.utils = (() => {
-  document.addEventListener('keydown', (e) => {
-    if (e.altKey && e.key === '`') {
-      console.log('fuck')
-    }
-  })
-})
-
 var $grid = $('.grid--masonry');
 
 _nef.masonry = function() {
@@ -102,7 +94,6 @@ _nef.carousel = function() {
 };
 
 $(function() {
-  _nef.utils()
   _nef.masonry()
   _nef.stickyHeader()
   _nef.readMore()
