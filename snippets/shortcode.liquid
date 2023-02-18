@@ -37,9 +37,9 @@
 
       {%- capture shortcodeFull -%}{{-shortcodeEndings[0]-}}{%- endcapture -%}
 
-      {%- capture shortcodeSplit -%}{{- shortcodeFull | strip | replace: ' ', ' "' | replace: '="', '":"' | replace: '" "', '","' | split: ' ' -}}{%- endcapture -%}
+      {% assign shortcodeArray = shortcodeFull | strip | replace: ' ', ' "' | replace: '="', '":"' | replace: '" "', '","' | split: ' ' %}
       {%- capture shortcodeJSON -%}
-        {{ shortcodeJSON }}"{{ shortcodeSplit.first }}":{[{{ shortcodeSplit.last }}]},
+        {{ shortcodeJSON }}"{{ shortcodeArray.first }}":{[{{ shortcodeArray.last }}]},
       {%- endcapture -%}
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
