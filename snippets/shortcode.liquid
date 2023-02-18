@@ -38,7 +38,7 @@
       {%- capture shortcodeFull -%}{{-shortcodeEndings[0]-}}{%- endcapture -%}
       
       {%- capture shortcodeJSON -%}
-        {{ shortcodeJSON }}{{ shortcodeFull | strip | replace: ' ', ' "' | replace: '="', '":"' | replace: '" "', '","' | prepend: '"' | split: ' ' | join: '":{' }}},
+        {{ shortcodeJSON }}{{ shortcodeFull }}
       {%- endcapture -%}
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
@@ -170,5 +170,5 @@
 {%- endif -%}
 
 <script>
-  console.log('{ {{ shortcodeJSON | replace_last: ',', '' }} }')
+  console.log('{{ shortcodeJSON }}')
 </script>
