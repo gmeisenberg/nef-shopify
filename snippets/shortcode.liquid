@@ -38,7 +38,7 @@
       {%- capture shortcodeFull -%}{{-shortcodeEndings[0]-}}{%- endcapture -%}
       
       {%- capture shortcodeDebug -%}
-        {{ shortcodeDebug }}\n[{{ shortcodeFull | strip | replace: ' ', ' "' | replace: '=', '": ' | replace: '" "', '",\n    "' | replace_first: ' ', '":\n  ' }}],
+        {{ shortcodeDebug }}\n[{{ shortcodeFull | strip | replace: ' ', ' "' | replace: '=', '": ' | replace: '" "', '",\n    "' | replace_first: ' ', '":\n    ' }}],
       {%- endcapture -%}
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
