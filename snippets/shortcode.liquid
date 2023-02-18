@@ -39,7 +39,10 @@
 
       {% assign shortcodeArray = shortcodeFull | strip | replace: ' ', ' "' | replace: '="', '":"' | replace: '" "', '","' | split: ' ' %}
       {%- capture shortcodeJSON -%}
-        {{ shortcodeJSON }}"{{ shortcodeArray.first }}":{[{{ shortcodeArray.last }}]},
+        {{- shortcodeJSON -}}
+        "{{- shortcodeArray.first -}}":{[
+        { asdf : asdf }
+        ]},
       {%- endcapture -%}
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
