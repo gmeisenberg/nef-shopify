@@ -170,6 +170,6 @@
 {%- endif -%}
 
 <script>
-  var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}]},"').replaceAll('" "','"},{"').replaceAll(' ','":{[{') + '}]}'
+  var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]}'
   console.log( shortcodeJSON )
 </script>
