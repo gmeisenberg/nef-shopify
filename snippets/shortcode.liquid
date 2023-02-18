@@ -36,13 +36,9 @@
       {%- assign contentAfterClosingTag = shortcodeEndings[1] -%}
 
       {%- capture shortcodeFull -%}{{-shortcodeEndings[0]-}}{%- endcapture -%}
-
-      {% assign shortcodeArray = shortcodeFull | strip | replace: ' ', ' "' | replace: '="', '":"' | replace: '" "', '","' | split: ' ' %}
+      
       {%- capture shortcodeJSON -%}
-        {{- shortcodeJSON -}}
-        "{{- shortcodeArray.first -}}":{[
-        { "asdf" : "asdf" }
-        ]},
+        {{ shortcodeJSON }}{{ shortcodeFull | strip | replace: ' ', ' "' | replace: '="', '":"' | replace: '" "', '","' }},
       {%- endcapture -%}
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
