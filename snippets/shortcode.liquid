@@ -35,7 +35,7 @@
 
       {%- capture shortcodeFull -%}{{-shortcodeEndings[0]-}}{%- endcapture -%}
       
-      <script>console.log('{{ shortcodeFull }}')</script>
+      <script>console.log('[{{ shortcodeFull }}]')</script>
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
       {%- assign variables = '' -%}
