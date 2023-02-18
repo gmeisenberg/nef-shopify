@@ -170,6 +170,9 @@
 <script>
   console.log(
     '// SHORTCODES //',
-    '{{ shortcodeDebug }}'
+    '{{ shortcodeDebug |
+        replace_first: ' ', ':' |
+        replace: ' ', ',\n    '
+        }}'
   )
 </script>
