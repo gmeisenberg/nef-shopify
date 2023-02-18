@@ -36,9 +36,10 @@
       {%- assign contentAfterClosingTag = shortcodeEndings[1] -%}
 
       {%- capture shortcodeFull -%}{{-shortcodeEndings[0]-}}{%- endcapture -%}
-      
+
+      {%- capture shortcodeSplit -%}{{- shortcodeFull | strip | replace: ' ', ' "' | replace: '="', '":"' | replace: '" "', '","' | split: ' ' -}}{%- endcapture -%}
       {%- capture shortcodeJSON -%}
-        {{ shortcodeJSON }}{{ shortcodeFull | strip | replace: ' ', ' "' | replace: '="', '":"' }},
+        {{ shortcodeJSON }}"{{ shortcodeSplit | first}}":{[{{ shortcodeSplit | last }}]},
       {%- endcapture -%}
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
