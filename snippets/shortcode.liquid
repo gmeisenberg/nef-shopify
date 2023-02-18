@@ -171,10 +171,11 @@
   console.log(
     '// SHORTCODES //',
     '{{ shortcodeDebug |
-        replace: ' ', '\n  "' |
+        replace_first: ' ', '": [\n    '
+        replace: ' ', ',\n    "' |
         replace: '=', '": ' | 
         replace: '[', '[ ' | 
-        replace: ']', '\n]' | 
+        replace: ']', '\n  ]\n]' | 
         replace_last: '],', ']' 
         }}'
   )
