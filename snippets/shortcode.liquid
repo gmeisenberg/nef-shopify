@@ -1,7 +1,7 @@
 {%- assign echo = echo | default: false -%}
 {%- assign read_more = read_more | default: false -%}
 
-{%- assign shortcodeJSON = '' -%}
+{%- assign shortcodeString = '' -%}
 
 {%- capture loadnew -%}{{- load | replace: '<!--[', '[' -}}{%- endcapture -%}
 {%- capture loadnew -%}{{- loadnew | replace: ']-->', ']' -}}{%- endcapture -%}
@@ -37,8 +37,8 @@
 
       {%- capture shortcodeFull -%}{{-shortcodeEndings[0]-}}{%- endcapture -%}
       
-      {%- capture shortcodeJSON -%}
-        {{ shortcodeJSON }}{{ shortcodeFull | strip | replace: ' ', ' "' | replace: '="', '":"' }},
+      {%- capture shortcodeString -%}
+        {{ shortcodeString }}{{ shortcodeFull | strip | replace: ' ', ' "' | replace: '="', '":"' }},
       {%- endcapture -%}
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
@@ -170,5 +170,5 @@
 {%- endif -%}
 
 <script>
-  console.log('{ {{ shortcodeJSON | replace_last: ',', '' }} }')
+  console.log('{ {{ shortcodeString | replace_last: ',', '' }} }')
 </script>
