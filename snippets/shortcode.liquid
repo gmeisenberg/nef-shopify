@@ -39,7 +39,9 @@
       
       {%- capture shortcodeJSON -%}
         {{- shortcodeJSON -}}
-        {{- shortcodeFull | split: ' ' | first -}},
+        {
+        {{- shortcodeFull | split: ' ' | first -}}
+        }
       {%- endcapture -%}
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
