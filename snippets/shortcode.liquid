@@ -37,7 +37,7 @@
 
       {%- capture shortcodeFull -%}{{-shortcodeEndings[0]-}}{%- endcapture -%}
       
-      {%- capture shortcodeDebug -%}{{ shortcodeDebug }}\n{{ '{{' }}{{ shortcodeFull | strip }}{{ '}}' }}{%- endcapture -%}
+      {%- capture shortcodeDebug -%}{{ shortcodeDebug }}\n[{{ shortcodeFull | strip }}]{%- endcapture -%}
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
       {%- assign variables = '' -%}
@@ -168,5 +168,5 @@
 {%- endif -%}
 
 <script>
-  console.log('// SHORTCODES //','{{ shortcodeDebug }}')
+  console.log('// SHORTCODES //','{{ shortcodeDebug | replace: ' ', '\n  ' | replace: '[', '[ ' | replace: ']', '\n],' | replace_last: '],', ']' }}')
 </script>
