@@ -1,6 +1,8 @@
 {%- assign echo = echo | default: false -%}
 {%- assign read_more = read_more | default: false -%}
 
+{%- assign shortcodeDebug = '// SHORTCODES //\n' -%}
+
 {%- capture loadnew -%}{{- load | replace: '<!--[', '[' -}}{%- endcapture -%}
 {%- capture loadnew -%}{{- loadnew | replace: ']-->', ']' -}}{%- endcapture -%}
 {%- capture loadnew -%}{{- loadnew | replace: ']</p>', ']' -}}{%- endcapture -%}
@@ -35,7 +37,7 @@
 
       {%- capture shortcodeFull -%}{{-shortcodeEndings[0]-}}{%- endcapture -%}
       
-      <script>console.log('[{{ shortcodeFull }}]')</script>
+      {%- assign shortcodeDebug = shortcodeDebug | append: '   [ {{ shortcodeFull }} ]\n' -%}
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
       {%- assign variables = '' -%}
