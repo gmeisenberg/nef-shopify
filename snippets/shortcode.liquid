@@ -168,5 +168,5 @@
 {%- endif -%}
 
 <script>
-  console.log('// SHORTCODES //','{{ shortcodeDebug }}')
+  console.log('// SHORTCODES //','{{ shortcodeDebug | replace: ' ', '\n  ' | replace: '[', '[ ' | replace: ']', '\n]' }}')
 </script>
