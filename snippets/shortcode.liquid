@@ -37,7 +37,7 @@
 
       {%- capture shortcodeFull -%}{{-shortcodeEndings[0]-}}{%- endcapture -%}
       
-      {%- capture shortcodeDebug -%}{{ shortcodeDebug }}\n[{{ shortcodeFull | replace: '" ', '"\n  ' }}]{%- endcapture -%}
+      {%- capture shortcodeDebug -%}{{ shortcodeDebug }}\n[{{- shortcodeFull | replace: ' ', '\n  ' -}}]{%- endcapture -%}
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
       {%- assign variables = '' -%}
