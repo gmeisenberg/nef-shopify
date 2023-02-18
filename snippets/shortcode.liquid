@@ -39,7 +39,7 @@
 
       {%- capture shortcodeSplit -%}{{- shortcodeFull | strip | replace: ' ', ' "' | replace: '="', '":"' | replace: '" "', '","' | split: ' ' -}}{%- endcapture -%}
       {%- capture shortcodeJSON -%}
-        {{ shortcodeJSON }}"{{ shortcodeSplit | first}}":{[{{ shortcodeSplit | last }}]},
+        {{ shortcodeJSON }}"{{ shortcodeSplit.first }}":{[{{ shortcodeSplit.last }}]},
       {%- endcapture -%}
 
       {%- assign shortcodes = shortcodeFull | split: '"' -%}
