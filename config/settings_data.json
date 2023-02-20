@@ -128,6 +128,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "cc471d03-ecea-4bb3-9231-39fd16339e8c": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF-98-banner-1600x535.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/voidscape-odyssey-of-spite"
+            }
+          },
           "99186bf0-570c-450b-a904-26c22db9a87f": {
             "type": "image",
             "settings": {
@@ -218,6 +229,7 @@
           }
         },
         "block_order": [
+          "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "99186bf0-570c-450b-a904-26c22db9a87f",
           "f180616d-e423-40f6-ae39-e45b6c5050c2",
           "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
