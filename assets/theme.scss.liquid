@@ -9248,6 +9248,11 @@ $min-height-disclosure: 92px;
   gap: 0 1.5rem;
 }
 .sc-grid > :not(.media-container),
-.sc-grid > .media-container__bandcamp {
+.sc-grid > .media-container__bandcamp,
+.sc-grid > .media-container:only-child,
+.sc-grid > .media-container:first-child:nth-last-child(2),
+.sc-grid > .media-container:first-child:nth-last-child(2) ~ .media-container,
+.sc-grid > .media-container:first-child:nth-last-child(3),
+.sc-grid > .media-container:first-child:nth-last-child(3) ~ .media-container {
   grid-column: 1 / 3;
 }
