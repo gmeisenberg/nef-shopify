@@ -9241,3 +9241,14 @@ $min-height-disclosure: 92px;
   text-decoration: line-through;
   pointer-events: none;
 }
+
+.sc_grid {
+  display: grid;
+  grid: 1fr / 1fr 1fr;
+  gap: 0 1.5rem;
+}
+.sc_grid > :not(.media-container),
+.sc_grid > .media-container:first-of-type,
+.sc_grid > .media-container__bandcamp {
+  grid-column: 1 / 3;
+}
