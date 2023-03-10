@@ -96,7 +96,7 @@
             {%- endfor -%}
 
             {%- capture output -%}
-              - {%- assign buildVariables = variables | split: '||' -%}{%- include template variable: buildVariables -%}
+              {%- assign buildVariables = variables | split: '||' -%}{%- include template variable: buildVariables -%}
             {%- endcapture -%}
 
             {%- if output contains 'Liquid error' -%}
