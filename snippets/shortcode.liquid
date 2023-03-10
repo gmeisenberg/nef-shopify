@@ -17,7 +17,7 @@
     {%- assign forloopNextIndex = forloop.index0 | plus: 1 -%}
 
     {%- comment -%}
-      // First Iteration will contain everithing before the first shortcode
+      // First Iteration will contain everything before the first shortcode
     {%- endcomment -%}
 
     {%- if forloop.first -%}
@@ -96,7 +96,7 @@
             {%- endfor -%}
 
             {%- capture output -%}
-              {%- assign buildVariables = variables | split: '||' -%}{%- include template variable: buildVariables -%}
+              - {%- assign buildVariables = variables | split: '||' -%}{%- include template variable: buildVariables -%}
             {%- endcapture -%}
 
             {%- if output contains 'Liquid error' -%}
@@ -127,7 +127,7 @@
             {%- assign keysFinal = keys | replace: ' ', '' | split: '||' -%}
 
             {%- capture output -%}
-              {%- include template variable: variablesFinal key: keysFinal -%}
+              - {%- include template variable: variablesFinal key: keysFinal -%}
             {%- endcapture -%}
 
             {%- if output contains 'Liquid error' -%}
