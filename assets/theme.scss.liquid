@@ -9247,12 +9247,11 @@ $min-height-disclosure: 92px;
   grid: 1fr / 1fr 1fr;
   gap: 0 1.5rem;
 }
-.sc-grid > :not(.media-container),
-.sc-grid > .media-container__bandcamp,
-.sc-grid > .media-container:first-of-type,
-.sc-grid > .media-container:first-of-type:nth-last-of-type(2),
-.sc-grid > .media-container:first-of-type:nth-last-of-type(2) ~ .media-container,
-.sc-grid > .media-container:first-of-type:nth-last-of-type(3),
-.sc-grid > .media-container:first-of-type:nth-last-of-type(3) ~ .media-container {
+.sc-grid > :not(.sc-grid__item),
+.sc-grid > .sc-grid__item:first-of-type,
+.sc-grid > .sc-grid__item:first-of-type:nth-last-of-type(2),
+.sc-grid > .sc-grid__item:first-of-type:nth-last-of-type(2) ~ .sc-grid__item,
+.sc-grid > .sc-grid__item:first-of-type:nth-last-of-type(3),
+.sc-grid > .sc-grid__item:first-of-type:nth-last-of-type(3) ~ .sc-grid__item {
   grid-column: 1 / 3;
 }
