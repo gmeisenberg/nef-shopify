@@ -127,7 +127,7 @@
             {%- assign keysFinal = keys | replace: ' ', '' | split: '||' -%}
 
             {%- capture output -%}
-              - {%- include template variable: variablesFinal key: keysFinal -%}
+              {%- include template variable: variablesFinal key: keysFinal -%}
             {%- endcapture -%}
 
             {%- if output contains 'Liquid error' -%}
