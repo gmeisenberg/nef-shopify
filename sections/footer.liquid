@@ -144,7 +144,7 @@
                       {%- assign icon_link = social | prepend: 'icon-' | downcase -%}
                       {%- if settings[social_link] != blank -%}
                       <li class="social-icons__item">
-                        <a class="social-icons__link" href="{{ settings[social_link] | escape }}" aria-describedby="a11y-external-message">
+                        <a class="social-icons__link" target="_blank" href="{{ settings[social_link] | escape }}" aria-describedby="a11y-external-message">
                           {%- include icon_link -%}
                           <span class="icon__fallback-text">{{ social }}</span>
                         </a>
