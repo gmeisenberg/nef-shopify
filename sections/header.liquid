@@ -157,7 +157,7 @@
 
     <nav class="mobile-nav-wrapper large-up--hide" role="navigation">
       <ul id="MobileNav" class="mobile-nav">
-        {% for link in linklists.mobile-nav.links %}
+        {% for link in linklists['mobile-nav'].links %}
           {%- assign outerLoopIndex = forloop.index -%}
           <li class="mobile-nav__item">
             {% if link.links != blank %}
@@ -248,17 +248,7 @@
         {% endfor %}
   
         <li class="social-icons">
-          {%- assign socials = "Facebook Instagram Twitter YouTube Bandcamp" | split: ' ' -%}
-          {%- for social in socials -%}
-            {%- assign social_link = social | prepend: 'social_' | append: '_link' | downcase -%}
-            {%- assign icon_link = social | prepend: 'icon-' | downcase -%}
-            {%- if settings[social_link] != blank -%}
-              <a class="social-icons__link" href="{{ settings[social_link] | escape }}" aria-describedby="a11y-external-message">
-                {%- include icon_link -%}
-                <span class="icon__fallback-text">{{ social }}</span>
-              </a>
-            {%- endif -%}
-          {%- endfor -%}
+          {% include 'social-links' %}
         </li>
       </ul>
     </nav>
@@ -266,7 +256,7 @@
 
   {% if section.settings.align_logo == 'center' %}
   <nav class="small--hide border-bottom" id="AccessibleNav" role="navigation">
-    {% include 'site-nav', linklist: section.settings.main_linklist, wrapper_class: 'site-nav--centered' %}
+    {% include 'site-nav', linklist: 'mobile-nav', wrapper_class: 'site-nav--centered' %}
   </nav>
   {% endif %}
 </div>
