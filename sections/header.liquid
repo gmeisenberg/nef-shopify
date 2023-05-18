@@ -157,7 +157,7 @@
 
     <nav class="mobile-nav-wrapper large-up--hide" role="navigation">
       <ul id="MobileNav" class="mobile-nav">
-        {% for link in linklists[mobile-nav].links %}
+        {% for link in linklists.mobile-nav.links %}
           {%- assign outerLoopIndex = forloop.index -%}
           <li class="mobile-nav__item">
             {% if link.links != blank %}
