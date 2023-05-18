@@ -131,7 +131,7 @@
           "cc471d03-ecea-4bb3-9231-39fd16339e8c": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF-98-banner-1600x535.jpg",
+              "image": "shopify:\/\/shop_images\/NEF-98-banner-out-now-1600x535.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
@@ -172,17 +172,6 @@
               "button_link": "shopify:\/\/collections\/sarattma-escape-velocity"
             }
           },
-          "91efeb3b-8298-425e-b84c-292a29259fd2": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/NEF-83-banner-out-now-1600x535.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/anxious-wave-live-from-the-poison-factory"
-            }
-          },
           "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d": {
             "type": "image",
             "settings": {
@@ -192,17 +181,6 @@
               "subheading": "",
               "button_label": "",
               "button_link": "shopify:\/\/collections\/brian-the-cataclysmic-engine"
-            }
-          },
-          "85e8b3a5-34e2-4a0a-88eb-486eb8ba4522": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/NEF-67-banner-out-now-1600x535.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/contemplator-morphose"
             }
           },
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c": {
@@ -222,9 +200,7 @@
           "99186bf0-570c-450b-a904-26c22db9a87f",
           "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
           "5d1bb0f9-11da-4c36-9b9a-ce50a9a72e0f",
-          "91efeb3b-8298-425e-b84c-292a29259fd2",
           "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d",
-          "85e8b3a5-34e2-4a0a-88eb-486eb8ba4522",
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c"
         ],
         "settings": {
