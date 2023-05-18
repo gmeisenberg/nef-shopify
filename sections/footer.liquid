@@ -135,32 +135,9 @@
                   {% endform %}
                 </div>
 
-                {%- assign socials = "Bandcamp Instagram Facebook YouTube" | split: ' ' -%}
                 {%- if social_icons -%}
                   <div class="site-footer__item-inner site-footer__item-inner--link_list">
-                    <ul class="social-icons site-footer__social-icons">
-                      {%- for social in socials -%}
-                      {%- assign social_link = social | prepend: 'social_' | append: '_link' | downcase -%}
-                      {%- assign icon_link = social | prepend: 'icon-' | downcase -%}
-                      {%- if settings[social_link] != blank -%}
-                      <li class="social-icons__item">
-                        <a class="social-icons__link" target="_blank" href="{{ settings[social_link] | escape }}" aria-describedby="a11y-external-message">
-                          {%- include icon_link -%}
-                          <span class="icon__fallback-text">{{ social }}</span>
-                        </a>
-                      </li>
-                      {%- endif -%}
-                      {%- endfor -%}
-
-                      {%- if request.page_type == 'blog' or request.page_type == 'article' -%}
-                      <li>
-                        <a class="social-icons__link" href="{{ shop.url }}{{ blog.url }}.atom">
-                          {% include 'icon-rss' %}
-                          <span class="icon__fallback-text">RSS</span>
-                        </a>
-                      </li>
-                      {%- endif -%}
-                    </ul>
+                    {% include 'social-links', className: 'site-footer__social-icons' %}
                   </div>
                 {%- endif -%}
 
