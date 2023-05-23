@@ -128,6 +128,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "80fec69c-f337-46e4-96b5-97e7a5496039": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF-97-banner_1600x535_6f6c9e48-5de3-4393-b648-c507fafec406.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/cinema-cinema-mjolnir"
+            }
+          },
           "cc471d03-ecea-4bb3-9231-39fd16339e8c": {
             "type": "image",
             "settings": {
@@ -196,6 +207,7 @@
           }
         },
         "block_order": [
+          "80fec69c-f337-46e4-96b5-97e7a5496039",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "99186bf0-570c-450b-a904-26c22db9a87f",
           "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
