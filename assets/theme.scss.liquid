@@ -3058,6 +3058,12 @@ hr {
 
 .grid-view-item__image {
   display: block;
+
+  .grid-view-item.artist & {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    width: 100%;
+  }
   
   .grid-view-item__image-wrapper & {
     position: absolute;
