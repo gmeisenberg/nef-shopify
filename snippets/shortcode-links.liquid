@@ -23,7 +23,7 @@
         {%- assign url = link[1] -%}
         {%- assign title = link[0] -%}
         <li class="social-icons__item">
-          <a class="social-icons__link" href="{{ url }}" title="{% if collection.title != blank %}{{ collection.title}} on {% endif %}{{ title }}">
+          <a class="social-icons__link" target="_blank" href="{{ url }}" title="{% if collection.title != blank %}{{ collection.title}} on {% endif %}{{ title }}">
             {%- include icon_link -%}
             <span class="icon__fallback-text">{{ title }}</span>
           </a>
