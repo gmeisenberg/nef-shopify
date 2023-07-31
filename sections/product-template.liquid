@@ -150,9 +150,6 @@
         {% if section.settings.show_vendor and product %}
           <div class="product__price price__vendor">
             {% assign vendor_delimiter = '//' %}
-            {% if vendors contains '&' %}
-              {% assign vendor_delimiter = '&' %}
-            {% endif %}
             {% assign vendors = product.vendor | split: vendor_delimiter %}
             {% for vendor in vendors %}
               {% assign vendor_handle = vendor | handleize %}
