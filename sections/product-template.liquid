@@ -159,6 +159,16 @@
               {% endif %}
               {% unless forloop.last == true %}//{% endunless %}
             {% endfor %}
+            {% assign vendors = product.vendor | split: '&' %}
+            {% for vendor in vendors %}
+              {% assign vendor_handle = vendor | handleize %}
+              {% if collections[vendor_handle] != blank %}
+                <a href="{{ collections[vendor_handle].url }}">{{ vendor }}</a>
+              {% else %}
+                {{ vendor }}
+              {% endif %}
+              {% unless forloop.last == true %}&{% endunless %}
+            {% endfor %}
           </div>
         {% endif %}
 
