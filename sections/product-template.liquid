@@ -149,7 +149,9 @@
 
         {% if section.settings.show_vendor and product %}
           <div class="product__price price__vendor">
-            {% assign vendors = product.vendor | split: '//' %}
+            {% if vendos contains '//' %}{% assign vendor_delimiter = '//' %}{% endif %}
+            {% if vendos contains '&' %}{% assign vendor_delimiter = '&' %}{% endif %}
+            {% assign vendors = product.vendor | split: vendor_delimiter %}
             {% for vendor in vendors %}
               {% assign vendor_handle = vendor | handleize %}
               {% if collections[vendor_handle] != blank %}
@@ -157,7 +159,7 @@
               {% else %}
                 {{ vendor }}
               {% endif %}
-              {% unless forloop.last == true %}//{% endunless %}
+              {% unless forloop.last == true %}{{ vendor_delimiter }}{% endunless %}
             {% endfor %}
           </div>
         {% endif %}
