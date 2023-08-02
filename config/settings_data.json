@@ -432,6 +432,12 @@
       "16554976101df50d3e": {
         "type": "collection-list",
         "blocks": {
+          "16554976101df50d3e-2": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "mac-gollehon-the-hispanic-mechanics-bite-of-the-street"
+            }
+          },
           "16554976101df50d3e-0": {
             "type": "featured_collection",
             "settings": {
@@ -455,20 +461,14 @@
             "settings": {
               "collection": "gematria-the-spindle-of-necessity"
             }
-          },
-          "16554976101df50d3e-2": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "nequient-darker-than-death-or-night"
-            }
           }
         },
         "block_order": [
+          "16554976101df50d3e-2",
           "16554976101df50d3e-0",
           "16554976101df50d3e-1",
           "c7bc433c-6f2d-4fd9-9bcf-e4a8f1aae68c",
-          "4afb37c7-e5f1-45ae-b1e6-0273ffc5cb7f",
-          "16554976101df50d3e-2"
+          "4afb37c7-e5f1-45ae-b1e6-0273ffc5cb7f"
         ],
         "settings": {
           "title": "",
@@ -492,7 +492,7 @@
           "title": "Sick Deals",
           "collection": "swag",
           "grid": 4,
-          "rows": 2,
+          "rows": 1,
           "show_vendor": false,
           "show_view_all": false
         }
