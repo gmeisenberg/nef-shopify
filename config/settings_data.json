@@ -128,6 +128,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "c49cbc1b-932b-4d0a-aef0-c554c2286b86": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF-99-banner-1600x535.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/mac-gollehon-the-hispanic-mechanics-bite-of-the-street"
+            }
+          },
           "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
             "type": "image",
             "settings": {
@@ -204,28 +215,17 @@
               "button_label": "",
               "button_link": "shopify:\/\/collections\/brian-the-cataclysmic-engine"
             }
-          },
-          "c49cbc1b-932b-4d0a-aef0-c554c2286b86": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/NEF-96-banner-out-now-1600x535.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/laces-out-here-at-the-ashram"
-            }
           }
         },
         "block_order": [
+          "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
           "80fec69c-f337-46e4-96b5-97e7a5496039",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "99186bf0-570c-450b-a904-26c22db9a87f",
           "5d1bb0f9-11da-4c36-9b9a-ce50a9a72e0f",
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c",
-          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d",
-          "c49cbc1b-932b-4d0a-aef0-c554c2286b86"
+          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d"
         ],
         "settings": {
           "slideshow_height": "adapt",
