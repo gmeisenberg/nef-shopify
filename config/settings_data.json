@@ -245,7 +245,7 @@
           "text_alignment": "center center",
           "show_overlay": false,
           "autorotate": true,
-          "autorotate_speed": 3
+          "autorotate_speed": 5
         }
       },
       "collection-template": {
