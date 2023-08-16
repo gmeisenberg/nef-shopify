@@ -67,9 +67,11 @@
       {%- if collection.template_suffix == 'artist' -%}
         <li class="grid__item artist small--one-half medium--one-third large-up--one-quarter">
 
-          <div class="grid-view-item product-card text-center">
+          <div class="grid-view-item product-card text-left">
             <div class="grid-view-item__vendor">
-              {{ collection.title }}
+              <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="{{ collection.url }}">
+                {{ collection.title }}
+              </a>
             </div>
           </div>
           
