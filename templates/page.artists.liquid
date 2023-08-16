@@ -9,6 +9,9 @@
   </div>
   {% endif %}
 
+  <header class="section-header">
+    <h2>Featured</h2>
+  </header>
   <ul class="grid grid--flex grid--uniform">
     {% for collection in collections %}
       {%- if collection.template_suffix == 'artist-featured' -%}
