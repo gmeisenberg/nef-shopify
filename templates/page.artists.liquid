@@ -20,52 +20,7 @@
   <ul class="grid grid--flex grid--uniform">
     {% for collection in collections %}
       {%- if collection.template_suffix == 'artist' -%}
-        <li class="grid__item artist small--one-half medium--one-third large-up--one-fifth">
-
-          <div class="grid-view-item product-card text-center">
-            <a class="grid-view-item__link grid-view-item__image-container full-width-link" 
-               href="{{ collection.url }}">
-              <span class="visually-hidden">{{ collection.title }}</span>
-            </a>
-
-            {% capture img_id %}ProductCardImage-{{ collection.id }}{% endcapture %}
-            {% capture wrapper_id %}ProductCardImageWrapper-{{ collection.id }}{% endcapture %}
-            {%- assign preview_image = collection.image -%}
-            {%- assign img_url = preview_image | img_url: '350x350' | replace: '_1x1.', '_{width}x.' -%}
-
-            {% unless preview_image == blank %}
-              {% include 'image-style', image: preview_image, img_id: img_id %}
-            {% endunless %}
-
-            <div class="product-card__image-with-placeholder-wrapper" data-image-with-placeholder-wrapper>
-              <div id="{{ wrapper_id }}" class="grid-view-item__image-wrapper product-card__image-wrapper js">
-                <div class="grid-view-item__outer">
-                  <div class="grid-view-item__inner">
-                    <img id="{{ img_id }}"
-                         class="grid-view-item__image lazyload"
-                         alt="{{ preview_image.alt }}"
-                         data-src="{{ img_url }}"
-                         data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
-                         data-aspectratio="{{ preview_image.aspect_ratio }}"
-                         data-sizes="auto"
-                         data-image />
-                  </div>
-                </div>
-              </div>
-              <div class="placeholder-background placeholder-background--animation" data-image-placeholder></div>
-            </div>
-
-            <noscript>
-              {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
-              <img class="grid-view-item__image" src="{{ preview_image | img_url: image_size, scale: 2 }}" alt="{{ preview_image.alt }}" style="max-width: {{ max_height | times: preview_image.aspect_ratio }}px;">
-            </noscript>
-
-            <div class="grid-view-item__vendor">
-              {{ collection.title }}
-            </div>
-          </div>
-          
-        </li>
+        {% include 'artist-grid-item', collection: collection %}
       {%- endif -%}
     {% endfor %}
   </ul>
