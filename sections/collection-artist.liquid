@@ -1,12 +1,130 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+{% comment %}
+  The contents of the collection.liquid template can be found in /sections/collection-template.liquid
+{% endcomment %}
 
-{% stylesheet %}
-{% endstylesheet %}
+{% if collection.description != blank %}
+  {% include 'shortcode' load: collection.description read_more: true %}
+{% endif %}
 
-{% javascript %}
-{% endjavascript %}
+{%- capture releases -%}
+  {%- for p in collection.products -%}
+    {% for c in p.collections %}
+      {%- if c.template_suffix == 'release' -%}
+        {{ c.metafields.nef.release_date }}|{{ c.handle }}
+      {%- endif -%}
+      {%- if forloop.last == false -%}::{%- endif -%}
+    {% endfor %}
+    {%- if forloop.last == false -%}::{%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+
+{% if sc_release_obj != blank %}
+  {%- assign releases = releases | append: '::' | append: sc_release_obj -%}
+{% endif %}
+
+{%- assign releases = releases | strip_newlines | split: '::' | uniq | sort | reverse -%}
+    
+<div class="page-width">
+  <div class="grid--masonry" data-masonry='{ "percentPosition": true, "horizontalOrder": false, "itemSelector": ".grid-item", "columnWidth": ".grid-sizer", "gutter": ".gutter-sizer" }'>
+    <div class="grid-sizer"></div>
+    <div class="gutter-sizer"></div>
+    
+    <div class="grid-item medium-up--one-half">
+      <div class="grid-view-item artist">
+        {% if sc_slider != blank %}
+          {{ sc_slider }}
+        {% else %}
+          <div class="grid-view-item__image-wrapper">
+            <div class="grid-view-item__outer">
+              <div class="grid-view-item__inner">
+                {% capture img_id %}ArtistImage-{{ collection.image.id }}{% endcapture %}
+                {% include 'image-style', image: collection.image, img_id: img_id %}
+                <img id="{{ img_id }}"
+                     class="grid-view-item__image lazyload"
+                     alt="{{ collection.image.alt }}"
+                     data-src="{{ collection.image | img_url: '800x800' }}"
+                     data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                     data-aspectratio="{{ collection.image.aspect_ratio }}"
+                     data-sizes="auto"
+                     data-image />
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if sc_links != blank %}
+        <div class="artist-links">
+          {{ sc_links }}
+        </div>
+      {% endif %}
+    </div>
+      
+    <div class="grid-item medium-up--one-half">
+      <header class="section-header">
+        <h1>{{ collection.title }}</h1>
+      </header>
+      
+      {% if sc_description != blank %}
+        <div class="rte">
+          {{ sc_description }}
+        </div>
+      {% endif %}
+    </div>
+                  
+    {% if sc_media != blank %}
+      <div class="grid-item medium-up--one-half">
+        <div class="section-header">
+          <h2>Media</h2>
+        </div>
+
+        <div class="artist-media">
+          {{ sc_media }}
+        </div>
+      </div>
+    {% endif %}
+      
+    {% if releases.size > 0 or collection.products.size > 0 %}
+      <div class="grid-item medium-up--one-half">
+
+      {% if releases.size > 0 %}
+        <div class="section-header">
+          <h2>Releases</h2>
+        </div>
+        
+        <ul class="grid grid--uniform">
+          {% for r in releases %}
+            {% if r.size > 0 %}
+              {%- assign release_meta = r | split: '|' -%}
+              {%- assign handle = release_meta[1] -%}
+
+              {%- assign rel = collections[handle] -%}
+              {%- assign prod = rel.products[0] -%}
+
+              <li class="grid__item small--one-half medium--one-half large-up--one-{% if releases.size > 4 %}third{% else %}half{% endif %}">
+                {% include 'product-card-grid', product: prod, release: rel %}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if collection.products.size > 0 %}
+        <div class="section-header">
+          <h2>Shop</h2>
+        </div>
+        
+        <ul class="grid grid--uniform">
+          {% for prod in collection.products %}
+            <li class="grid__item small--one-half medium--one-half large-up--one-{% if collection.products_count > 4 %}third{% else %}half{% endif %}">
+              {% include 'product-card-grid', product: prod, show_vendor: true %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      
+      </div>
+    {% endif %}
+    
+  </div>
+</div>
