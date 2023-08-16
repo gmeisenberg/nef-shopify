@@ -12,7 +12,7 @@
   <ul class="grid grid--flex grid--uniform">
     {% for collection in collections %}
       {%- if collection.template_suffix == 'artist-highlight' -%}
-        {% include 'artist-grid-item', collection: collection %}
+        {% include 'artist-grid-item', collection: collection, class: 'medium--one-half large-up--one-third' %}
       {%- endif -%}
     {% endfor %}
   </ul>
