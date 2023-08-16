@@ -9,7 +9,7 @@
     {% capture img_id %}ProductCardImage-{{ collection.id }}{% endcapture %}
     {% capture wrapper_id %}ProductCardImageWrapper-{{ collection.id }}{% endcapture %}
     {%- assign preview_image = collection.image -%}
-    {%- assign img_url = preview_image | img_url: '350x350' | replace: '_1x1.', '_{width}x.' -%}
+    {%- assign img_url = preview_image | img_url: '800x800' | replace: '_1x1.', '_{width}x.' -%}
 
     {% unless preview_image == blank %}
       {% include 'image-style', image: preview_image, img_id: img_id %}
