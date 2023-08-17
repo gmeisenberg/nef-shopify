@@ -19,7 +19,7 @@
   {% assign product_title = release.title | remove_first: product_vendor | remove_first: separator %}
 {% endif %}
 
-<div class="grid-view-item{% unless product.available %} grid-view-item--sold-out{% endunless %} product-card text-center">
+<div class="grid-view-item{% unless product.available %} grid-view-item--sold-out{% endunless %} product-card{% if release %} release{% endif %} text-center">
   <a class="grid-view-item__link grid-view-item__image-container full-width-link" 
      href="{% if release %}{{ release.url }}{% else %}{{ product.url | within: collection }}{% endif %}">
     <span class="visually-hidden">{{ product_title }}</span>
