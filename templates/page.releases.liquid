@@ -24,7 +24,7 @@
   </div>
   {% endif %}
 
-  <ul class="grid grid--flex grid--uniform releases">
+  <ul class="grid grid--flex grid--uniform">
     {% for release in releases %}
       {%- assign release_meta = release | split: '|' -%}
       {%- assign handle = release_meta[1] -%}
