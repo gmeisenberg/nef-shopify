@@ -128,17 +128,6 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
-          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/NEF101-banner_1600x535_d747e07e-8613-4292-ac4c-b824576410a0.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/bassoon-succumbent"
-            }
-          },
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf": {
             "type": "image",
             "settings": {
@@ -170,6 +159,17 @@
               "subheading": "",
               "button_label": "",
               "button_link": "shopify:\/\/collections\/mac-gollehon-the-hispanic-mechanics-bite-of-the-street"
+            }
+          },
+          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF101-banner_1600x535_d747e07e-8613-4292-ac4c-b824576410a0.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/bassoon-succumbent"
             }
           },
           "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
@@ -229,10 +229,10 @@
           }
         },
         "block_order": [
-          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d",
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
           "99186bf0-570c-450b-a904-26c22db9a87f",
           "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
+          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
           "80fec69c-f337-46e4-96b5-97e7a5496039",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
