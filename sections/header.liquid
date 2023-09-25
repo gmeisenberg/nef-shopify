@@ -81,9 +81,8 @@
             {%- assign img_url = section.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
             <a href="{{ routes.root_url }}" class="site-header__logo-image{% if section.settings.align_logo == 'center' %} site-header__logo-image--centered{% endif %}">
               {% capture logo_alt %}{{ section.settings.logo.alt | default: shop.name }}{% endcapture %}
-              {% comment %}
               <img src="{{ 'logo.svg' | asset_url }}"  alt="{{ shop.name }}" itemprop="logo" />
-              {% endcomment %}
+              {% comment %}
               <img class="lazyload js"
                    src="{{ section.settings.logo | img_url: '300x300' }}"
                    data-src="{{ img_url }}"
@@ -97,6 +96,7 @@
                      srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
                      alt="{{ section.settings.logo.alt | default: shop.name }}">
               </noscript>
+              {% endcomment %}
             </a>
           {% else %}
             <a class="site-header__logo-link" href="{{ routes.root_url }}">{{ shop.name }}</a>
