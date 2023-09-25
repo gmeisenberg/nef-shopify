@@ -79,9 +79,6 @@
         {% endif %}
           {% if section.settings.logo %}
             {%- assign img_url = section.settings.logo | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-            {% if request.page_type == 'index' %}
-              {%- assign page_image = img_url -%}
-            {% endif %}
             <a href="{{ routes.root_url }}" class="site-header__logo-image{% if section.settings.align_logo == 'center' %} site-header__logo-image--centered{% endif %}">
               {% capture logo_alt %}{{ section.settings.logo.alt | default: shop.name }}{% endcapture %}
               <img src="{{ 'logo.svg' | asset_url }}"  alt="{{ shop.name }}" itemprop="logo" />
