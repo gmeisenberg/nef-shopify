@@ -198,8 +198,15 @@
         .replaceAll('&quot;','')
         .replaceAll('“','');
     {%- endif -%}
-    {%- if collection.metafields.nef.catalog_number -%}
+    {%- if product.metafields.nef.catalog_number -%}
+      shortcodeJSON += ',"catalod_id": "{{ product.metafields.nef.catalog_number }}"';
+    {%- elsif collection.metafields.nef.catalog_number -%}
       shortcodeJSON += ',"catalod_id": "{{ collection.metafields.nef.catalog_number }}"';
+    {%- endif -%}
+    {%- if product.metafields.nef.release_date -%}
+      shortcodeJSON += ',"catalod_id": "{{ product.metafields.nef.release_date }}"';
+    {%- elsif collection.metafields.nef.catalog_number -%}
+      shortcodeJSON += ',"catalod_id": "{{ collection.metafields.nef.release_date }}"';
     {%- endif -%}
     shortcodeJSON += '}';
     console.log( JSON.parse( shortcodeJSON ) );
