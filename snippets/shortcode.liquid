@@ -21,18 +21,18 @@
     {%- endcomment -%}
 
     {%- if forloop.first -%}
-      {% capture sc_descHTML %}
+      {% capture sc_desc %}
         {{ shortcodeBegin }}
       {% endcapture %}
-      {% capture sc_descHTMLription %}
+      {% capture sc_description %}
         {%- if read_more == true -%}
-          {% include 'read-more', content: sc_descHTML %}
+          {% include 'read-more', content: sc_desc %}
         {%- else -%}
-          {{ sc_descHTML }}
+          {{ sc_desc }}
         {%- endif -%}
       {% endcapture %}
       {% if echo == true %}
-        {{ sc_descHTMLription }}
+        {{ sc_description }}
       {% endif %}
     {%- else -%}
       {%- assign shortcodeEndings = shortcodeBegin | split: ']' -%}
@@ -160,28 +160,29 @@
   {%- endfor -%}
 
 {%- else -%}
-  {% capture sc_descHTML %}
+  {% capture sc_desc %}
     {{ load }}
   {% endcapture %}
-  {% capture sc_descHTMLription %}
+  {% capture sc_description %}
     {%- if read_more == true -%}
-      {%- include 'read-more', content: sc_descHTML -%}
+      {%- include 'read-more', content: sc_desc -%}
     {%- else -%}
-      {{- sc_descHTML -}}
+      {{- sc_desc -}}
     {%- endif -%}
   {% endcapture %}
   {% if echo == true %}
-    {{ sc_descHTMLription }}
+    {{ sc_description }}
   {% endif %}
 {%- endif -%}
 
 {%- if content_for_header contains 'adminBar' -%}
   {%- if shortcodeString != empty -%}
   <script>
-    var shortcodeJSON = '{';
-    shortcodeJSON += '"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]';
-    shortcodeJSON += '}';
+    var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]}';
     console.log( JSON.parse( shortcodeJSON ) );
+    {%- if sc_desc != blank -%}
+      console.log( {{ sc_desc | json }} );
+    {%- endif -%}
     {%- if sc_read != blank -%}
       console.log( {{ sc_read | json }} );
     {%- endif -%}
