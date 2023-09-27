@@ -178,14 +178,16 @@
 {%- if content_for_header contains 'adminBar' -%}
   {%- if shortcodeString != empty -%}
   <script>
-    var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]}';
-    console.log( JSON.parse( shortcodeJSON ) );
+    var shortcodeJSON = '{';
+    shortcodeJSON += '"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]';
     {%- if sc_descHTML != blank -%}
-      console.log( `{{ sc_descHTML | strip | json }}` );
+      shortcodeJSON += `,"description": {{ sc_descHTML | strip | json }}`;
     {%- endif -%}
     {%- if sc_read != blank -%}
-      console.log( `{{ sc_read | strip | json }}` );
+      shortcodeJSON += `,"reviews": {{ sc_read | strip | json }}`;
     {%- endif -%}
+    shortcodeJSON += '}';
+    console.log( JSON.parse( shortcodeJSON ) );
   </script>
   {%- endif -%}
 {%- endif -%}
