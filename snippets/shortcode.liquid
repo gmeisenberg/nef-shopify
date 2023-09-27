@@ -182,7 +182,7 @@
     shortcodeJSON += '"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]';
     shortcodeJSON += ',"description": {{ sc_descHTML | json }}';
     shortcodeJSON += '}';
-    console.log( JSON.parse( shortcodeJSON ) );
+    console.log( shortcodeJSON );
     {%- if sc_read != blank -%}
       console.log( {{ sc_read | json }} );
     {%- endif -%}
