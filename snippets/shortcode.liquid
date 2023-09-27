@@ -181,10 +181,10 @@
     var shortcodeJSON = '{';
     shortcodeJSON += '"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]';
     {%- if sc_descHTML != blank -%}
-      shortcodeJSON += ',"description": {{ sc_descHTML | strip | escape_once | json }}';
+      shortcodeJSON += ',"description": {{ sc_descHTML | strip | escape_once }}';
     {%- endif -%}
     {%- if sc_read != blank -%}
-      shortcodeJSON += ',"reviews": {{ sc_read | strip | escape_once | json }}';
+      shortcodeJSON += ',"reviews": {{ sc_read | strip | escape_once }}';
     {%- endif -%}
     shortcodeJSON += '}';
     console.log( JSON.parse( shortcodeJSON ) );
