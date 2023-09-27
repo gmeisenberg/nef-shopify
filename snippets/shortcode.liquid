@@ -26,9 +26,9 @@
       {% endcapture %}
       {% capture sc_descHTMLription %}
         {%- if read_more == true -%}
-          {% include 'read-more', content: sc_descHTML %}
+          {% include 'read-more', content: shortcodeBegin %}
         {%- else -%}
-          {{ sc_descHTML }}
+          {{ shortcodeBegin }}
         {%- endif -%}
       {% endcapture %}
       {% if echo == true %}
@@ -165,9 +165,9 @@
   {% endcapture %}
   {% capture sc_descHTMLription %}
     {%- if read_more == true -%}
-      {%- include 'read-more', content: sc_descHTML -%}
+      {%- include 'read-more', content: load -%}
     {%- else -%}
-      {{- sc_descHTML -}}
+      {{- load -}}
     {%- endif -%}
   {% endcapture %}
   {% if echo == true %}
