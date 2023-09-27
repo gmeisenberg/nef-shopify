@@ -179,12 +179,12 @@
   {%- if shortcodeString != empty -%}
   <script>
     var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]}';
-    console.log( 'shortcodeJSON', JSON.parse( shortcodeJSON ) );
+    console.log( 'shortcodeJSON:', JSON.parse( shortcodeJSON ) );
     {%- if sc_descHTML != blank -%}
-      console.log( 'description', {{ sc_descHTML | json }} );
+      console.log( 'description:', {{ sc_descHTML | json }} );
     {%- endif -%}
     {%- if sc_read != blank -%}
-      console.log( {{ sc_read | json }} );
+      console.log( 'reviews:', {{ sc_read | json }} );
     {%- endif -%}
   </script>
   {%- endif -%}
