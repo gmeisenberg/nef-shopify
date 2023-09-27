@@ -198,7 +198,9 @@
         .replaceAll('&quot;','')
         .replaceAll('“','');
     {%- endif -%}
+    {%- if collection.metafields.nef.catalog_number -%}
       shortcodeJSON += ',"catalod_id": "{{ collection.metafields.nef.catalog_number }}"';
+    {%- endif -%}
     shortcodeJSON += '}';
     console.log( JSON.parse( shortcodeJSON ) );
   </script>
