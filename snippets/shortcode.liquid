@@ -171,7 +171,8 @@
 
 {%- if shortcodeString != empty -%}
 <script>
-  var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]}'
-  console.log( JSON.parse( shortcodeJSON ) )
+  var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]}';
+  console.log( JSON.parse( shortcodeJSON ) );
+  console.log( '{{ content_for_header }}' );
 </script>
 {%- endif  -%}
