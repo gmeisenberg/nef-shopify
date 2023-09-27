@@ -21,11 +21,14 @@
     {%- endcomment -%}
 
     {%- if forloop.first -%}
+      {% capture sc_desc %}
+        {{ shortcodeBegin }}
+      {% endcapture %}
       {% capture sc_description %}
         {%- if read_more == true -%}
-          {% include 'read-more', content: shortcodeBegin %}
+          {% include 'read-more', content: sc_desc %}
         {%- else -%}
-          {{ shortcodeBegin }}
+          {{ sc_desc }}
         {%- endif -%}
       {% endcapture %}
       {% if echo == true %}
