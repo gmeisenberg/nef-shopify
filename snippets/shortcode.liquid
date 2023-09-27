@@ -22,7 +22,7 @@
 
     {%- if forloop.first -%}
       {% capture sc_descHTML %}
-        {{ shortcodeBegin }}
+        {{ shortcodeBegin | escape | json }}
       {% endcapture %}
       {% capture sc_descHTMLription %}
         {%- if read_more == true -%}
@@ -161,7 +161,7 @@
 
 {%- else -%}
   {% capture sc_descHTML %}
-    {{ load }}
+    {{ load | escape | json }}
   {% endcapture %}
   {% capture sc_descHTMLription %}
     {%- if read_more == true -%}
@@ -181,7 +181,7 @@
     var shortcodeJSON = '{';
     shortcodeJSON += '"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]';
     {%- if sc_descHTML != blank -%}
-      shortcodeJSON += ',"description": "{{ 'asdf' | escape | json }}"';
+      shortcodeJSON += ',"description": "{{ sc_descHTML }}"';
     {%- endif -%}
     shortcodeJSON += '}';
     console.log( JSON.parse( shortcodeJSON ) );
