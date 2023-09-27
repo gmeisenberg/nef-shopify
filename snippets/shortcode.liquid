@@ -205,7 +205,7 @@
     {%- endif -%}
     {%- if product.metafields.nef.release_date -%}
       shortcodeJSON += ',"catalod_id": "{{ product.metafields.nef.release_date }}"';
-    {%- elsif collection.metafields.nef.catalog_number -%}
+    {%- elsif collection.metafields.nef.release_date -%}
       shortcodeJSON += ',"catalod_id": "{{ collection.metafields.nef.release_date }}"';
     {%- endif -%}
     shortcodeJSON += '}';
