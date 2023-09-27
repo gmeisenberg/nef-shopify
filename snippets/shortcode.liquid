@@ -178,7 +178,9 @@
 {%- if content_for_header contains 'adminBar' -%}
   {%- if shortcodeString != empty -%}
   <script>
-    var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]}';
+    var shortcodeJSON = '{';
+    shortcodeJSON += '"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]';
+    shortcodeJSON += '}';
     console.log( JSON.parse( shortcodeJSON ) );
     {%- if sc_descHTML != blank -%}
       console.log( {{ sc_descHTML | json }} );
