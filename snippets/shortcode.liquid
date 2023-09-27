@@ -169,9 +169,11 @@
   {% endif %}
 {%- endif -%}
 
-{%- if shortcodeString != empty -%}
-<script>
-  var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]}';
-  console.log( JSON.parse( shortcodeJSON ) );
-</script>
+{%- if content_for_header contains 'adminBar' -%}
+  {%- if shortcodeString != empty -%}
+  <script>
+    var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]}';
+    console.log( JSON.parse( shortcodeJSON ) );
+  </script>
+  {%- endif  -%}
 {%- endif  -%}
