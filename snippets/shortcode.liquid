@@ -184,7 +184,7 @@
       shortcodeJSON += ',"description": {{ sc_descHTML | strip | strip_newlines | escape_once | json }}';
     {%- endif -%}
     {%- if sc_read != blank -%}
-      shortcodeJSON += ',"reviews": [{{ sc_read | strip | strip_newlines | escape_once }}]'.replaceAll('&lt;p&gt;','{"review":`').replaceAll('&lt;/p&gt;','`},');
+      shortcodeJSON += ',"reviews": [{{ sc_read | strip | strip_newlines | escape_once }}]';
     {%- endif -%}
     shortcodeJSON += '}';
     console.log( JSON.parse( shortcodeJSON ) );
