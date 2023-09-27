@@ -180,9 +180,6 @@
   <script>
     var shortcodeJSON = '{';
     shortcodeJSON += '"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]';
-    {%- if sc_descHTML != blank -%}
-      shortcodeJSON += ',"description": "asdf"';
-    {%- endif -%}
     shortcodeJSON += '}';
     console.log( JSON.parse( shortcodeJSON ) );
     {%- if sc_read != blank -%}
