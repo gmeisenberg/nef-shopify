@@ -22,7 +22,7 @@
 
     {%- if forloop.first -%}
       {% capture sc_descHTML %}
-        {{ shortcodeBegin | escape | json }}
+        {{ shortcodeBegin | escape }}
       {% endcapture %}
       {% capture sc_descHTMLription %}
         {%- if read_more == true -%}
@@ -161,7 +161,7 @@
 
 {%- else -%}
   {% capture sc_descHTML %}
-    {{ load | escape | json }}
+    {{ load | escape }}
   {% endcapture %}
   {% capture sc_descHTMLription %}
     {%- if read_more == true -%}
