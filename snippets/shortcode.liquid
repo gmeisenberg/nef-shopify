@@ -192,9 +192,11 @@
         .replaceAll('&lt;p&gt;','[{"review":"')
         .replaceAll('&lt;/p&gt;','"}]')
         .replaceAll('&quot; - &lt;a href=&quot;','","url":"')
+        .replaceAll('” - &lt;a href=&quot;','","url":"')
         .replaceAll('&quot;&gt;','","source":"')
         .replaceAll('&lt;/a&gt;','')
-        .replaceAll('&quot;','');
+        .replaceAll('&quot;','')
+        .replaceAll('“','');
     {%- endif -%}
     shortcodeJSON += '}';
     console.log( JSON.parse( shortcodeJSON ) );
