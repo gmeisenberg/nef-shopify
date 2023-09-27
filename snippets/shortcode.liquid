@@ -204,9 +204,9 @@
       shortcodeJSON += ',"catalod_id": "{{ collection.metafields.nef.catalog_number }}"';
     {%- endif -%}
     {%- if product.metafields.nef.release_date -%}
-      shortcodeJSON += ',"catalod_id": "{{ product.metafields.nef.release_date }}"';
+      shortcodeJSON += ',"release_date": "{{ product.metafields.nef.release_date }}"';
     {%- elsif collection.metafields.nef.release_date -%}
-      shortcodeJSON += ',"catalod_id": "{{ collection.metafields.nef.release_date }}"';
+      shortcodeJSON += ',"release_date": "{{ collection.metafields.nef.release_date }}"';
     {%- endif -%}
     shortcodeJSON += '}';
     console.log( JSON.parse( shortcodeJSON ) );
