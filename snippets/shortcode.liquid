@@ -198,6 +198,9 @@
         .replaceAll('&quot;','')
         .replaceAll('“','');
     {%- endif -%}
+    {%- if template.name == 'collection' -%}
+      shortcodeJSON += ',"catalod_id": {{ collection.metafields.nef.catalog_number }}';
+    {%- endif -%}
     shortcodeJSON += '}';
     console.log( JSON.parse( shortcodeJSON ) );
   </script>
