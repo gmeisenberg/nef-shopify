@@ -160,11 +160,14 @@
   {%- endfor -%}
 
 {%- else -%}
+  {% capture sc_desc %}
+    {{ load }}
+  {% endcapture %}
   {% capture sc_description %}
     {%- if read_more == true -%}
-      {%- include 'read-more', content: load -%}
+      {%- include 'read-more', content: sc_desc -%}
     {%- else -%}
-      {{- load -}}
+      {{- sc_desc -}}
     {%- endif -%}
   {% endcapture %}
   {% if echo == true %}
@@ -177,8 +180,8 @@
   <script>
     var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]}';
     console.log( JSON.parse( shortcodeJSON ) );
-    {%- if sc_description != blank -%}
-      console.log( {{ sc_description | json }} );
+    {%- if sc_desc != blank -%}
+      console.log( {{ sc_desc | json }} );
     {%- endif -%}
     {%- if sc_read != blank -%}
       console.log( {{ sc_read | json }} );
