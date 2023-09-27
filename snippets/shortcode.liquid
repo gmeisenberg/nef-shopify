@@ -174,7 +174,9 @@
   <script>
     var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]}';
     console.log( JSON.parse( shortcodeJSON ) );
-    console.log( '{{ contentAfterClosingTag }}' )
+    {%- if sc_description != blank -%}
+      console.log( {{ sc_description }} )
+    {%- endif -%}
   </script>
-  {%- endif  -%}
-{%- endif  -%}
+  {%- endif -%}
+{%- endif -%}
