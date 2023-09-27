@@ -181,10 +181,10 @@
     var shortcodeJSON = '{"' + '{{ shortcodeString | replace_last: ',', '' }}'.replaceAll(',','}],"').replaceAll('" "','"},{"').replaceAll(' ','":[{') + '}]}';
     console.log( JSON.parse( shortcodeJSON ) );
     {%- if sc_descHTML != blank -%}
-      console.log( `{{ sc_descHTML | strip | json }}` );
+      console.log( `{{ sc_descHTML | strip | escape_once | json }}` );
     {%- endif -%}
     {%- if sc_read != blank -%}
-      console.log( `{{ sc_read | strip | json }}` );
+      console.log( `{{ sc_read | strip | escape_once | json }}` );
     {%- endif -%}
   </script>
   {%- endif -%}
