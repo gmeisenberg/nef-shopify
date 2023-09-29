@@ -128,21 +128,10 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
-          "40f02c18-c4b8-4290-be55-8f4ea239fdcf": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/NEF102-banner-out-now_1600x535_30abcddd-c7b2-49d3-81f3-f63902ebef2d.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/equivocator"
-            }
-          },
           "99186bf0-570c-450b-a904-26c22db9a87f": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF104-banner_1600x535_2efd173c-ddbb-4c46-b99a-22352688d677.jpg",
+              "image": "shopify:\/\/shop_images\/NEF104-banner-out-now_1600x535_c7c8a371-5189-4b3b-adc4-41c3bb414b10.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
@@ -153,12 +142,23 @@
           "c49cbc1b-932b-4d0a-aef0-c554c2286b86": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF-99-banner-1600x535.jpg",
+              "image": "shopify:\/\/shop_images\/NEF-99-banner-out-now-1600x535.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
               "button_link": "shopify:\/\/collections\/mac-gollehon-the-hispanic-mechanics-bite-of-the-street"
+            }
+          },
+          "40f02c18-c4b8-4290-be55-8f4ea239fdcf": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF102-banner-out-now_1600x535_30abcddd-c7b2-49d3-81f3-f63902ebef2d.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/equivocator"
             }
           },
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c": {
@@ -229,9 +229,9 @@
           }
         },
         "block_order": [
-          "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
           "99186bf0-570c-450b-a904-26c22db9a87f",
           "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
+          "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c",
           "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
