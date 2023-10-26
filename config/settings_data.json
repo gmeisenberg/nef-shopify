@@ -215,17 +215,6 @@
               "button_label": "",
               "button_link": "shopify:\/\/collections\/voidscape-odyssey-of-spite"
             }
-          },
-          "5d1bb0f9-11da-4c36-9b9a-ce50a9a72e0f": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/NEF-80-banner-out-now-1600x535.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/sarattma-escape-velocity"
-            }
           }
         },
         "block_order": [
@@ -236,8 +225,7 @@
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
           "80fec69c-f337-46e4-96b5-97e7a5496039",
-          "cc471d03-ecea-4bb3-9231-39fd16339e8c",
-          "5d1bb0f9-11da-4c36-9b9a-ce50a9a72e0f"
+          "cc471d03-ecea-4bb3-9231-39fd16339e8c"
         ],
         "settings": {
           "slideshow_height": "adapt",
@@ -447,13 +435,13 @@
           "16554976101df50d3e-2": {
             "type": "featured_collection",
             "settings": {
-              "collection": "mac-gollehon-the-hispanic-mechanics-bite-of-the-street"
+              "collection": "psychosomatic-the-invisible-prison"
             }
           },
           "16554976101df50d3e-0": {
             "type": "featured_collection",
             "settings": {
-              "collection": "oxx-the-primordial-blues"
+              "collection": "nequient-darker-than-death-or-night"
             }
           },
           "c7bc433c-6f2d-4fd9-9bcf-e4a8f1aae68c": {
