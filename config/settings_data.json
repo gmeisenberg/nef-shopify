@@ -128,6 +128,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "b8887a17-7495-49e9-979f-1bcb0e534d3e": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2023-year-end-sale-02.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c": {
             "type": "image",
             "settings": {
@@ -218,6 +229,7 @@
           }
         },
         "block_order": [
+          "b8887a17-7495-49e9-979f-1bcb0e534d3e",
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c",
           "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d",
           "99186bf0-570c-450b-a904-26c22db9a87f",
