@@ -38,7 +38,7 @@
     "message": true,
     "home_page_only": false,
     "message_text": "<p><strong>25% OFF EVERYTHING through January 05!<br\/><\/strong>Discount applied automatically at checkout. Excludes Pre-Orders & Grab Bags.<\/p>",
-    "message_bg_color": "#5e0ba7",
+    "message_bg_color": "#21bf0d",
     "message_text_color": "#ffffff",
     "enable_ajax": true,
     "checkout_header_image": "",
@@ -128,6 +128,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF101-banner_1600x535_f48f392a-7a65-466e-8231-7975596eca6e.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/bassoon-succumbent"
+            }
+          },
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c": {
             "type": "image",
             "settings": {
@@ -148,17 +159,6 @@
               "subheading": "",
               "button_label": "",
               "button_link": ""
-            }
-          },
-          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/NEF101-banner_1600x535_f48f392a-7a65-466e-8231-7975596eca6e.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/bassoon-succumbent"
             }
           },
           "99186bf0-570c-450b-a904-26c22db9a87f": {
@@ -229,9 +229,9 @@
           }
         },
         "block_order": [
+          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d",
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c",
           "b8887a17-7495-49e9-979f-1bcb0e534d3e",
-          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d",
           "99186bf0-570c-450b-a904-26c22db9a87f",
           "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
