@@ -10,10 +10,6 @@
 {%- assign max_height = 195 -%}
 {%- assign limit = 100 -%}
 
-{% if collection.image != blank %}
- <div class="collection-release__bg" style="background-image: url('{{ collection.image | img_url: '2048x' }});"></div>
-{% endif %}
-
 <div class="collection--{{ catalog_id | handleize }} collection-release" data-section-type="collection-template">
   <header class="collection-header">
     <div class="collection-hero">
