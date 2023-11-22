@@ -22,7 +22,7 @@
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section" data-header-section>  
   {%- assign show_announcement_bar = true -%}
-  {%- if request.page_type == 'collection' and collection.template_suffix == 'sale' -%}
+  {%- if request.page_type == 'collection' and collection.template_suffix == 'product-custom' -%}
     {%- assign show_announcement_bar = false -%}
   {%- endif -%}
   
