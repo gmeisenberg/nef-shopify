@@ -20,7 +20,7 @@
       <div class="collection-hero__image ratio-container lazyload js{% if featured_image.aspect_ratio > 2 %} wide{% endif %}"
            data-bgset="{% include 'bgset', image: featured_image %}"
            data-sizes="auto"
-           data-parent-fit="cover"
+           data-parent-fit="contain"
            style="background-image: url('{{ featured_image | img_url: '2048x' }});"></div>
       <noscript>
         <div class="collection-hero__image" style="background-image: url({{ featured_image | img_url: '2048x' }});"></div>
