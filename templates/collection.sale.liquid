@@ -2,10 +2,6 @@
   The contents of the collection.liquid template can be found in /sections/collection-template.liquid
 {% endcomment %}
 
-{% if collection.description != blank %}
-  {% include 'shortcode', load: collection.description %}
-{% endif %}
-
 {%- assign featured_image = collection.image -%}
 {%- assign max_height = 195 -%}
 {%- assign limit = 100 -%}
@@ -40,67 +36,11 @@
         {% endfor %}
       </ul>
     </div>
-
-    {% if sc_shop_partner != blank %}
-    <div id="partner" class="section-container page-width">
-      {{ sc_shop_partner }}
-    </div>
-    {% endif %}
   </section>
   
-  {% if sc_media != blank %}
-    <section class="dark release-media">
-      <div id="media" class="section-container page-width">
-        <div class="grid grid--flex">
-          <div class="grid__item medium-up--three-fifths">
-            <div class="section-header text-center">
-              <h2>Watch // Listen</h2>
-            </div>
-            <div class="sc-grid">
-            {{ sc_media }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  {% endif %}
-
-  {% if sc_digital != blank %}
-    <section class="dark{% if collection.image != blank %} transparent{% endif %} release-digital-links">
-      <div id="stream" class="section-container page-width">
-        <div class="grid grid--flex">
-          <div class="grid__item medium-up--one-half">
-            <div class="section-header text-center">
-              <h2>Stream</h2>
-            </div>
-            {{ sc_digital }}
-          </div>
-        </div>
-      </div>
-    </section>
-  {% endif %}
-
-  {% if sc_read != blank or sc_description != blank %}
-    <section class="release-read">
-      <div id="read" class="section-container page-width">
-        {% if sc_description != blank %}
-          {{ sc_description }}
-        {% endif %}
-        {% if sc_read != blank %}
-          {% assign sc_read_col = sc_read | strip | split: '<p>' %}
-          <div class="release-reviews">
-            {% if sc_read_col.size > 3 %}
-              <div class="grid--masonry" data-masonry='{ "percentPosition": true, "itemSelector": "p", "columnWidth": ".grid-sizer", "gutter": ".gutter-sizer" }'>
-                <div class="grid-sizer"></div>
-                <div class="gutter-sizer"></div>
-                {{ sc_read }}
-              </div>
-            {% else %}
-              {{ sc_read }}
-            {% endif %}
-          </div>
-        {% endif %}
-      </div>
-    </section>
+  {% if collection.description != blank %}
+    <div class="rte collection-description page-width">
+      {{ collection.description }}
+    </div>
   {% endif %}
 </div>
