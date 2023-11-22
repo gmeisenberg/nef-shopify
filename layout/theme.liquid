@@ -126,8 +126,12 @@
 {% include 'cscode_discount' %}
 </head>
 
+{%- assign collection_release = false -%}
 {%- if request.page_type == 'collection' -%}
   {%- capture collection_handle -%}collection-{{ collection.template_suffix }}{%- endcapture -%}
+  {%- if collection.template_suffix == 'release' -%}
+    {%- assign collection_release = true -%}
+  {%- endif -%}
 {%- endif -%}
 
 <body class="template-{{ request.page_type | handle }} {{ collection_handle }} {% if settings.message %}{% if settings.home_page_only == false or request.page_type == 'index' %} has-announcement{% endif %}{% endif %}">
