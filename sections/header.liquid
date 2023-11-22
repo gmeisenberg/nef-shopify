@@ -20,8 +20,13 @@
 
 {% include 'search-drawer' %}
 
-<div data-section-id="{{ section.id }}" data-section-type="header-section" data-header-section>
-  {% if settings.message %}
+<div data-section-id="{{ section.id }}" data-section-type="header-section" data-header-section>  
+  {%- assign show_announcement_bar = true -%}
+  {%- if request.page_type == 'collection' and collection.template_suffix == 'sale' -%}
+    {%- assign show_announcement_bar = true -%}
+  {%- endif -%}
+  
+  {% if settings.message and show_announcement_bar %}
     {% if settings.home_page_only == false or request.page_type == 'index' %}
       <style>
         .announcement-bar {
