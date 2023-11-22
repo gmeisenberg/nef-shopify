@@ -31,7 +31,7 @@
 <div class="collection--{{ catalog_id | handleize }}" data-section-type="collection-template">
   <header class="collection-header">
     <div class="collection-hero">
-      <div class="collection-hero__image ratio-container lazyload js{% if featured_image.aspect_ratio > 2 %} wide{% endif %}{% if sc_hero_image == blank %} blur{% endif %}"
+      <div class="collection-hero__image ratio-container lazyload js{% if featured_image.aspect_ratio > 2 %} wide{% endif %}"
            data-bgset="{% include 'bgset', image: featured_image %}"
            data-sizes="auto"
            data-parent-fit="cover"
@@ -39,17 +39,6 @@
       <noscript>
         <div class="collection-hero__image" style="background-image: url({{ featured_image | img_url: '2048x' }});"></div>
       </noscript>
-      {% if sc_hero_image == blank %}
-        <div class="collection-hero__title-wrapper">
-          <h1 class="collection-hero__title page-width">
-            <img src="{{ featured_image | img_url: '300x300' }}" alt="{{ featured_image.alt }}" />
-            <span>
-              <span class="visually-hidden">{{ 'collections.general.collection_label' | t }}: </span>
-              {{ release_artist }}<br />{{ release_title }}
-            </span>
-          </h1>
-        </div>
-      {% endif %}
     </div>
   </header>
 
