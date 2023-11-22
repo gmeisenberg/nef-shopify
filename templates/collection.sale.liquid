@@ -12,7 +12,7 @@
 
 <div class="collection--{{ catalog_id | handleize }} collection-release" data-section-type="collection-template">
   <header class="collection-header">
-    <div class="collection-hero">
+    <div class="collection-hero" style="margin-bottom: 0;">
       <div class="collection-hero__image ratio-container lazyload js{% if featured_image.aspect_ratio > 2 %} wide{% endif %}"
            data-bgset="{% include 'bgset', image: featured_image %}"
            data-sizes="auto"
