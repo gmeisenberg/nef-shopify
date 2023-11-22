@@ -126,12 +126,11 @@
 {% include 'cscode_discount' %}
 </head>
 
-{%- assign collection_release = false -%}
-{%- if request.page_type == 'collection' and collection.template_suffix == 'release' -%}
-  {%- assign collection_release = true -%}
+{%- if request.page_type == 'collection' -%}
+  {%- assign collection_handle = 'collection-'{{ request.page_type | handle }} -%}
 {%- endif -%}
 
-<body class="template-{{ request.page_type | handle }}{% if collection_release %} collection-release{% endif %}{% if settings.message %}{% if settings.home_page_only == false or request.page_type == 'index' %} has-announcement{% endif %}{% endif %}">
+<body class="template-{{ request.page_type | handle }} {{ collection_handle }} {% if settings.message %}{% if settings.home_page_only == false or request.page_type == 'index' %} has-announcement{% endif %}{% endif %}">
 
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
