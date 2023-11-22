@@ -5017,11 +5017,11 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 #shopify-section-header {
   transition: transform $transition-duration-slow ease;
   
-  .has-scrolled:not(.mobile-nav--is-open):not(.collection-release) & {
+  .has-scrolled:not(.mobile-nav--is-open):not(.collection-release, .collection-sale) & {
     transform: translateY(-#{$header-padding});
   }
 
-  .has-announcement.has-scrolled:not(.mobile-nav--is-open):not(.collection-release) & {
+  .has-announcement.has-scrolled:not(.mobile-nav--is-open):not(.collection-release, .collection-sale) & {
     transform: translateY(calc(-#{$header-padding} - #{$header-padding-announcement} - 1px));
   }
 }
