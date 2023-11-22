@@ -2,8 +2,6 @@
   The contents of the collection.liquid template can be found in /sections/collection-template.liquid
 {% endcomment %}
 
-{% include 'header-release' %}
-
 {% if sc_hero_image != blank %}
   {%- assign featured_image = images[sc_hero_image] -%}
 {% elsif collection.image != blank %}
