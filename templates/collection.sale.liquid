@@ -14,7 +14,7 @@
  <div class="collection-release__bg" style="background-image: url('{{ collection.image | img_url: '2048x' }});"></div>
 {% endif %}
 
-<div class="collection--{{ catalog_id | handleize }}" data-section-type="collection-template">
+<div class="collection--{{ catalog_id | handleize }} collection-release" data-section-type="collection-template">
   <header class="collection-header">
     <div class="collection-hero">
       <div class="collection-hero__image ratio-container lazyload js"
