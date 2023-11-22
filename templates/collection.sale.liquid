@@ -51,24 +51,6 @@
         </div>
       {% endif %}
     </div>
-
-    <div class="collection-header__nav smooth-scroll">
-      {% if collection.products.size > 0 or sc_shop_digital != blank %}
-        <a class="collection-header__nav-link btn" href="#buy">Buy{% if sc_shop_partner__nav_nef != blank %} ({{ sc_shop_partner__nav_nef }}){% endif %}</a>
-      {% endif %}
-      {% if sc_shop_partner__nav != blank %}
-        <a class="collection-header__nav-link btn" href="#partner">Buy ({{ sc_shop_partner__nav }})</a>
-      {% endif %}
-      {% if sc_media != blank %}
-        <a class="collection-header__nav-link btn" href="#media">Watch // Listen</a>
-      {% endif %}
-      {% if sc_digital != blank %}
-        <a class="collection-header__nav-link btn" href="#stream">Stream</a>
-      {% endif %}
-      {% if sc_read != blank or sc_description != blank %}
-        <a class="collection-header__nav-link btn" href="#read">Read</a>
-      {% endif %}
-    </div>
   </header>
 
   <section class="release-products">
