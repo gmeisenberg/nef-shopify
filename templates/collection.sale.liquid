@@ -28,7 +28,7 @@
     {% if collection.products.size > 0 or sc_shop_digital != blank %}
     <div id="buy" class="section-container page-width">
       <div class="section-header text-center">
-        <h2>{% if pre_order == true %}Pre-{%endif%}Order Now!</h2>
+        <h2>{{ collection.title }}</h2>
       </div>
       <ul class="grid grid--flex grid--uniform">
         {% if sc_shop_digital != blank %}
