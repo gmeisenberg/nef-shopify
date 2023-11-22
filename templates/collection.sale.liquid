@@ -2,20 +2,6 @@
   The contents of the collection.liquid template can be found in /sections/collection-template.liquid
 {% endcomment %}
 
-{%- assign catalog_id = collection.products[0].metafields.nef.catalog_number -%}
-{%- assign release_date = collection.products[0].metafields.nef.release_date -%}
-{% assign today_date = 'now' | date: '%s' | plus: 0 %}
-{% assign pre_date = release_date | date: '%s' | plus: 0 %}
-{% assign pre_order = false %}
-{% if pre_date > today_date %}
-	{% assign pre_order = true %}
-{% endif %}
-
-{% assign separator = ' - ' %}
-{% assign collection_title = collection.title | split: separator %}
-{% assign release_artist = collection_title.first %}
-{% assign release_title = collection.title | remove_first: release_artist | remove_first: separator %}
-
 {% if collection.description != blank %}
   {% include 'shortcode', load: collection.description %}
 {% endif %}
@@ -31,7 +17,7 @@
 <div class="collection--{{ catalog_id | handleize }}" data-section-type="collection-template">
   <header class="collection-header">
     <div class="collection-hero">
-      <div class="collection-hero__image ratio-container lazyload js{% if featured_image.aspect_ratio > 2 %} wide{% endif %}"
+      <div class="collection-hero__image ratio-container lazyload js"
            data-bgset="{% include 'bgset', image: featured_image %}"
            data-sizes="auto"
            data-parent-fit="cover"
