@@ -38,7 +38,7 @@
     "message": true,
     "home_page_only": false,
     "message_text": "<p><strong>25% OFF EVERYTHING through January 05!<br\/><\/strong>Discount applied automatically at checkout. Excludes Pre-Orders & Grab Bags.<\/p>",
-    "message_bg_color": "#21bf0d",
+    "message_bg_color": "#000000",
     "message_text_color": "#ffffff",
     "enable_ajax": true,
     "checkout_header_image": "",
