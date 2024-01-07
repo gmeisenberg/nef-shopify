@@ -139,15 +139,15 @@
               "button_link": "shopify:\/\/collections\/dreamwheel-redeemer"
             }
           },
-          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d": {
+          "40f02c18-c4b8-4290-be55-8f4ea239fdcf": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF101-banner_1600x535_f48f392a-7a65-466e-8231-7975596eca6e.jpg",
+              "image": "shopify:\/\/shop_images\/NEF102-banner-out-now_1600x535_30abcddd-c7b2-49d3-81f3-f63902ebef2d.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": "shopify:\/\/collections\/bassoon-succumbent"
+              "button_link": "shopify:\/\/collections\/equivocator"
             }
           },
           "99186bf0-570c-450b-a904-26c22db9a87f": {
@@ -161,6 +161,17 @@
               "button_link": "shopify:\/\/collections\/chiaraoscuro-rancor-succor"
             }
           },
+          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF101-banner_1600x535_f48f392a-7a65-466e-8231-7975596eca6e.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/bassoon-succumbent"
+            }
+          },
           "c49cbc1b-932b-4d0a-aef0-c554c2286b86": {
             "type": "image",
             "settings": {
@@ -172,17 +183,6 @@
               "button_link": "shopify:\/\/collections\/mac-gollehon-the-hispanic-mechanics-bite-of-the-street"
             }
           },
-          "40f02c18-c4b8-4290-be55-8f4ea239fdcf": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/NEF102-banner-out-now_1600x535_30abcddd-c7b2-49d3-81f3-f63902ebef2d.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/equivocator"
-            }
-          },
           "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
             "type": "image",
             "settings": {
@@ -192,17 +192,6 @@
               "subheading": "",
               "button_label": "",
               "button_link": "shopify:\/\/collections\/oxx-the-primordial-blues"
-            }
-          },
-          "80fec69c-f337-46e4-96b5-97e7a5496039": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/NEF-97-banner-out-now_1600x535_5585f3c1-a3c7-4b4a-82b6-e0b5ddb7bd7d.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/cinema-cinema-mjolnir"
             }
           },
           "cc471d03-ecea-4bb3-9231-39fd16339e8c": {
@@ -219,12 +208,11 @@
         },
         "block_order": [
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c",
-          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d",
-          "99186bf0-570c-450b-a904-26c22db9a87f",
-          "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
+          "99186bf0-570c-450b-a904-26c22db9a87f",
+          "8ee2f124-2453-4305-95f0-2a3f4d3a3e2d",
+          "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
-          "80fec69c-f337-46e4-96b5-97e7a5496039",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c"
         ],
         "settings": {
