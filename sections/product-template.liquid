@@ -3,6 +3,9 @@
     {%- if collection.metafields.nef.catalog_number -%}
       {%- assign catalog_number = collection.metafields.nef.catalog_number -%}
     {%- endif -%}
+    {%- if collection.metafields.monopile.release_date -%}
+      {%- assign release_date = collection.metafields.monopile.release_date -%}
+    {%- endif -%}
     {%- if collection.metafields.nef.release_date -%}
       {%- assign release_date = collection.metafields.nef.release_date -%}
     {%- endif -%}
