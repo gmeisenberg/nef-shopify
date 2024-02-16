@@ -1,7 +1,7 @@
 {% if release %}
   {%- assign release_date = release.metafields.nef.release_date -%}
 {% else %}
-  {%- assign release_date = product.metafields.nef.release_date -%}
+  {%- assign release_date = product.metafields.monopile.release_date || product.metafields.nef.release_date -%}
 {% endif %}
 
 {% assign today_date = 'now' | date: '%s' | plus: 0 %}
