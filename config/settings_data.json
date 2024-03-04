@@ -66,7 +66,7 @@
         "type": "header",
         "settings": {
           "align_logo": "left",
-          "logo": "shopify:\/\/shop_images\/NEF-2023-logo-black.png",
+          "logo": "shopify:\/\/shop_images\/NEF-2023-logo-black-square.jpg",
           "logo_max_width": 250,
           "main_linklist": "main-menu"
         }
