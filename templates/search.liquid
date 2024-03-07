@@ -76,6 +76,9 @@
                     {% unless item.image == null %}
                       <img class="list-view-item__image" src="{{ item.image.src | img_url: '600x600' }}" alt="{{ item.image.alt | escape }}">
                     {% endunless %}
+                    {% if item.image == null %}
+                      <img class="list-view-item__image" src="{{ images['NEF-logo-shrimp-fill.png'] | img_url: '600x600' }}" alt="Nefarious Industries evil shrimp logo">
+                    {% endif %}
                   </div>
                 </div>
   
