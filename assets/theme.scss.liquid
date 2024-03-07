@@ -6384,6 +6384,11 @@ $predictive-search-hover-and-select-background-color: $predictive-search-focus;
 ///
 /// Items
 
+.predictive-search__list {
+  display: grid;
+  grid: 1fr / repeat(4, minmax(0,1fr));
+}
+
 .predictive-search-item {
   font-weight: 400;
   white-space: normal;
