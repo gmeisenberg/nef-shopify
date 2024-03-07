@@ -18,12 +18,6 @@
     <h1>{{ page.title }}</h1>
   </header>
 
-  {% if page.content != blank %}
-  <div class="rte">
-    {{ page.content }}
-  </div>
-  {% endif %}
-
   <ul class="grid grid--flex grid--uniform">
     {% for release in releases %}
       {%- assign release_meta = release | split: '|' -%}
