@@ -4289,9 +4289,9 @@ theme.SearchResultsTemplate = (function() {
         getNumberOfResultsString(index + 1, resultsCount) +
         '</span>',
       '</div>',
-      '<div class="predictive-search__column predictive-search__column--price">',
-      	(getDetailsCount() ? renderProductDetails(product) : ''),
-      '</div>',
+      // '<div class="predictive-search__column predictive-search__column--price">',
+      // 	(getDetailsCount() ? renderProductDetails(product) : ''),
+      // '</div>',
       '</a>',
       '</li>'
     ].join('');
