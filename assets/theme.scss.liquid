@@ -6412,23 +6412,6 @@ $predictive-search-hover-and-select-background-color: $predictive-search-focus;
   display: flex;
   flex-direction: column;
   padding: $predictive-search-list-padding;
-  background-color: transparent;
-  transition: background-color $transition-duration-fast ease-in-out;
-
-  &:active {
-    background-color: transparent;
-  }
-}
-
-.predictive-search-item--selected .predictive-search-item__link,
-.predictive-search-item--selected .predictive-search-view-all__button,
-.predictive-search-item__link:hover
-{
-  background-color: $predictive-search-hover-and-select-background-color;
-
-  .predictive-search-item__title-text {
-    border: none;
-  }
 }
 
 .predictive-search__column {
@@ -6455,6 +6438,7 @@ $predictive-search-hover-and-select-background-color: $predictive-search-focus;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  text-align: center;
 }
 
 .predictive-search__column--price {
