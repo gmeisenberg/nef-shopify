@@ -5,9 +5,10 @@
     - release: {Object} Collection Liquid object (required when included from page.releases.liquid)
     - max_height: {Number} Maximum height of the product's image
     - show_vendor: {Boolean} Show the product's vendor depending on the section setting (optional)
+    - show_price: {Boolean} Show the product's price depending on the section setting (optional)
 
     Usage:
-    {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: section.settings.show_vendor %}
+    {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: section.settings.show_vendor, show_price: section.settings.show_price %}
 {% endcomment %}
 
 {% assign product_vendor = product.vendor %}
@@ -80,7 +81,7 @@
     {% endif %}
   {% endunless %}
 
-  {% unless release %}
+  {% unless release or show_price == false %}
   	{% include 'product-price-listing', product: product, show_vendor: false %}
   {% endunless %}
 
