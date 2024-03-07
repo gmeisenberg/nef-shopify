@@ -81,7 +81,7 @@
   
                 <div class="list-view-item__title-column">
                   <div class="list-view-item__title" aria-hidden="true">
-                    <span class="product-card__title">{{ item.title }}</span>
+                    {{ item.title }}
                   </div>
                   <div>
                     {{ item.content | strip_html | truncate: 200 }}
