@@ -62,9 +62,12 @@
 
   <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
 
-  <ul class="page-width grid grid--flex grid--uniform grid--view-items">
+  <ul class="page-width list-view-items">
     {% for item in search.results %}
-        {% if item.object_type != 'product' %}
+      <li class="list-view-item">
+        {% if item.object_type == 'product' %}
+          {% include 'product-card-list', product: item, show_vendor: true %}
+        {% else %}
           <div class="product-card product-card--list">
             <a href="{{ item.url }}" class="full-width-link">
               <span class="visually-hidden">{{ item.title }}</span>
@@ -90,14 +93,7 @@
             </div>
           </div>
         {% endif %}
-    {% endfor %}
-    
-    {% for item in search.results %}
-        {% if item.object_type == 'product' %}
-          <li class="grid__item small--one-half medium--one-third large-up--one-fifth">
-            {% include 'product-card-grid', product: item, show_vendor: true, show_price: false %}
-          </li>
-        {% endif %}
+      </li>
     {% endfor %}
   </ul>
 
