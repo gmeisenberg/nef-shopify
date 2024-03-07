@@ -7,7 +7,7 @@
   {% else %}
     <div class="text-center">
       <h1 class="h2">
-        <span class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}:</span>
+        {{ 'general.search.heading' | t: count: search.results_count }}:
         {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
       </h1>
   {% endif %}
