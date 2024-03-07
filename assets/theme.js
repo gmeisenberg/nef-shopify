@@ -4250,10 +4250,10 @@ theme.SearchResultsTemplate = (function() {
           return renderProduct(normalizeProduct(product), index, resultsCount);
         })
         .join(''),
-      '<li id="search-all" class="predictive-search-view-all" role="option" data-search-result>' +
+      '</ul>',
+      '<div id="search-all" class="predictive-search-view-all" role="option" data-search-result>' +
         renderViewAll(searchQuery) +
-        '</li>',
-      '</ul>'
+      '</div>'
     ].join('');
   }
 
