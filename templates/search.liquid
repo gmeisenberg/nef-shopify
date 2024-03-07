@@ -62,38 +62,44 @@
 
   <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
 
-  <ul class="page-width list-view-items">
+  <ul class="page-width grid grid--flex grid--uniform grid--view-items">
     {% for item in search.results %}
-      <li class="list-view-item">
-        {% if item.object_type == 'product' %}
-          {% include 'product-card-list', product: item, show_vendor: true %}
-        {% else %}
-          <div class="product-card product-card--list">
-            <a href="{{ item.url }}" class="full-width-link">
-              <span class="visually-hidden">{{ item.title }}</span>
-            </a>
-            <div class="list-view-item__link">
-              <div class="list-view-item__image-column">
-                <div class="list-view-item__image-wrapper product-card__image-wrapper">
-                  {% unless item.image == null %}
-                    <img class="list-view-item__image" src="{{ item.image.src | img_url: '600x600' }}" alt="{{ item.image.alt | escape }}">
-                  {% endunless %}
+        {% if item.object_type != 'product' %}
+          <li class="list-view-item">
+            <div class="product-card product-card--list">
+              <a href="{{ item.url }}" class="full-width-link">
+                <span class="visually-hidden">{{ item.title }}</span>
+              </a>
+              <div class="list-view-item__link">
+                <div class="list-view-item__image-column">
+                  <div class="list-view-item__image-wrapper product-card__image-wrapper">
+                    {% unless item.image == null %}
+                      <img class="list-view-item__image" src="{{ item.image.src | img_url: '600x600' }}" alt="{{ item.image.alt | escape }}">
+                    {% endunless %}
+                  </div>
                 </div>
-              </div>
-
-              <div class="list-view-item__title-column">
-                <div class="list-view-item__title" aria-hidden="true">
-                  <span class="product-card__title">{{ item.title }}</span>
-                </div>
-                <div>
-                  {% if item.published_at %}{{ item.published_at | date: format: "date" }} &#8212; {% endif %}
-                  {{ item.content | strip_html | truncate: 200 }}
+  
+                <div class="list-view-item__title-column">
+                  <div class="list-view-item__title" aria-hidden="true">
+                    <span class="product-card__title">{{ item.title }}</span>
+                  </div>
+                  <div>
+                    {% if item.published_at %}{{ item.published_at | date: format: "date" }} &#8212; {% endif %}
+                    {{ item.content | strip_html | truncate: 200 }}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </li>
         {% endif %}
-      </li>
+    {% endfor %}
+    
+    {% for item in search.results %}
+        {% if item.object_type == 'product' %}
+          <li class="grid__item small--one-half medium--one-third large-up--one-fifth">
+            {% include 'product-card-grid', product: item, show_vendor: true, show_price: false %}
+          </li>
+        {% endif %}
     {% endfor %}
   </ul>
 
