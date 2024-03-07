@@ -84,7 +84,6 @@
                     <span class="product-card__title">{{ item.title }}</span>
                   </div>
                   <div>
-                    {% if item.published_at %}{{ item.published_at | date: format: "date" }} &#8212; {% endif %}
                     {{ item.content | strip_html | truncate: 200 }}
                   </div>
                 </div>
