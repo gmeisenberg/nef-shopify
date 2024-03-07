@@ -3,12 +3,6 @@
     <h1>{{ page.title }}</h1>
   </header>
 
-  {% if page.content != blank %}
-  <div class="rte">
-    {{ page.content }}
-  </div>
-  {% endif %}
-
   <ul class="grid grid--flex grid--uniform">
     {% for collection in collections %}
       {%- if collection.template_suffix == 'artist-highlight' -%}
