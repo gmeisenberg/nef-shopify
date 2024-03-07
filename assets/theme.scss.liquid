@@ -6206,7 +6206,7 @@ $search-bar-button-hover: rgba($color-text-field-text, 0.6);
 $predictive-search-image-size: 80px;
 $predictive-search-list-padding: 14px;
 $predictive-search-heading-title-font-size: em($font-size-base - 2px);
-$predictive-search-vendor-font-size: em($font-size-base - 3);
+$predictive-search-font-size: em($font-size-base - 3);
 $predictive-search-hover-and-select-background-color: $predictive-search-focus;
 
 .predictive-search-wrapper {
@@ -6410,6 +6410,7 @@ $predictive-search-hover-and-select-background-color: $predictive-search-focus;
 
 .predictive-search-item__link {
   display: flex;
+  flex-direction: column;
   padding: $predictive-search-list-padding;
   background-color: transparent;
   transition: background-color $transition-duration-fast ease-in-out;
@@ -6478,15 +6479,17 @@ $predictive-search-hover-and-select-background-color: $predictive-search-focus;
   line-height: 1.2;
   font-family: $font-stack-header;
   font-weight: $font-weight-header;
+  font-size: $predictive-search-font-size;
 }
 
 .predictive-search-item__vendor {
   color: $color-body-text;
-  font-size: $predictive-search-vendor-font-size;
+  font-size: $predictive-search-font-size;
   text-transform: uppercase;
 }
 
 .predictive-search-item__price {
+  font-size: $predictive-search-font-size;
   padding-top: 6px;
   flex: 0 0 auto;
   color: $color-body-text;
