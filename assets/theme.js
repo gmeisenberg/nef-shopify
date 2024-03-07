@@ -4276,7 +4276,7 @@ theme.SearchResultsTemplate = (function() {
       '</span>',
       '<span class="predictive-search-item__title">',
       '<span class="predictive-search-item__title-text">' +
-        product.title + product.type
+        product.title + product.type +
         '</span>',
       '</span>',
       // '<span class="predictive-search-item__detail">',
