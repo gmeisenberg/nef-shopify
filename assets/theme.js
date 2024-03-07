@@ -4440,7 +4440,7 @@ theme.SearchResultsTemplate = (function() {
 
     if (image !== null) {
       image = {
-        url: theme.Images.getSizedImageUrl(featuredImage.url, '100x'),
+        url: theme.Images.getSizedImageUrl(featuredImage.url, '300x'),
         alt: featuredImage.alt
       };
     }
