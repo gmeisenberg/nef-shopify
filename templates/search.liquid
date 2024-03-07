@@ -95,7 +95,7 @@
     {% for item in search.results %}
         {% if item.object_type == 'product' %}
           <li class="grid__item small--one-half medium--one-third large-up--one-fifth">
-            {% include 'product-card-grid', product: item, show_vendor: true %}
+            {% include 'product-card-grid', product: item, show_vendor: true, show_price: false %}
           </li>
         {% endif %}
     {% endfor %}
