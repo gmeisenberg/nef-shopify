@@ -81,6 +81,8 @@
     {% endif %}
   {% endunless %}
 
+  {% unless release or show_price == false %}
   	{% include 'product-price-listing', product: product, show_vendor: false %}
+  {% endunless %}
 
 </div>
