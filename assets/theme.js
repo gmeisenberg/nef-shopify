@@ -4276,14 +4276,14 @@ theme.SearchResultsTemplate = (function() {
       '</span>',
       '<span class="predictive-search-item__title">',
       '<span class="predictive-search-item__title-text">' +
-        product.title +
+        product.title + product.type
         '</span>',
       '</span>',
-      '<span class="predictive-search-item__detail">',
-      '<span class="predictive-search-item__type">' +
-        product.type +
-        '</span>',
-      '</span>',
+      // '<span class="predictive-search-item__detail">',
+      // '<span class="predictive-search-item__type">' +
+      //   product.type +
+      //   '</span>',
+      // '</span>',
       '<span class="visually-hidden">, </span>',
       '<span class="visually-hidden">' +
         getNumberOfResultsString(index + 1, resultsCount) +
