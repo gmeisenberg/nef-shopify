@@ -12,7 +12,7 @@
 {%- if product.metafields.nef.catalog_number -%}
   {%- assign product_catalog_number = product.metafields.nef.catalog_number -%}
 {%- endif -%}
-{%- if product.metafields.monopile.release_date -%}
+{%- if product.metafields.monopile.release_date != 'none' -%}
   {%- assign release_date = product.metafields.monopile.release_date -%}
 {%- endif -%}
 {%- if product.metafields.nef.release_date -%}
