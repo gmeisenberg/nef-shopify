@@ -128,6 +128,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "image_jyg8NP": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF110-banner-out-now-1600x535.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/martin-howth-distant-dissonance"
+            }
+          },
           "image_kFi8Ci": {
             "type": "image",
             "settings": {
@@ -137,17 +148,6 @@
               "subheading": "",
               "button_label": "",
               "button_link": "shopify:\/\/collections\/tina-fey-in-living-memory"
-            }
-          },
-          "image_jyg8NP": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/NEF110-banner-1600x535.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/martin-howth-distant-dissonance"
             }
           },
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c": {
@@ -229,8 +229,8 @@
           }
         },
         "block_order": [
-          "image_kFi8Ci",
           "image_jyg8NP",
+          "image_kFi8Ci",
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c",
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
           "99186bf0-570c-450b-a904-26c22db9a87f",
