@@ -9302,10 +9302,11 @@ $min-height-disclosure: 92px;
 .sc-grid {
   display: grid;
   grid: 1fr / 1fr;
-  gap: 0 1.5rem;
+  gap: 0;
   
   @include media-query($medium-up) {
     grid: 1fr / 1fr 1fr;
+    gap: 0 1.5rem;
   }
 }
 .sc-grid > :not(.sc-grid__item),
