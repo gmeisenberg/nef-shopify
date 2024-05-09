@@ -9171,7 +9171,7 @@ $min-height-disclosure: 92px;
   z-index: 99;
   
   @include media-query($medium-up) {
-  grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     width: 440px;
     right: calc(50% - 220px);
     padding: 20px;
@@ -9301,8 +9301,11 @@ $min-height-disclosure: 92px;
 
 .sc-grid {
   display: grid;
-  grid: 1fr / 1fr 1fr;
   gap: 0 1.5rem;
+  
+  @include media-query($medium-up) {
+    grid: 1fr / 1fr 1fr;
+  }
 }
 .sc-grid > :not(.sc-grid__item),
 .sc-grid > .sc-grid__item:first-of-type,
