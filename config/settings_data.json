@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "color_text": "#000000",
@@ -131,7 +140,7 @@
           "cc471d03-ecea-4bb3-9231-39fd16339e8c": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF100-banner_1600x535_1aefdb62-531a-4422-9328-a67ffcb791d1.jpg",
+              "image": "shopify:\/\/shop_images\/NEF100-banner-out-now_1600x535_02eb224d-0d48-4c11-91ce-d0b490ce8196.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
