@@ -137,6 +137,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "image_kFi8Ci": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/NEF107-banner-02.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/products\/the-salinas-years"
+            }
+          },
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c": {
             "type": "image",
             "settings": {
@@ -179,17 +190,6 @@
               "subheading": "",
               "button_label": "",
               "button_link": "shopify:\/\/collections\/martin-howth-distant-dissonance"
-            }
-          },
-          "image_kFi8Ci": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/NEF112-banner-1600x535.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/tina-fey-in-living-memory"
             }
           },
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf": {
@@ -238,11 +238,11 @@
           }
         },
         "block_order": [
+          "image_kFi8Ci",
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "image_pFQxjY",
           "image_jyg8NP",
-          "image_kFi8Ci",
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
           "99186bf0-570c-450b-a904-26c22db9a87f",
           "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
