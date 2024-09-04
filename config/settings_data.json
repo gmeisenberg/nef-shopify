@@ -159,6 +159,17 @@
               "button_link": "shopify:\/\/collections\/bye-bye-tsunami-eating"
             }
           },
+          "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/322401615cec7f8c6c63a3aa1ad23f75.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/oxx-the-primordial-blues"
+            }
+          },
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c": {
             "type": "image",
             "settings": {
@@ -224,29 +235,18 @@
               "button_label": "",
               "button_link": "shopify:\/\/collections\/mac-gollehon-the-hispanic-mechanics-bite-of-the-street"
             }
-          },
-          "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/NEF105-banner-out-now_1600x535_c094289a-ca30-41ba-b19a-b9c947c00a3a.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/oxx-the-primordial-blues"
-            }
           }
         },
         "block_order": [
           "image_kFi8Ci",
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
+          "1b847e47-2e86-422b-87f7-3e5757dd4fec",
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "image_pFQxjY",
           "image_jyg8NP",
           "99186bf0-570c-450b-a904-26c22db9a87f",
-          "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
-          "1b847e47-2e86-422b-87f7-3e5757dd4fec"
+          "c49cbc1b-932b-4d0a-aef0-c554c2286b86"
         ],
         "settings": {
           "slideshow_height": "adapt",
