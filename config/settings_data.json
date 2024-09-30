@@ -37,21 +37,21 @@
     "share_facebook": true,
     "share_twitter": true,
     "share_pinterest": true,
-    "social_facebook_link": "https:\/\/www.facebook.com\/NefariousIndustries",
-    "social_twitter_link": "https:\/\/twitter.com\/NefariousInd",
-    "social_instagram_link": "https:\/\/www.instagram.com\/nefarious_industries",
-    "social_youtube_link": "https:\/\/www.youtube.com\/NefariousIndustries",
-    "social_bandcamp_link": "https:\/\/nefariousindustries.bandcamp.com",
+    "social_facebook_link": "https://www.facebook.com/NefariousIndustries",
+    "social_twitter_link": "https://twitter.com/NefariousInd",
+    "social_instagram_link": "https://www.instagram.com/nefarious_industries",
+    "social_youtube_link": "https://www.youtube.com/NefariousIndustries",
+    "social_bandcamp_link": "https://nefariousindustries.bandcamp.com",
     "social_spotify_link": "",
-    "favicon": "shopify:\/\/shop_images\/nef_circles_outlined.png",
+    "favicon": "shopify://shop_images/nef_circles_outlined.png",
     "message": false,
     "home_page_only": false,
-    "message_text": "<p><strong>25% OFF EVERYTHING through January 05!<br\/><\/strong>Discount applied automatically at checkout. Excludes Pre-Orders & Grab Bags.<\/p>",
+    "message_text": "<p><strong>25% OFF EVERYTHING through January 05!<br/></strong>Discount applied automatically at checkout. Excludes Pre-Orders & Grab Bags.</p>",
     "message_bg_color": "#000000",
     "message_text_color": "#ffffff",
     "enable_ajax": true,
     "checkout_header_image": "",
-    "checkout_logo_image": "shopify:\/\/shop_images\/nef_circles_outlined_logo_100px-01.png",
+    "checkout_logo_image": "shopify://shop_images/nef_circles_outlined_logo_100px-01.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
     "checkout_body_background_image": "",
@@ -75,7 +75,7 @@
         "type": "header",
         "settings": {
           "align_logo": "left",
-          "logo": "shopify:\/\/shop_images\/NEF-2023-logo-black.png",
+          "logo": "shopify://shop_images/NEF-2023-logo-black.png",
           "logo_max_width": 250,
           "main_linklist": "main-menu"
         }
@@ -140,100 +140,100 @@
           "image_kFi8Ci": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF107-banner-02.jpg",
+              "image": "shopify://shop_images/NEF107-digital-1600x535.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": "shopify:\/\/products\/the-salinas-years-cd-box-set"
+              "button_link": "shopify://collections/psychosomatic-the-salinas-years"
             }
           },
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF115-banner-02.jpg",
+              "image": "shopify://shop_images/NEF115-banner-02.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": "shopify:\/\/collections\/bye-bye-tsunami-eating"
+              "button_link": "shopify://collections/bye-bye-tsunami-eating"
             }
           },
           "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/322401615cec7f8c6c63a3aa1ad23f75.jpg",
+              "image": "shopify://shop_images/322401615cec7f8c6c63a3aa1ad23f75.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": "shopify:\/\/collections\/oxx-the-primordial-blues"
+              "button_link": "shopify://collections/oxx-the-primordial-blues"
             }
           },
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF113-1600x535.jpg",
+              "image": "shopify://shop_images/NEF113-1600x535.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": "shopify:\/\/collections\/fuck-your-birthday-bbqd"
+              "button_link": "shopify://collections/fuck-your-birthday-bbqd"
             }
           },
           "cc471d03-ecea-4bb3-9231-39fd16339e8c": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF100-banner-out-now_1600x535_02eb224d-0d48-4c11-91ce-d0b490ce8196.jpg",
+              "image": "shopify://shop_images/NEF100-banner-out-now_1600x535_02eb224d-0d48-4c11-91ce-d0b490ce8196.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": "shopify:\/\/collections\/nef100-burn-after-hearing"
+              "button_link": "shopify://collections/nef100-burn-after-hearing"
             }
           },
           "image_pFQxjY": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF114-banner-out-now-1600x535.jpg",
+              "image": "shopify://shop_images/NEF114-banner-out-now-1600x535.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": "shopify:\/\/collections\/bangladeafy-vulture"
+              "button_link": "shopify://collections/bangladeafy-vulture"
             }
           },
           "image_jyg8NP": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF110-banner-out-now-1600x535.jpg",
+              "image": "shopify://shop_images/NEF110-banner-out-now-1600x535.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": "shopify:\/\/collections\/martin-howth-distant-dissonance"
+              "button_link": "shopify://collections/martin-howth-distant-dissonance"
             }
           },
           "99186bf0-570c-450b-a904-26c22db9a87f": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF104-banner-out-now_1600x535_c7c8a371-5189-4b3b-adc4-41c3bb414b10.jpg",
+              "image": "shopify://shop_images/NEF104-banner-out-now_1600x535_c7c8a371-5189-4b3b-adc4-41c3bb414b10.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": "shopify:\/\/collections\/chiaraoscuro-rancor-succor"
+              "button_link": "shopify://collections/chiaraoscuro-rancor-succor"
             }
           },
           "c49cbc1b-932b-4d0a-aef0-c554c2286b86": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/NEF-99-banner-out-now-1600x535.jpg",
+              "image": "shopify://shop_images/NEF-99-banner-out-now-1600x535.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": "shopify:\/\/collections\/mac-gollehon-the-hispanic-mechanics-bite-of-the-street"
+              "button_link": "shopify://collections/mac-gollehon-the-hispanic-mechanics-bite-of-the-street"
             }
           }
         },
@@ -303,7 +303,7 @@
         "settings": {
           "newsletter_enable": true,
           "newsletter_form_heading": "Be the first to know when we launch.",
-          "newsletter_form_subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
+          "newsletter_form_subheading": "<p>Promotions, new products and sales. Directly to your inbox.</p>",
           "newsletter_placeholder": "Email address",
           "newsletter_button_text": "Notify me"
         }
@@ -386,19 +386,19 @@
           "1601927333345": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/BANGLADEAFY_-_window_01_-_photo_by_Jayden_Spano.jpg"
+              "image": "shopify://shop_images/BANGLADEAFY_-_window_01_-_photo_by_Jayden_Spano.jpg"
             }
           },
           "1601927375973": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Bangladeafy_2018_Promos_NVS8.jpg"
+              "image": "shopify://shop_images/Bangladeafy_2018_Promos_NVS8.jpg"
             }
           },
           "1601928489987": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Bangladeafy_2018_Promos_NVS1.jpg"
+              "image": "shopify://shop_images/Bangladeafy_2018_Promos_NVS1.jpg"
             }
           }
         },
@@ -416,7 +416,7 @@
           "1602025470406": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/SP-404.png"
+              "image": "shopify://shop_images/SP-404.png"
             }
           }
         },
@@ -559,15 +559,15 @@
       "share_facebook": true,
       "share_twitter": true,
       "share_pinterest": true,
-      "social_twitter_link": "https:\/\/twitter.com\/NefariousInd",
-      "social_facebook_link": "https:\/\/www.facebook.com\/NefariousIndustries",
+      "social_twitter_link": "https://twitter.com/NefariousInd",
+      "social_facebook_link": "https://www.facebook.com/NefariousIndustries",
       "social_pinterest_link": "",
-      "social_instagram_link": "https:\/\/www.instagram.com\/nefarious_industries\/",
+      "social_instagram_link": "https://www.instagram.com/nefarious_industries/",
       "social_tumblr_link": "",
       "social_snapchat_link": "",
-      "social_youtube_link": "https:\/\/www.youtube.com\/user\/NefariousIndustries",
+      "social_youtube_link": "https://www.youtube.com/user/NefariousIndustries",
       "social_vimeo_link": "",
-      "favicon": "shopify:\/\/shop_images\/nef-logo-120-inverse-64x64.png",
+      "favicon": "shopify://shop_images/nef-logo-120-inverse-64x64.png",
       "message": false,
       "home_page_only": true,
       "message_text": "Announce something here",
@@ -642,67 +642,67 @@
             "1599935624432-0": {
               "type": "image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/NEF-64_banner-1600x535.jpg",
+                "image": "shopify://shop_images/NEF-64_banner-1600x535.jpg",
                 "alignment": "center center",
                 "slide_title": "",
                 "subheading": "",
                 "button_label": "",
-                "button_link": "https:\/\/bangladeafy.bandcamp.com\/album\/housefly"
+                "button_link": "https://bangladeafy.bandcamp.com/album/housefly"
               }
             },
             "1599945692488": {
               "type": "image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/NEF-60_banner-1600x535.jpg",
+                "image": "shopify://shop_images/NEF-60_banner-1600x535.jpg",
                 "alignment": "center center",
                 "slide_title": "",
                 "subheading": "",
                 "button_label": "",
-                "button_link": "shopify:\/\/collections\/psychosomatic-the-invisible-prison"
+                "button_link": "shopify://collections/psychosomatic-the-invisible-prison"
               }
             },
             "1600052549916": {
               "type": "image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/NEF-61-banner-1600x535-2.jpg",
+                "image": "shopify://shop_images/NEF-61-banner-1600x535-2.jpg",
                 "alignment": "center center",
                 "slide_title": "",
                 "subheading": "",
                 "button_label": "",
-                "button_link": "shopify:\/\/products\/cactides"
+                "button_link": "shopify://products/cactides"
               }
             },
             "1600052894819": {
               "type": "image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/UNDERER-SITE-BANNER-01.jpg",
+                "image": "shopify://shop_images/UNDERER-SITE-BANNER-01.jpg",
                 "alignment": "center center",
                 "slide_title": "",
                 "subheading": "",
                 "button_label": "",
-                "button_link": "https:\/\/underer.bandcamp.com\/album\/the-code"
+                "button_link": "https://underer.bandcamp.com/album/the-code"
               }
             },
             "1600052970890": {
               "type": "image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/NEF-57-banner-1600.jpg",
+                "image": "shopify://shop_images/NEF-57-banner-1600.jpg",
                 "alignment": "center center",
                 "slide_title": "",
                 "subheading": "",
                 "button_label": "",
-                "button_link": "shopify:\/\/products\/the-golden-age-of-bad-ideas"
+                "button_link": "shopify://products/the-golden-age-of-bad-ideas"
               }
             },
             "1600053000757": {
               "type": "image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/NEF-44-banner-1600-2.jpg",
+                "image": "shopify://shop_images/NEF-44-banner-1600-2.jpg",
                 "alignment": "center center",
                 "slide_title": "",
                 "subheading": "",
                 "button_label": "",
-                "button_link": "shopify:\/\/collections\/oxx-the-skeleton-is-just-a-coat-hanger-these-are-the-black-strings-that-make-you-dance"
+                "button_link": "shopify://collections/oxx-the-skeleton-is-just-a-coat-hanger-these-are-the-black-strings-that-make-you-dance"
               }
             }
           },
@@ -769,7 +769,7 @@
           "settings": {
             "newsletter_enable": true,
             "newsletter_form_heading": "Be the first to know when we launch.",
-            "newsletter_form_subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
+            "newsletter_form_subheading": "<p>Promotions, new products and sales. Directly to your inbox.</p>",
             "newsletter_placeholder": "Email address",
             "newsletter_button_text": "Notify me"
           }
@@ -828,15 +828,15 @@
       "share_facebook": true,
       "share_twitter": true,
       "share_pinterest": true,
-      "social_twitter_link": "https:\/\/twitter.com\/NefariousInd",
-      "social_facebook_link": "https:\/\/www.facebook.com\/NefariousIndustries",
+      "social_twitter_link": "https://twitter.com/NefariousInd",
+      "social_facebook_link": "https://www.facebook.com/NefariousIndustries",
       "social_pinterest_link": "",
-      "social_instagram_link": "https:\/\/www.instagram.com\/nefarious_industries\/",
+      "social_instagram_link": "https://www.instagram.com/nefarious_industries/",
       "social_tumblr_link": "",
       "social_snapchat_link": "",
-      "social_youtube_link": "https:\/\/www.youtube.com\/user\/NefariousIndustries",
+      "social_youtube_link": "https://www.youtube.com/user/NefariousIndustries",
       "social_vimeo_link": "",
-      "favicon": "shopify:\/\/shop_images\/nef-logo-120-inverse-64x64.png",
+      "favicon": "shopify://shop_images/nef-logo-120-inverse-64x64.png",
       "message": false,
       "home_page_only": true,
       "message_text": "Announce something here",
@@ -911,67 +911,67 @@
             "1599935624432-0": {
               "type": "image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/NEF-64_banner-1600x535.jpg",
+                "image": "shopify://shop_images/NEF-64_banner-1600x535.jpg",
                 "alignment": "center center",
                 "slide_title": "",
                 "subheading": "",
                 "button_label": "",
-                "button_link": "https:\/\/bangladeafy.bandcamp.com\/album\/housefly"
+                "button_link": "https://bangladeafy.bandcamp.com/album/housefly"
               }
             },
             "1599945692488": {
               "type": "image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/NEF-60_banner-1600x535.jpg",
+                "image": "shopify://shop_images/NEF-60_banner-1600x535.jpg",
                 "alignment": "center center",
                 "slide_title": "",
                 "subheading": "",
                 "button_label": "",
-                "button_link": "shopify:\/\/collections\/psychosomatic-the-invisible-prison"
+                "button_link": "shopify://collections/psychosomatic-the-invisible-prison"
               }
             },
             "1600052549916": {
               "type": "image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/NEF-61-banner-1600x535-2.jpg",
+                "image": "shopify://shop_images/NEF-61-banner-1600x535-2.jpg",
                 "alignment": "center center",
                 "slide_title": "",
                 "subheading": "",
                 "button_label": "",
-                "button_link": "shopify:\/\/products\/cactides"
+                "button_link": "shopify://products/cactides"
               }
             },
             "1600052894819": {
               "type": "image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/UNDERER-SITE-BANNER-01.jpg",
+                "image": "shopify://shop_images/UNDERER-SITE-BANNER-01.jpg",
                 "alignment": "center center",
                 "slide_title": "",
                 "subheading": "",
                 "button_label": "",
-                "button_link": "https:\/\/underer.bandcamp.com\/album\/the-code"
+                "button_link": "https://underer.bandcamp.com/album/the-code"
               }
             },
             "1600052970890": {
               "type": "image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/NEF-57-banner-1600.jpg",
+                "image": "shopify://shop_images/NEF-57-banner-1600.jpg",
                 "alignment": "center center",
                 "slide_title": "",
                 "subheading": "",
                 "button_label": "",
-                "button_link": "shopify:\/\/products\/the-golden-age-of-bad-ideas"
+                "button_link": "shopify://products/the-golden-age-of-bad-ideas"
               }
             },
             "1600053000757": {
               "type": "image",
               "settings": {
-                "image": "shopify:\/\/shop_images\/NEF-44-banner-1600-2.jpg",
+                "image": "shopify://shop_images/NEF-44-banner-1600-2.jpg",
                 "alignment": "center center",
                 "slide_title": "",
                 "subheading": "",
                 "button_label": "",
-                "button_link": "shopify:\/\/collections\/oxx-the-skeleton-is-just-a-coat-hanger-these-are-the-black-strings-that-make-you-dance"
+                "button_link": "shopify://collections/oxx-the-skeleton-is-just-a-coat-hanger-these-are-the-black-strings-that-make-you-dance"
               }
             }
           },
@@ -1038,7 +1038,7 @@
           "settings": {
             "newsletter_enable": true,
             "newsletter_form_heading": "Be the first to know when we launch.",
-            "newsletter_form_subheading": "<p>Promotions, new products and sales. Directly to your inbox.<\/p>",
+            "newsletter_form_subheading": "<p>Promotions, new products and sales. Directly to your inbox.</p>",
             "newsletter_placeholder": "Email address",
             "newsletter_button_text": "Notify me"
           }
