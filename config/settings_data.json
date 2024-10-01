@@ -148,6 +148,17 @@
               "button_link": "shopify://collections/psychosomatic-the-salinas-years"
             }
           },
+          "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF111-banner_1600x535_56fbea49-c436-43cd-8c2f-5ce23c59f7f3.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/miracle-blood-hello-hell"
+            }
+          },
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf": {
             "type": "image",
             "settings": {
@@ -157,17 +168,6 @@
               "subheading": "",
               "button_label": "",
               "button_link": "shopify://collections/bye-bye-tsunami-eating"
-            }
-          },
-          "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/322401615cec7f8c6c63a3aa1ad23f75.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/oxx-the-primordial-blues"
             }
           },
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c": {
@@ -239,8 +239,8 @@
         },
         "block_order": [
           "image_kFi8Ci",
-          "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
+          "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "image_pFQxjY",
