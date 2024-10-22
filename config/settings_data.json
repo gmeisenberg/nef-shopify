@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "color_text": "#000000",
@@ -137,6 +137,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF111-banner-1600x535.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/miracle-blood-hello-hell"
+            }
+          },
           "image_kFi8Ci": {
             "type": "image",
             "settings": {
@@ -148,15 +159,15 @@
               "button_link": "shopify://collections/psychosomatic-the-salinas-years"
             }
           },
-          "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
+          "cc471d03-ecea-4bb3-9231-39fd16339e8c": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/NEF111-banner-1600x535.jpg",
+              "image": "shopify://shop_images/NEF100-banner-out-now_1600x535_02eb224d-0d48-4c11-91ce-d0b490ce8196.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": "shopify://collections/miracle-blood-hello-hell"
+              "button_link": "shopify://collections/nef100-burn-after-hearing"
             }
           },
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf": {
@@ -179,17 +190,6 @@
               "subheading": "",
               "button_label": "",
               "button_link": "shopify://collections/fuck-your-birthday-bbqd"
-            }
-          },
-          "cc471d03-ecea-4bb3-9231-39fd16339e8c": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF100-banner-out-now_1600x535_02eb224d-0d48-4c11-91ce-d0b490ce8196.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/nef100-burn-after-hearing"
             }
           },
           "image_pFQxjY": {
@@ -238,11 +238,11 @@
           }
         },
         "block_order": [
-          "image_kFi8Ci",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
+          "image_kFi8Ci",
+          "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c",
-          "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "image_pFQxjY",
           "image_jyg8NP",
           "99186bf0-570c-450b-a904-26c22db9a87f",
