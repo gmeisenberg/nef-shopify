@@ -22,7 +22,7 @@
               <td class="cart__meta small--text-left" data-cart-table-cell>
                 <div class="cart__product-information">
                   <div class="cart__image-wrapper">
-                    <img class="cart__image{% if item.image == null %} hide{% endif %}" src="{{ item | img_url: 'x190' }}" alt="{{ item.image.alt | escape }}" data-cart-item-image>
+                    <img class="cart__image{% if item.image == null %} hide{% endif %}" src="{{ item | img_url: 'x190' }}" loading="lazy" alt="{{ item.image.alt | escape }}" width="{{ item.image.width }}" height="{{ item.image.height }}" data-cart-item-image>
                   </div>
                   <div>
                     <div class="list-view-item__vendor">
@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="list-view-item__title">
-                      <a href="{{ item.url }}" class="cart__product-title" data-cart-item-title>
+                      <a href="{{ item.url }}" class="cart__product-title" data-cart-item-title data-role="product-title">
                         {{ item.product.title }}
                       </a>
                     </div>
@@ -41,10 +41,18 @@
                     {%- endif -%}
                     {%- assign property_size = item.properties | size -%}
 
-                    <ul class="product-details{% if item.product.has_only_default_variant and property_size == 0 %} hide{% endif %}" data-cart-item-details aria-label="{{ 'cart.label.product_details' | t }}">
+                    <ul class="product-details{% if item.product.has_only_default_variant and property_size == 0 and item.selling_plan_allocation == nil %} hide{% endif %}" data-cart-item-details aria-label="{{ 'cart.label.product_details' | t }}">
                       {%- for option in variant_options -%}
                         <li class="product-details__item product-details__item--variant-option{% if item.product.has_only_default_variant %} hide{% endif %}" data-cart-item-option>{{ option.name }}: {{ option.value }}</li>
                       {%- endfor -%}
+
+                      <li
+                        class="product-details__item product-details__item--property
+                        {% if item.selling_plan_allocation == empty %} hide {% endif %}"
+                        data-cart-item-selling-plan-name
+                      >
+                        {{ item.selling_plan_allocation.selling_plan.name }}
+                      </li>
 
                       {%- comment -%}
                         Optional, loop through custom product line items if available
@@ -56,33 +64,35 @@
                           - http://docs.shopify.com/support/your-store/products/how-do-I-collect-additional-information-on-the-product-page-Like-for-a-monogram-engraving-or-customization
                       {%- endcomment -%}
 
-                      {%- assign properties = 'template ' | split: ' ' -%}
-                      {%- if property_size > 0 -%}
-                        {%- assign properties = item.properties -%}
-                      {%- endif -%}
+                      {%- liquid
+                        assign properties = 'template ' | split: ' '
+                        if property_size > 0
+                          assign properties = item.properties
+                        endif
+                      -%}
 
                       {%- for p in properties -%}
-                        {%- unless p.last == blank -%}
-                          <li class="product-details__item product-details__item--property{%if property_size == 0%} hide{% endif %}" data-cart-item-property>
-                            <span class="product-details__item-label" data-cart-item-property-name>{{ p.first }}: </span>
+                        {% assign property_first_char = p.first | slice: 0 %}
+                        <li class="product-details__item product-details__item--property
+                          {%if property_size == 0 or p.last == blank or property_first_char == '_' %} hide{% endif %}" data-cart-item-property>
+                          <span class="product-details__item-label" data-cart-item-property-name>{{ p.first }}: </span>
 
-                            {%- comment -%}
-                              Check if there was an uploaded file associated
-                            {%- endcomment -%}
-                            <span data-cart-item-property-value>
-                              {%- if p.last contains '/uploads/' -%}
-                                <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
-                              {%- else -%}
-                                {{ p.last }}
-                              {%- endif -%}
-                            </span>
-                          </li>
-                        {%- endunless -%}
+                          {%- comment -%}
+                            Check if there was an uploaded file associated
+                          {%- endcomment -%}
+                          <span data-cart-item-property-value>
+                            {%- if p.last contains '/uploads/' -%}
+                              <a href="{{ p.last }}" data-role="product-upload">{{ p.last | split: '/' | last }}</a>
+                            {%- else -%}
+                              {{ p.last }}
+                            {%- endif -%}
+                          </span>
+                        </li>
                       {%- endfor -%}
                     </ul>
 
                     <p class="cart__remove">
-                      <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="text-link text-link--accent" aria-label="{{ 'cart.label.remove' | t: product: item.title }}" data-cart-remove>{{ 'cart.general.remove' | t }}</a>
+                      <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="text-link text-link--accent" aria-label="{{ 'cart.label.remove' | t: product: item.title }}" data-cart-remove data-role="product-remove">{{ 'cart.general.remove' | t }}</a>
                     </p>
                   </div>
                 </div>
@@ -160,7 +170,7 @@
                 <ul class="order-discount order-discount--list order-discount--title order-discount--cart{% if item.line_level_discount_allocations == blank %} hide{% endif %}" aria-label="{{ 'customer.order.discount' | t }}" data-cart-item-discount-list>
                   {%- for discount_allocation in itemDiscounts -%}
                     <li class="order-discount__item" data-cart-item-discount>
-                      {% include 'icon-saletag' %}
+                      {% render 'icon-saletag' %}
                       <span data-cart-item-discount-title>
                         {{- discount_allocation.discount_application.title -}}
                       </span> (-<span data-cart-item-discount-amount>{{ discount_allocation.amount | money }}</span>)
@@ -174,11 +184,11 @@
                   </label>
                   <input id="updates_{{ item.key }}" class="cart__qty-input" type="number"
                     value="{{ item.quantity }}" min="0" pattern="[0-9]*"
-                    data-quantity-input data-quantity-item="{{ forloop.index }}" data-quantity-input-mobile>
+                    data-quantity-input data-quantity-item="{{ forloop.index }}" data-quantity-input-mobile data-role="product-quantity-mobile">
                 </div>
                 <div class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--mobile hide" role="alert" data-cart-quantity-error-message-wrapper>
                   <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-                  {% include 'icon-error' %}
+                  {% render 'icon-error' %}
                   <span class="cart__qty-error-message" data-cart-quantity-error-message></span>
                 </div>
               </td>
@@ -187,11 +197,11 @@
                   <label for="updates_large_{{ item.key }}" class="cart__qty-label" data-quantity-label-desktop>{{ 'cart.label.quantity' | t }}</label>
                   <input id="updates_large_{{ item.key }}" class="cart__qty-input" type="number"
                     name="updates[]" value="{{ item.quantity }}" min="0" pattern="[0-9]*"
-                    data-quantity-input data-quantity-item="{{ forloop.index }}" data-quantity-input-desktop>
+                    data-quantity-input data-quantity-item="{{ forloop.index }}" data-quantity-input-desktop data-role="product-quantity-desktop">
                 </div>
                 <div class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--desktop hide" role="alert" data-cart-quantity-error-message-wrapper>
                   <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-                  {% include 'icon-error' %}
+                  {% render 'icon-error' %}
                   <span class="cart__qty-error-message" data-cart-quantity-error-message></span>
                 </div>
               </td>
@@ -244,7 +254,7 @@
               <div class="order-discount-card-wrapper" data-cart-discount>
                 {%- for discount_application in cartDiscounts -%}
                   <span class="order-discount order-discount--title order-discount--cart">
-                    {% include 'icon-saletag' %}<span class="visually-hidden">{{ 'customer.order.discount' | t }}:</span><span data-cart-discount-title>{{- discount_application.title -}}</span>
+                    {% render 'icon-saletag' %}<span class="visually-hidden">{{ 'customer.order.discount' | t }}:</span><span data-cart-discount-title>{{- discount_application.title -}}</span>
                   </span>
                   <span class="order-discount order-discount--cart order-discount--cart-total">
                     -<span data-cart-discount-amount>{{ discount_application.total_allocated_amount | money }}</span>
@@ -255,13 +265,13 @@
 
             <div class="cart-subtotal">
               <span class="cart-subtotal__title">{{ 'cart.general.subtotal' | t }}</span>
-              <span class="cart-subtotal__price" data-cart-subtotal><span class="csapps-cart-original-total">{{ cart.total_price | money_with_currency }}</span></span>
+              <span class="cart-subtotal__price" data-cart-subtotal>{{ cart.total_price | money_with_currency }}</span>
             </div>
 
             {%- capture taxes_shipping_checkout -%}
-              {%- if shop.taxes_included and shop.shipping_policy.body != blank -%}
+              {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
                 {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
-              {%- elsif shop.taxes_included -%}
+              {%- elsif cart.taxes_included -%}
                 {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
               {%- elsif shop.shipping_policy.body != blank -%}
                 {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
@@ -284,7 +294,7 @@
 
               <div class="cart__error-message-wrapper hide" role="alert" data-cart-error-message-wrapper>
                 <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
-                {% include 'icon-error' %}
+                {% render 'icon-error' %}
                 <span class="cart__error-message" data-cart-error-message></span>
               </div>
 
@@ -303,7 +313,7 @@
     ></p>
   </div>
 
-  <div class="{% if cart.item_count > 0 %} hide{% endif %} text-center" data-empty-page-content>
+  <div class="empty-page-content{% if cart.item_count > 0 %} hide{% endif %} text-center" data-empty-page-content>
     <h1>{{ 'cart.general.title' | t }}</h1>
     <img class="feature-row__image lazyload"
          style="max-height:35vh; padding: 1rem;"
@@ -313,7 +323,7 @@
     <div class="cookie-message">
       <p>{{ 'cart.general.cookies_required' | t }}</p>
     </div>
-    <a href="{{ routes.root_url }}" class="btn btn--has-icon-after cart__continue-btn">{{ 'general.404.link' | t }}{% include 'icon-arrow-right' %}</a>
+    <a href="{{ routes.root_url }}" class="btn btn--has-icon-after cart__continue-btn">{{ 'general.404.link' | t }}{% render 'icon-arrow-right' %}</a>
   </div>
 </div>
 
@@ -321,95 +331,19 @@
 
 {% schema %}
 {
-  "name": {
-    "da": "Side med indkøbskurv",
-    "de": "Warenkorb-Seite",
-    "en": "Cart page",
-    "es": "Página del carrito de compras",
-    "fi": "Ostoskorisivu",
-    "fr": "Page du panier",
-    "hi": "कार्ट पेज",
-    "it": "Pagina del carrello",
-    "ja": "カートページ",
-    "ko": "카트 페이지",
-    "nb": "Handlekurvside",
-    "nl": "Winkelwagenpagina",
-    "pt-BR": "Página do carrinho",
-    "pt-PT": "Página do carrinho",
-    "sv": "Varukorgssida",
-    "th": "หน้าตะกร้าสินค้า",
-    "zh-CN": "购物车页面",
-    "zh-TW": "購物車頁面"
-  },
+  "name": "t:sections.cart-template.name",
   "settings": [
     {
       "type": "checkbox",
       "id": "cart_ajax_enable",
-      "label": {
-        "da": "Aktivér automatisk opdatering af indkøbskurv",
-        "de": "Automatische Warenkorbaktualisierungen aktivieren",
-        "en": "Enable automatic cart updates",
-        "es": "Habilitar las actualizaciones automáticas del carrito de compra",
-        "fi": "Ota automaattinen ostoskorin päivitykset käyttöön",
-        "fr": "Activer les mises à jour automatiques",
-        "hi": "स्वचालित कार्ट अपडेट सक्षम करें",
-        "it": "Abilita aggiornamenti automatici carrello",
-        "ja": "自動カートの更新を有効にする",
-        "ko": "자동 카트 업데이트 활성화하기",
-        "nb": "Aktiver automatiske oppdateringer av handlekurven",
-        "nl": "Automatische winkelwagen-updates inschakelen",
-        "pt-BR": "Permitir atualizações automáticas do carrinho",
-        "pt-PT": "Ativar atualizações automáticas do carrinho",
-        "sv": "Aktivera automatiska uppdateringar av varukorgen",
-        "th": "เปิดใช้งานการอัปเดตตะกร้าสินค้าอัตโนมัติ",
-        "zh-CN": "启用购物车自动更新功能",
-        "zh-TW": "啟用自動更新購物車"
-      },
-      "info": {
-        "da": "Opdaterer indkøbskurven, så snart kunden foretager ændringer",
-        "de": "Aktualisiert den Warenkorb, sobald Kundenänderungen vorgenommen werden",
-        "en": "Updates the cart as soon as customer changes are made",
-        "es": "Actualiza el carrito de compra tan pronto como el cliente realice cambios",
-        "fi": "Päivittää ostoskorin heti, kun asiakkaan muutokset on tehty",
-        "fr": "Mise à jour du panier dès que les modifications apportées aux clients ont été effectuées",
-        "hi": "ग्राहक के द्वारा परिवर्तन करते ही कार्ट को अपडेट हो जाता है",
-        "it": "Aggiorna il carrello appena il cliente apporta le modifiche",
-        "ja": "お客様が変更されるとすぐにカートを更新します",
-        "ko": "고객 변경 시 카트를 업데이트합니다.",
-        "nb": "Oppdaterer handlekurven så snart kundens endringer er gjort",
-        "nl": "De winkelwagen wordt bijgewerkt zodra de klant wijzigingen aanbrengt",
-        "pt-BR": "Atualiza o carrinho assim que o cliente faz alterações",
-        "pt-PT": "Atualiza o carrinho assim que o cliente faz alterações",
-        "sv": "Uppdaterar varukorgen så snart kundändringar görs",
-        "th": "อัปเดตตะกร้าสินค้าเมื่อลูกค้าได้ทำการเปลี่ยนแปลง",
-        "zh-CN": "客户做出更改后立即更新购物车",
-        "zh-TW": "在顧客進行變更時立即更新購物車"
-      },
+      "label": "t:sections.cart-template.settings.cart_ajax_enable.label",
+      "info": "t:sections.cart-template.settings.cart_ajax_enable.info",
       "default": true
     },
     {
       "type": "checkbox",
       "id": "cart_notes_enable",
-      "label": {
-        "da": "Aktivér bemærkninger til indkøbskurv",
-        "de": "Warenkorbanmerkungen erlauben",
-        "en": "Enable cart notes",
-        "es": "Habilitar notas del carrito de compra",
-        "fi": "Ota tilauskommentit käyttöön",
-        "fr": "Activer les notes de panier",
-        "hi": "कार्ट नोट्स सक्षम करें",
-        "it": "Abilita note carrello",
-        "ja": "カートメモを有効にする",
-        "ko": "카트 참고 사항 사용",
-        "nb": "Aktiver handlekurvmerknader",
-        "nl": "Opmerkingen voor winkelwagen inschakelen",
-        "pt-BR": "Habilitar observações do carrinho",
-        "pt-PT": "Ativar notas do carrinho",
-        "sv": "Aktivera varukorgsmeddelanden",
-        "th": "เปิดใช้หมายเหตุสำหรับตะกร้าสินค้า",
-        "zh-CN": "启用购物车备注",
-        "zh-TW": "啟用購物車備註"
-      },
+      "label": "t:sections.cart-template.settings.cart_notes_enable.label",
       "default": false
     }
   ]
