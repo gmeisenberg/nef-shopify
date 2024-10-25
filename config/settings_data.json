@@ -517,6 +517,17 @@
           "show_vendor": false,
           "show_view_all": false
         }
+      },
+      "collection_gt7TBx": {
+        "type": "collection",
+        "settings": {
+          "title": "NEF100: Burn After Hearing",
+          "collection": "nef100-burn-after-hearing",
+          "grid": 4,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
+        }
       }
     },
     "content_for_index": [
@@ -525,8 +536,9 @@
       "1655500218dc123d94",
       "collection",
       "162558419088ef5f22",
-      "1655499220c04ccc6c",
-      "1599944739126"
+      "collection_gt7TBx",
+      "1599944739126",
+      "1655499220c04ccc6c"
     ]
   },
   "presets": {
