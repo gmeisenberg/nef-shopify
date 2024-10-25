@@ -528,6 +528,13 @@
           "show_vendor": true,
           "show_view_all": false
         }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_ajax_enable": true,
+          "cart_notes_enable": true
+        }
       }
     },
     "content_for_index": [
