@@ -69,7 +69,7 @@ _nef.smoothScroll = function() {
   var headerHeight = $('.site-header').height();
 
   var options = {
-    duration: 300,
+    duration: 100,
     easing: 'easeOutExpo'
   };
 
