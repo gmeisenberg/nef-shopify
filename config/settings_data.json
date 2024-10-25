@@ -525,7 +525,7 @@
           "collection": "nef100-burn-after-hearing",
           "grid": 4,
           "rows": 2,
-          "show_vendor": false,
+          "show_vendor": true,
           "show_view_all": false
         }
       }
