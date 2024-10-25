@@ -70,7 +70,7 @@ _nef.smoothScroll = function() {
 
   var options = {
     duration: 300,
-    easing: 'easeOutQuint'
+    easing: 'easeInQuint'
   };
 
   $(".smooth-scroll a, a.smooth-scroll").on("click", function (e) {
