@@ -137,6 +137,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "c49cbc1b-932b-4d0a-aef0-c554c2286b86": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/2024-Halloween-sale-02.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
           "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
             "type": "image",
             "settings": {
@@ -224,20 +235,10 @@
               "button_label": "",
               "button_link": "shopify://collections/chiaraoscuro-rancor-succor"
             }
-          },
-          "c49cbc1b-932b-4d0a-aef0-c554c2286b86": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF-99-banner-out-now-1600x535.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/mac-gollehon-the-hispanic-mechanics-bite-of-the-street"
-            }
           }
         },
         "block_order": [
+          "c49cbc1b-932b-4d0a-aef0-c554c2286b86",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
           "image_kFi8Ci",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
@@ -245,8 +246,7 @@
           "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c",
           "image_pFQxjY",
           "image_jyg8NP",
-          "99186bf0-570c-450b-a904-26c22db9a87f",
-          "c49cbc1b-932b-4d0a-aef0-c554c2286b86"
+          "99186bf0-570c-450b-a904-26c22db9a87f"
         ],
         "settings": {
           "slideshow_height": "adapt",
