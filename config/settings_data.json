@@ -44,7 +44,7 @@
     "social_bandcamp_link": "https://nefariousindustries.bandcamp.com",
     "social_spotify_link": "",
     "favicon": "shopify://shop_images/nef_circles_outlined.png",
-    "message": true,
+    "message": false,
     "home_page_only": false,
     "message_text": "<p><a href=\"/collections/flash-sale-select-cds-cassettes-only-2-shipping\" title=\"FLASH SALE: Select CDS & CASSETTES Only $2 + Shipping!\"><strong>FLASH SALE: Select CDS & CASSETTES Only $2 + Shipping!</strong></a></p>",
     "message_bg_color": "#c2ff2e",
