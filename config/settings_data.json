@@ -140,7 +140,7 @@
           "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/NEF111-banner-1600x535.jpg",
+              "image": "shopify://shop_images/NEF111-banner-out-now_1600x535_f6246d7f-2dc0-44f1-81cc-73697cd9ff6a.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
@@ -395,8 +395,7 @@
           "1601927375973",
           "1601928489987"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "404-template": {
         "type": "404-template",
@@ -411,8 +410,7 @@
         "block_order": [
           "1602025470406"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "162558419088ef5f22": {
         "type": "collection",
