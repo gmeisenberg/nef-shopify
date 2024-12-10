@@ -137,6 +137,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "image_iddwaD": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/2024-year-end-sale-02.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
           "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
             "type": "image",
             "settings": {
@@ -168,28 +179,6 @@
               "subheading": "",
               "button_label": "",
               "button_link": "shopify://collections/nef100-burn-after-hearing"
-            }
-          },
-          "40f02c18-c4b8-4290-be55-8f4ea239fdcf": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF115-banner-02.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/bye-bye-tsunami-eating"
-            }
-          },
-          "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF113-1600x535.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/fuck-your-birthday-bbqd"
             }
           },
           "image_pFQxjY": {
@@ -227,11 +216,10 @@
           }
         },
         "block_order": [
+          "image_iddwaD",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
           "image_kFi8Ci",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
-          "40f02c18-c4b8-4290-be55-8f4ea239fdcf",
-          "40a67c5d-7fdd-4faf-8da4-8f35aa622e8c",
           "image_pFQxjY",
           "image_jyg8NP",
           "99186bf0-570c-450b-a904-26c22db9a87f"
