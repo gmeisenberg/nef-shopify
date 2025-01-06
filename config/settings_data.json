@@ -191,17 +191,6 @@
               "button_label": "",
               "button_link": "shopify://collections/martin-howth-distant-dissonance"
             }
-          },
-          "99186bf0-570c-450b-a904-26c22db9a87f": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF104-banner-out-now_1600x535_c7c8a371-5189-4b3b-adc4-41c3bb414b10.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/chiaraoscuro-rancor-succor"
-            }
           }
         },
         "block_order": [
@@ -209,8 +198,7 @@
           "image_kFi8Ci",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "image_pFQxjY",
-          "image_jyg8NP",
-          "99186bf0-570c-450b-a904-26c22db9a87f"
+          "image_jyg8NP"
         ],
         "settings": {
           "slideshow_height": "adapt",
