@@ -137,17 +137,6 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
-          "image_iddwaD": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/2024-year-end-sale-02.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": ""
-            }
-          },
           "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
             "type": "image",
             "settings": {
@@ -216,7 +205,6 @@
           }
         },
         "block_order": [
-          "image_iddwaD",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
           "image_kFi8Ci",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
