@@ -476,9 +476,9 @@
           "title": "10th Anniversary Collection",
           "collection": "a-fucking-elephant-el-drugstore-dope-soaked-and-wow-silver-medals-for-everyone",
           "grid": 4,
-          "rows": 1,
+          "rows": 2,
           "show_vendor": true,
-          "show_view_all": true
+          "show_view_all": false
         }
       },
       "1655500218dc123d94": {
