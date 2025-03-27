@@ -9316,12 +9316,10 @@ $min-height-disclosure: 92px;
 }
 
 .nef-alumni {
-  display: grid;
-  grid: 1fr / 1fr;
-  gap: 0;
+  column-count: 1;
   
   @include media-query($large-up) {
-    grid: 1fr / repeat(3, 1fr);
+    column-count: 3
   }
 
   > * {
