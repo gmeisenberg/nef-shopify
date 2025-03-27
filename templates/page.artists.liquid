@@ -3,7 +3,7 @@
     <h1>{{ page.title }}</h1>
   </header>
 
-  <ul class="grid grid--flex grid--uniform">
+  <ul class="grid grid--uniform">
     {% for collection in collections %}
       {%- if collection.template_suffix == 'artist-highlight' -%}
         {% include 'artist-grid-item', collection: collection, class: 'medium--one-half large-up--one-third' %}
@@ -17,7 +17,7 @@
     {% endfor %}
   </ul>
 
-  <ul class="grid grid--flex grid--uniform">
+  <ul class="grid grid--uniform">
     {% for collection in collections %}
       {%- if collection.template_suffix == 'artist' -%}
         {% include 'artist-grid-item', collection: collection, class: 'small--one-half medium--one-third large-up--one-fifth' %}
