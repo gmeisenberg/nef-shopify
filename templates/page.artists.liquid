@@ -9,9 +9,7 @@
         {% include 'artist-grid-item', collection: collection, class: 'medium--one-half large-up--one-third' %}
       {%- endif -%}
     {% endfor %}
-  </ul>
-
-  <ul class="grid grid--flex grid--uniform">
+    
     {% for collection in collections %}
       {%- if collection.template_suffix == 'artist-featured' -%}
         {% include 'artist-grid-item', collection: collection, class: 'medium--one-half large-up--one-quarter' %}
