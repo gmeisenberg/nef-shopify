@@ -191,28 +191,6 @@
               "button_label": "",
               "button_link": "shopify://collections/psychosomatic-the-salinas-years"
             }
-          },
-          "image_mMNJCA": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF113-1600x535.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/fuck-your-birthday-bbqd"
-            }
-          },
-          "image_tJ9Brd": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF115-banner-02.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/bye-bye-tsunami-eating"
-            }
           }
         },
         "block_order": [
@@ -220,9 +198,7 @@
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "image_pFQxjY",
           "image_jyg8NP",
-          "image_kFi8Ci",
-          "image_mMNJCA",
-          "image_tJ9Brd"
+          "image_kFi8Ci"
         ],
         "settings": {
           "slideshow_height": "adapt",
