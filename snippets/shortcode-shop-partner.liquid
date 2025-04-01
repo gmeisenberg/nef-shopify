@@ -8,7 +8,7 @@
       <h2>{{ sc_shop_partner__heading }}</h2>
     </div>
   {% endif %}
-  <ul class="grid grid--flex grid--uniform">
+  <ul class="grid grid--flex grid--flex-center grid--uniform">
     {%- for keys in key  -%}
       {% if keys != 'img' and keys != 'heading' and keys != 'nav' and keys != 'nav_nef' %}
         {% assign title = keys | replace: '-', ' ' %}
