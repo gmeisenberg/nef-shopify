@@ -137,6 +137,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "image_tNTLTc": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF-50-banner-1920x640.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/gridfailure-sixth-mass-extinction-skulduggery"
+            }
+          },
           "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
             "type": "image",
             "settings": {
@@ -194,6 +205,7 @@
           }
         },
         "block_order": [
+          "image_tNTLTc",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "image_pFQxjY",
