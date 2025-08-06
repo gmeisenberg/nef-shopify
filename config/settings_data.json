@@ -137,6 +137,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "image_CpKRJb": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF117-banner_1920x640_9eec8bde-0f23-455b-b099-dfeee78651d3.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/irk-the-seeing-house"
+            }
+          },
           "image_tNTLTc": {
             "type": "image",
             "settings": {
@@ -205,6 +216,7 @@
           }
         },
         "block_order": [
+          "image_CpKRJb",
           "image_tNTLTc",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
