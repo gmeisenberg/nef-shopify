@@ -4041,7 +4041,9 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 }
 
 .product-featured-media {
-  position: relative;
+  .product-single__media & {
+    position: relative;
+  }
 
   .product-single__media--has-thumbnails & {
     aspect-ratio: 4/3;
