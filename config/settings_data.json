@@ -254,7 +254,7 @@
           "enable_payment_button": false,
           "show_share_buttons": false,
           "media_size": "medium",
-          "enable_image_zoom": true,
+          "enable_image_zoom": false,
           "enable_video_looping": false
         }
       },
