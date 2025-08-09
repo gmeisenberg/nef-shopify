@@ -122,7 +122,7 @@
                       {%- endif -%}
                     {%- endcapture -%}
 
-                    <img class="product-single__thumbnail-image" src="{{ media.preview_image | img_url: '110x110', scale: 2 }}" alt="{{ thumbnailAlt }}">
+                    <img class="product-single__thumbnail-image" src="{{ media.preview_image | img_url: '200x200', scale: 2 }}" alt="{{ thumbnailAlt }}">
                     {%- if media.media_type == 'video' or media.media_type =='external_video' -%}
                       <div class="product-single__thumbnail-badge">
                         {% include 'icon-video-badge-full-color' %}
