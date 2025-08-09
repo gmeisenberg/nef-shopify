@@ -44,7 +44,6 @@
       {% include 'image-style', height: height, wrapper_id: media_wrapper_id, img_id: media_id, image: media.preview_image %}
       <div
         id="{{ zoom_media_id }}"
-        style="padding-top:{{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100}}%;"
         class="product-single__media{% if product.media.size > 1 %} product-single__media--has-thumbnails{% endif %}{% if enable_image_zoom %} js-zoom-enabled{% endif %}"
         {% if enable_image_zoom %} data-image-zoom-wrapper data-zoom="{{ media | img_url: image_zoom_size, scale: image_scale }}"{% endif %}>
         <img id="{{ media_id }}"
