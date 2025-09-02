@@ -137,6 +137,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "image_ViXExJ": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF116-banner-1920x640.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/defigurement-endbryo"
+            }
+          },
           "image_xmLcRH": {
             "type": "image",
             "settings": {
@@ -216,6 +227,7 @@
           }
         },
         "block_order": [
+          "image_ViXExJ",
           "image_xmLcRH",
           "image_tNTLTc",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
