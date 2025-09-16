@@ -9296,12 +9296,9 @@ $min-height-disclosure: 92px;
   pointer-events: none;
 }
 
-.sc-grid {
-  display: grid;
-  grid: 1fr / 1fr;
-  gap: 0;
-  
-  @include media-query($large-up) {
+@include media-query($large-up) {
+  .sc-grid {
+    display: grid;
     grid: 1fr / 1fr 1fr;
     gap: 0 1.5rem;
   }
