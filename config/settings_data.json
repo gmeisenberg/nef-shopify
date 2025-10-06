@@ -46,7 +46,7 @@
     "favicon": "shopify://shop_images/nef_circles_outlined.png",
     "message": true,
     "home_page_only": false,
-    "message_text": "<p><strong>SPOOKY SEASON SALE: 66.6% OFF PHYSICAL MEDIA THROUGH NOV 03<br/></strong><em>Discount automatically applied at checkout.</em></p>",
+    "message_text": "<p><strong>SPOOKY SEASON SALE: 66.6% OFF PHYSICAL MEDIA THROUGH NOV 03<br/></strong><em>Discount automatically applied at checkout. Excludes pre-orders, box sets & grab bags.</em></p>",
     "message_bg_color": "#ea4630",
     "message_text_color": "#ffd700",
     "enable_ajax": true,
