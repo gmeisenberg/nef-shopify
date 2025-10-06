@@ -137,6 +137,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "image_pFQxjY": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/2025-Halloween-sale-1920x640.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
           "image_tNTLTc": {
             "type": "image",
             "settings": {
@@ -203,17 +214,6 @@
               "button_link": "shopify://collections/nef100-burn-after-hearing"
             }
           },
-          "image_pFQxjY": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF114-banner-out-now-1600x535.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/bangladeafy-vulture"
-            }
-          },
           "image_kFi8Ci": {
             "type": "image",
             "settings": {
@@ -227,13 +227,13 @@
           }
         },
         "block_order": [
+          "image_pFQxjY",
           "image_tNTLTc",
           "image_xmLcRH",
           "image_ViXExJ",
           "image_jyg8NP",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
-          "image_pFQxjY",
           "image_kFi8Ci"
         ],
         "settings": {
