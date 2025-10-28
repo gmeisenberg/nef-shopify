@@ -137,17 +137,6 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
-          "image_ViXExJ": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF116-banner-out-now-1920x640.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/defigurement-endbryo"
-            }
-          },
           "image_pFQxjY": {
             "type": "image",
             "settings": {
@@ -157,6 +146,17 @@
               "subheading": "",
               "button_label": "",
               "button_link": ""
+            }
+          },
+          "image_ViXExJ": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF116-banner-out-now-1920x640.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/defigurement-endbryo"
             }
           },
           "image_tNTLTc": {
@@ -227,8 +227,8 @@
           }
         },
         "block_order": [
-          "image_ViXExJ",
           "image_pFQxjY",
+          "image_ViXExJ",
           "image_tNTLTc",
           "image_xmLcRH",
           "image_jyg8NP",
