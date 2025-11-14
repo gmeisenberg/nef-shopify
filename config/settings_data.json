@@ -44,7 +44,7 @@
     "social_bandcamp_link": "https://nefariousindustries.bandcamp.com",
     "social_spotify_link": "",
     "favicon": "shopify://shop_images/nef_circles_outlined.png",
-    "message": true,
+    "message": false,
     "home_page_only": false,
     "message_text": "<p>🎃 <strong>66.6% OFF PHYSICAL MEDIA THROUGH NOV 03 </strong>🎃<strong><br/></strong><em>Discount at checkout. Excl. pre-orders, box sets, grab bags.</em></p>",
     "message_bg_color": "#88e032",
@@ -137,15 +137,15 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
-          "image_pFQxjY": {
+          "image_jyg8NP": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/2025-Halloween-sale-1920x640.jpg",
+              "image": "shopify://shop_images/NEF118-banner-out-now-1920x640.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": ""
+              "button_link": "shopify://collections/lavisher-aligned-vital"
             }
           },
           "image_ViXExJ": {
@@ -179,17 +179,6 @@
               "subheading": "",
               "button_label": "",
               "button_link": "shopify://collections/irk-the-seeing-house"
-            }
-          },
-          "image_jyg8NP": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF118-banner-1920x640.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/lavisher-aligned-vital"
             }
           },
           "1b847e47-2e86-422b-87f7-3e5757dd4fec": {
@@ -227,11 +216,10 @@
           }
         },
         "block_order": [
-          "image_pFQxjY",
+          "image_jyg8NP",
           "image_ViXExJ",
           "image_tNTLTc",
           "image_xmLcRH",
-          "image_jyg8NP",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "image_kFi8Ci"
