@@ -46,7 +46,7 @@
     "favicon": "shopify://shop_images/nef_circles_outlined.png",
     "message": true,
     "home_page_only": false,
-    "message_text": "<p>YEAR END SALE: <strong>25% OFF EVERYTHING</strong> THRU JAN 05<br/><em>Discount applied at checkout. Excludes Grab Bags.</em></p>",
+    "message_text": "<p>YEAR END SALE: <strong>25% OFF EVERYTHING</strong> THRU JAN 05<br/><em>Grab Bags excluded. Discount applied at checkout.</em></p>",
     "message_bg_color": "#228b22",
     "message_text_color": "#ffffff",
     "enable_ajax": true,
