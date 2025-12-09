@@ -133,13 +133,13 @@
   {%- endif -%}
 {%- endif -%}
 
-{% capture message_class %}
-  {% if collection_handle != 'collection-product-custom' %}
-    {% if settings.message %}
-      {% if settings.home_page_only == false or request.page_type == 'index' %} has-announcement{% endif %}
-    {% endif %}
-  {% endif %}
-{% endcapture %}
+{%- capture message_class -%}
+  {%- if collection_handle != 'collection-product-custom' -%}
+    {%- if settings.message -%}
+      {%- if settings.home_page_only == false or request.page_type == 'index' -%} has-announcement{%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endcapture -%}
 
 <body class="template-{{ request.page_type | handle }} {{ collection_handle }} {{ message_class }}">
 
