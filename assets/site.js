@@ -93,7 +93,6 @@ _nef.countdown = () => {
     // const minutesSpan = clock.querySelector('.minutes');
     // const secondsSpan = clock.querySelector('.seconds');
     
-    updateClock();
     const timeinterval = setInterval(updateClock, 1000);
 
     function updateClock() {
@@ -104,13 +103,15 @@ _nef.countdown = () => {
       // minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
       // secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
-      clock.innerHTML = Straing(t.days).padStart(2,'0') + "d " + t.hours + "h " + t.minutes + "m " + t.seconds + "s ";
+      clock.innerHTML = t.days + "d " + t.hours + "h " + t.minutes + "m " + t.seconds + "s ";
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
         clock.innerHTML = "EXPIRED";
       }
     }
+
+    updateClock();
   }
 
   const countdown = document.querySelectorAll('countdown');
