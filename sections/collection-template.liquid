@@ -51,13 +51,22 @@
           </h1>
         </div>
       </div>
-      {% if collection.description != blank %}
+      <div class="page-width">
         <div class="section-header text-center">
-          <div class="rte collection-description page-width">
-            {{ collection.description }}
-          </div>
+          <h1>
+              <span class="visually-hidden">{{ 'collections.general.collection_label' | t }}: </span>
+              {{ collection.title }}
+          </h1>
+          {% if collection.description != blank %}
+            <div class="rte">
+              {{ collection.description }}
+            </div>
+          {% endif %}
+          {% if is_filter_by_available == false and section.settings.sort_enable == false %}
+            <span class="filters-toolbar__product-count">{{ 'collections.general.items_with_count' | t: count: collection.products_count }}</span>
+          {% endif %}
         </div>
-      {% endif %}
+      </div>
     {% else %}
       <div class="page-width">
         <div class="section-header text-center">
