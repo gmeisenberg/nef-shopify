@@ -134,8 +134,10 @@
 {%- endif -%}
 
 {%- capture message_class -%}
-  {%- if settings.message -%}
-    {%- if settings.home_page_only == false or request.page_type == 'index' -%} has-announcement{%- endif -%}
+  {%- if collection_handle != 'collection-product-custom' -%}
+    {%- if settings.message -%}
+      {%- if settings.home_page_only == false or request.page_type == 'index' -%} has-announcement{%- endif -%}
+    {%- endif -%}
   {%- endif -%}
 {%- endcapture -%}
 
