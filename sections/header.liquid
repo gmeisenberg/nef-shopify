@@ -21,49 +21,6 @@
 {% include 'search-drawer' %}
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section" data-header-section>  
-  {%- assign show_announcement_bar = true -%}
-  {%- if request.page_type == 'collection' and collection.template_suffix == 'product-custom' -%}
-    {%- assign show_announcement_bar = false -%}
-  {%- endif -%}
-  
-  {% if settings.message and show_announcement_bar %}
-    {% if settings.home_page_only == false or request.page_type == 'index' %}
-      <style>
-        .announcement-bar {
-          background-color: {{ settings.message_bg_color }};
-        }
-        
-        .announcement-bar__message p {
-          color: {{ settings.message_text_color }};
-        }
-        
-        .announcement-bar__message a {
-          color: {{ settings.message_text_color }};
-          text-decoration: underline;
-        }
-
-        .announcement-bar__message a:hover {
-          {% assign brightness = settings.message_text_color | color_brightness %}
-
-          {% if brightness <= 192 %}
-            {% assign lightenAmount = 255 | minus: brightness | divided_by: 255 | times: 16 %}
-            color: {{ settings.message_text_color | color_lighten: lightenAmount }};
-          {% else %}
-            {% assign darkenAmount = 255 | divided_by: brightness | times: 8 %}
-            color: {{ settings.message_text_color | color_darken: darkenAmount }};
-          {% endif %}
-        }
-      </style>
-
-      <div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement_bar_label' | t }}">
-        <div class="announcement-bar__message">
-          {{ settings.message_text }}
-        </div>
-      </div>
-
-    {% endif %}
-  {% endif %}
-
   <header class="site-header{% if section.settings.align_logo == 'left' %} logo--left{% else %} logo--center{% endif %}" role="banner">
     <div class="grid grid--no-gutters grid--table site-header__mobile-nav">
       {% if section.settings.align_logo == 'center' %}
