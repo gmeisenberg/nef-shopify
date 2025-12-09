@@ -73,7 +73,7 @@ _nef.carousel = () => {
 _nef.countdown = () => {
   const countdown = document.querySelectorAll('countdown');
 
-  countdown.forEach(c => {
+  [...countdown].forEach(c => {
     const cDate = new Date(c.dataset.date).getTime();
       
       const x = setInterval(() => {
