@@ -71,6 +71,8 @@ _nef.carousel = () => {
 };
 
 _nef.countdown = () => {
+  let expiredMsg = 'EXPIRED';
+
   const getTimeRemaining = (t) => {
     const total = Date.parse(t) - Date.parse(new Date());
     const seconds = Math.floor( (total/1000) % 60 );
@@ -106,7 +108,7 @@ _nef.countdown = () => {
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
-        clock.innerHTML = "EXPIRED";
+        clock.innerHTML = expiredMsg;
       }
     }
 
