@@ -72,66 +72,64 @@
 
         {% if is_filter_by_available or section.settings.sort_enable %}
           <div class="filters-toolbar-wrapper{% if is_filter_by_available %} filters-toolbar--has-filter{% endif %}">
-            <div class="page-width">
-              <div class="filters-toolbar">
-                <div class="filters-toolbar__item-wrapper">
-                  {% if section.settings.tags_enable or filter_collection %}
-                    {% unless collection.all_tags.size == 0 %}
-                      <div class="filters-toolbar__item-child">
-                        {% unless filter_collection %}
-                          <label class="filters-toolbar__label select-label" for="FilterTags">{{ 'collections.filters.title_tags' | t }}</label>
-                        {% endunless %}
-                        <div class="filters-toolbar__input-wrapper select-group">
-                          <select class="filters-toolbar__input hidden" name="FilterTags" id="FilterTags" aria-describedby="a11y-refresh-page-message a11y-selection-message">
-                            {% if collection.handle == 'vinyl' %}
-                              <option value="{{ collection.url }}">All {{ collection.handle }}&nbsp;&nbsp;&nbsp;</option>
-                              <option value="/collections/{{ collection.handle }}/lp"{% if current_tags contains 'LP' %} selected="selected"{% endif %}>LP / 12"</option>
-                              <option value="/collections/{{ collection.handle }}/10in"{% if current_tags contains '10in' %} selected="selected"{% endif %}>10"</option>
-                              <option value="/collections/{{ collection.handle }}/7in"{% if current_tags contains '7in' %} selected="selected"{% endif %}>7"</option>
-                            {% elsif collection.handle == 'merch' %}
-                              <option value="{{ collection.url }}">All {{ collection.handle }}&nbsp;&nbsp;&nbsp;</option>
-                              <option value="/collections/{{ collection.handle }}/t-shirt"{% if current_tags contains 'T-Shirt' %} selected="selected"{% endif %}>T-Shirts</option>
-                              <option value="/collections/{{ collection.handle }}/girls-t-shirt"{% if current_tags contains 'Girls T-Shirt' %} selected="selected"{% endif %}>Girls T-Shirts</option>
-                              <option value="/collections/{{ collection.handle }}/longsleeve"{% if current_tags contains 'Longsleeve' %} selected="selected"{% endif %}>Long Sleeves</option>
-                              <option value="/collections/{{ collection.handle }}/hoodie"{% if current_tags contains 'Hoodie' %} selected="selected"{% endif %}>Hoodies</option>
-                              <option value="/collections/{{ collection.handle }}/bag"{% if current_tags contains 'Bag' %} selected="selected"{% endif %}>Bags</option>
-                            {% else %}
-                              <option value="{{ collection.url }}">{{ 'collections.filters.all_tags' | t }}</option>
-                              {% for tag in collection.all_tags %}
-                                {%- assign new_url = tag | link_to_tag: tag | split: 'href="' | last | split: '"' | first -%}
-                                <option value="{{ new_url }}"{% if current_tags contains tag %} selected="selected"{% endif %}>{{ tag }}</option>
-                              {% endfor %}
-                            {% endif %}
-                          </select>
-                          {% include 'icon-chevron-down' %}
-                        </div>
-                      </div>
-                    {% endunless %}
-                  {% endif %}
-
-                  {% if section.settings.sort_enable %}
+            <div class="filters-toolbar">
+              <div class="filters-toolbar__item-wrapper">
+                {% if section.settings.tags_enable or filter_collection %}
+                  {% unless collection.all_tags.size == 0 %}
                     <div class="filters-toolbar__item-child">
-                      {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                      <label class="filters-toolbar__label select-label" for="SortBy">{{ 'collections.sorting.title' | t }}</label>
+                      {% unless filter_collection %}
+                        <label class="filters-toolbar__label select-label" for="FilterTags">{{ 'collections.filters.title_tags' | t }}</label>
+                      {% endunless %}
                       <div class="filters-toolbar__input-wrapper select-group">
-                        <select name="sort_by" id="SortBy"
-                          class="filters-toolbar__input hidden"
-                          aria-describedby="a11y-refresh-page-message a11y-selection-message"
-                          data-default-sortby="{{ collection.default_sort_by }}"
-                        >
-                          {%- for option in collection.sort_options -%}
-                            <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>{{ option.name }}</option>
-                          {%- endfor -%}
+                        <select class="filters-toolbar__input hidden" name="FilterTags" id="FilterTags" aria-describedby="a11y-refresh-page-message a11y-selection-message">
+                          {% if collection.handle == 'vinyl' %}
+                            <option value="{{ collection.url }}">All {{ collection.handle }}&nbsp;&nbsp;&nbsp;</option>
+                            <option value="/collections/{{ collection.handle }}/lp"{% if current_tags contains 'LP' %} selected="selected"{% endif %}>LP / 12"</option>
+                            <option value="/collections/{{ collection.handle }}/10in"{% if current_tags contains '10in' %} selected="selected"{% endif %}>10"</option>
+                            <option value="/collections/{{ collection.handle }}/7in"{% if current_tags contains '7in' %} selected="selected"{% endif %}>7"</option>
+                          {% elsif collection.handle == 'merch' %}
+                            <option value="{{ collection.url }}">All {{ collection.handle }}&nbsp;&nbsp;&nbsp;</option>
+                            <option value="/collections/{{ collection.handle }}/t-shirt"{% if current_tags contains 'T-Shirt' %} selected="selected"{% endif %}>T-Shirts</option>
+                            <option value="/collections/{{ collection.handle }}/girls-t-shirt"{% if current_tags contains 'Girls T-Shirt' %} selected="selected"{% endif %}>Girls T-Shirts</option>
+                            <option value="/collections/{{ collection.handle }}/longsleeve"{% if current_tags contains 'Longsleeve' %} selected="selected"{% endif %}>Long Sleeves</option>
+                            <option value="/collections/{{ collection.handle }}/hoodie"{% if current_tags contains 'Hoodie' %} selected="selected"{% endif %}>Hoodies</option>
+                            <option value="/collections/{{ collection.handle }}/bag"{% if current_tags contains 'Bag' %} selected="selected"{% endif %}>Bags</option>
+                          {% else %}
+                            <option value="{{ collection.url }}">{{ 'collections.filters.all_tags' | t }}</option>
+                            {% for tag in collection.all_tags %}
+                              {%- assign new_url = tag | link_to_tag: tag | split: 'href="' | last | split: '"' | first -%}
+                              <option value="{{ new_url }}"{% if current_tags contains tag %} selected="selected"{% endif %}>{{ tag }}</option>
+                            {% endfor %}
+                          {% endif %}
                         </select>
                         {% include 'icon-chevron-down' %}
                       </div>
                     </div>
-                  {% endif %}
-                </div>
+                  {% endunless %}
+                {% endif %}
 
-                <div class="filters-toolbar__item filters-toolbar__item--count">
-                  <span class="filters-toolbar__product-count">{{ 'collections.general.items_with_count' | t: count: collection.products_count }}</span>
-                </div>
+                {% if section.settings.sort_enable %}
+                  <div class="filters-toolbar__item-child">
+                    {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                    <label class="filters-toolbar__label select-label" for="SortBy">{{ 'collections.sorting.title' | t }}</label>
+                    <div class="filters-toolbar__input-wrapper select-group">
+                      <select name="sort_by" id="SortBy"
+                        class="filters-toolbar__input hidden"
+                        aria-describedby="a11y-refresh-page-message a11y-selection-message"
+                        data-default-sortby="{{ collection.default_sort_by }}"
+                      >
+                        {%- for option in collection.sort_options -%}
+                          <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>{{ option.name }}</option>
+                        {%- endfor -%}
+                      </select>
+                      {% include 'icon-chevron-down' %}
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+
+              <div class="filters-toolbar__item filters-toolbar__item--count">
+                <span class="filters-toolbar__product-count">{{ 'collections.general.items_with_count' | t: count: collection.products_count }}</span>
               </div>
             </div>
           </div>
