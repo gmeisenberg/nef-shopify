@@ -93,6 +93,7 @@ _nef.countdown = () => {
     // const minutesSpan = clock.querySelector('.minutes');
     // const secondsSpan = clock.querySelector('.seconds');
     
+    updateClock();
     const timeinterval = setInterval(updateClock, 1000);
 
     function updateClock() {
@@ -110,8 +111,6 @@ _nef.countdown = () => {
         clock.innerHTML = "EXPIRED";
       }
     }
-
-    updateClock();
   }
 
   const countdown = document.querySelectorAll('countdown');
