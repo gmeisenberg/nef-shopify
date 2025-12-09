@@ -44,7 +44,7 @@
     "social_bandcamp_link": "https://nefariousindustries.bandcamp.com",
     "social_spotify_link": "",
     "favicon": "shopify://shop_images/nef_circles_outlined.png",
-    "message": false,
+    "message": true,
     "home_page_only": false,
     "message_text": "<p><a href=\"/collections/flash-sale\" title=\"$2 TUESDAY\"><strong>FLASH SALE: ALL PHYSICAL MEDIA ONLY $2</strong></a></p><p><em>Excludes Box Sets & Grab Bags. Sale Ends Dec 09 23:59 EST.</em></p>",
     "message_bg_color": "#990000",
