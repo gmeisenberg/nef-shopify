@@ -34,7 +34,7 @@
       {%- assign is_filter_by_available = true -%}
     {%- endif -%}
 
-    {% if section.settings.show_collection_image and collection.image and collection.template_suffix != blank %}
+    {% if section.settings.show_collection_image and collection.image %}
       <div class="collection-hero">
         <div class="collection-hero__image ratio-container lazyload js"
              data-bgset="{% include 'bgset', image: collection.image %}"
