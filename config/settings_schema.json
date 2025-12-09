@@ -1385,6 +1385,14 @@
           "zh-TW": "文字"
         },
         "default": "#ffffff"
+      },
+      {
+        "type": "checkbox",
+        "id": "countdown",
+        "label": {
+          "en": "Countdown"
+        },
+        "default": false
       }
     ]
   },
