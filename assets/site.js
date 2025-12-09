@@ -20,10 +20,10 @@ _nef.stickyHeader = () => {
     }
   };
   
-  $(window).on('resize', () => {
+  $(window).on('resize', function(e) {
     const scrollTop = $(window).scrollTop();
     (scrollTop > 0) ? scrollDown() : scrollUp();
-  }).on('scroll', () => {
+  }).on('scroll', function(e) {
     const scrollTop = $(window).scrollTop();
     const headerHeight = $('.site-header').height();
 
@@ -37,8 +37,8 @@ _nef.stickyHeader = () => {
 };
 
 _nef.readMore = () => {
-  $('.readmore__toggle').on('click', (e) => {
-    // e.preventDefault();
+  $('.readmore__toggle').on('click', function(e) {
+    e.preventDefault();
     $(this).hide();
     $(this).siblings('.readmore__short').hide();
     $(this).siblings('.readmore__full').show();
