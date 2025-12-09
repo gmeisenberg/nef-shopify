@@ -5038,6 +5038,10 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   .has-announcement.has-scrolled:not(.mobile-nav--is-open):not(.collection-release) & {
     transform: translateY(calc(-#{$header-padding} - #{$header-padding-announcement} - 1px));
   }
+
+  .has-announcement.has-scrolled.collection-release:not(.mobile-nav--is-open) & {
+    transform: translateY(calc(-#{$header-padding-announcement} - 1px));
+  }
 }
 
 .site-header {
