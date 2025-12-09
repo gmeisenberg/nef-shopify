@@ -117,6 +117,7 @@ _nef.countdown = () => {
 
   [...countdown].forEach(c => {
     const d = new Date(c.dataset.date).getTime();
+    console.log(d);
     initializeClock(c, d);
   });
 }
