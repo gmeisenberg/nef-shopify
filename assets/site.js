@@ -71,7 +71,27 @@ _nef.carousel = () => {
 };
 
 _nef.countdown = () => {
-  console.log('dicks');
+  const countdown = document.querySelectorAll('countdown');
+
+  [...countdown].foreach(c => {
+    const cDate = new Date(c.dataset.date).getTime();
+      
+      const x = setInterval(() => {
+        var now = new Date().getTime();
+        var dist = cDate - now;
+        var d = Math.floor(dist / (1000 * 60 * 60 * 24));
+        var h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+        var s = Math.floor((dist % (1000 * 60)) / 1000);
+
+        c.innerHTML = d + "d " + h + "h " + m + "m " + s + "s ";
+
+        if (dist < 0) {
+          clearInterval(x);
+          c.innerHTML = "EXPIRED";
+        }
+      }, 1000);
+  });
 }
 
 $(function() {
