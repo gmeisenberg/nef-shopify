@@ -54,7 +54,7 @@ _nef.smoothScroll = () => {
   };
 
   $(".smooth-scroll a, a.smooth-scroll").on("click", (e) => {
-    e.target.preventDefault();
+    // e.target.preventDefault();
     const href = $(this).attr("href");
     $("html, body").animate({ scrollTop: $(href).offset().top - headerHeight }, options);
   });
