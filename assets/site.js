@@ -89,7 +89,7 @@ _nef.countdown = () => {
     };
   }
 
-  const formatTime = (t, prefix) => {
+  const formatTime = (t, prefix = '') => {
     const timeFormat = ['d', 'h', 'm', 's'].reverse();
 
     return [
@@ -105,7 +105,7 @@ _nef.countdown = () => {
     function updateClock() {
       const t = getTimeRemaining(endtime);
       
-      clock.innerHTML = formatTime(t), prefix;
+      clock.innerHTML = formatTime(t, prefix);
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
