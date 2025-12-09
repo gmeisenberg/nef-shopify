@@ -92,8 +92,10 @@ _nef.countdown = () => {
     // const hoursSpan = clock.querySelector('.hours');
     // const minutesSpan = clock.querySelector('.minutes');
     // const secondsSpan = clock.querySelector('.seconds');
+    
+    const timeinterval = setInterval(updateClock, 1000);
 
-    function updateClock() {
+    const updateClock = () => {
       const t = getTimeRemaining(endtime);
 
       // daysSpan.innerHTML = t.days;
@@ -110,7 +112,6 @@ _nef.countdown = () => {
     }
 
     updateClock();
-    const timeinterval = setInterval(updateClock, 1000);
   }
 
   const countdown = document.querySelectorAll('countdown');
