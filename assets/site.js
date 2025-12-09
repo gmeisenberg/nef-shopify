@@ -1,15 +1,11 @@
 (function ($) {
 
-var _nef = window._nef || {};
+const _nef = window._nef || {};
 
-var $grid = $('.grid--masonry');
+const $grid = $('.grid--masonry');
 
-_nef.masonry = function() {
-  
-  $grid.imagesLoaded( function() {
-    $grid.masonry();
-  });
-
+_nef.masonry = () => {
+  $grid.imagesLoaded( () => $grid.masonry() );
 };
 
 _nef.stickyHeader = function() {
