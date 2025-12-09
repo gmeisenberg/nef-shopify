@@ -71,8 +71,6 @@ _nef.carousel = () => {
 };
 
 _nef.countdown = () => {
-  const timeFormat = ['d', 'h', 'm', 's'].reverse();
-
   const getTimeRemaining = (t) => {
     const total = Date.parse(t) - Date.parse(new Date());
     const seconds = Math.floor( (total/1000) % 60 );
@@ -89,17 +87,21 @@ _nef.countdown = () => {
     };
   }
 
+  const formatTime = (t) => {
+    const timeFormat = ['d', 'h', 'm', 's'].reverse();
+    return = [
+      ...[t.seconds, t.minutes, t.hours].map(e => ('0' + e).slice(-2)),
+      t.days
+    ].filter(e=>e).map((item, index) => `${item}${timeFormat[index]}`).reverse().join(' ');
+  }
+
   const initializeClock = (clock, endtime) => {
     const timeinterval = setInterval(updateClock, 1000);
 
     function updateClock() {
       const t = getTimeRemaining(endtime);
-      const timeRemaining = [
-        ...[t.seconds, t.minutes, t.hours].map(e => ('0' + e).slice(-2)),
-        t.days
-      ].filter(e=>e).map((item, index) => `${item}${timeFormat[index]}`).reverse().join(' ');
       
-      clock.innerHTML = timeRemaining;
+      clock.innerHTML = formatTime(t);
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
