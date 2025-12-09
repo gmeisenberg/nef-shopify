@@ -71,7 +71,7 @@ _nef.carousel = () => {
 };
 
 _nef.countdown = () => {
-  const timeFormat = ['d', 'h', 'm', 's'];
+  const timeFormat = ['d', 'h', 'm', 's'].reverse();
 
   const getTimeRemaining = (t) => {
     const total = Date.parse(t) - Date.parse(new Date());
@@ -95,8 +95,8 @@ _nef.countdown = () => {
     function updateClock() {
       const t = getTimeRemaining(endtime);
       const timeRemaining = [
-        t.days,
-        ...[t.hours, t.minutes, t.seconds].map(e => ('0' + e).slice(-2))
+        [t.seconds, t.minutes, t.hours].map(e => ('0' + e).slice(-2)),
+        t.days
       ].map((item, index) => `${item}${timeFormat[index]}`).join(' ');
       clock.innerHTML = timeRemaining;
 
