@@ -104,7 +104,7 @@ _nef.countdown = () => {
       // minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
       // secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
-      clock.innerHTML = t.days + "d " + t.hours + "h " + t.minutes + "m " + t.seconds + "s ";
+      clock.innerHTML = padStart(2, t.days) + "d " + t.hours + "h " + t.minutes + "m " + t.seconds + "s ";
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
