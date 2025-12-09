@@ -46,7 +46,7 @@
     "favicon": "shopify://shop_images/nef_circles_outlined.png",
     "message": true,
     "home_page_only": false,
-    "message_text": "<p><a href=\"/collections/flash-sale\" title=\"$2 TUESDAY\"><strong>FLASH SALE: ALL PHYSICAL MEDIA ONLY $2</strong></a></p><p><em>Excludes Box Sets & Grab Bags. Sale Ends Dec 09 23:59 EST.</em></p>",
+    "message_text": "<p><a href=\"/collections/flash-sale\" title=\"$2 TUESDAY\"><strong>FLASH SALE: ALL PHYSICAL MEDIA ONLY $2</strong></a></p><p><em>Excludes Box Sets &amp; Grab Bags. <countdown data-deadline=\"Dec 10, 2025 00:00:00 EST\" data-expired=\"SALE HAS ENDED\" data-prefix=\"Sale Ends\">Sale Ends Dec 09 23:59 EST</countdown>.</em></p>",
     "message_bg_color": "#990000",
     "message_text_color": "#ffffff",
     "enable_ajax": true,
