@@ -21,15 +21,18 @@
   </header>
 
   <section class="release-products">
-    <div id="buy" class="section-container page-width">
+    <div class="section-container page-width">
       <div class="section-header text-center">
         <h2>{{ collection.title }}</h2>
       </div>
-      <div class="rte">{{ collection.description }}</div>
+  
+      {% if collection.description != blank %}
+        <div class="rte collection-description page-width">
+          {{ collection.description }}
+        </div>
+      {% endif %}
+
       <ul class="grid grid--flex grid--uniform">
-        {% if sc_shop_digital != blank %}
-          {{ sc_shop_digital }}
-        {% endif %}
         {% for product in collection.products %}
         <li class="grid__item medium-up--one-quarter">
           {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: true %}
@@ -38,10 +41,4 @@
       </ul>
     </div>
   </section>
-  
-  {% if collection.description != blank %}
-    <div class="rte collection-description page-width">
-      {{ collection.description }}
-    </div>
-  {% endif %}
 </div>
