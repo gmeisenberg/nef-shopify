@@ -70,12 +70,17 @@ _nef.carousel = () => {
   });
 };
 
+_nef.countdown = () => {
+  console.log('dicks');
+}
+
 $(function() {
   _nef.masonry();
   _nef.stickyHeader();
   _nef.readMore();
   _nef.smoothScroll();
   _nef.carousel();
+  _nef.countdown();
 })
 
 })(jQuery)
