@@ -94,16 +94,18 @@ _nef.countdown = () => {
 
     function updateClock() {
       const t = getTimeRemaining(endtime);
-      const timeRemaining = [
-        ...[t.seconds, t.minutes, t.hours].map(e => ('0' + e).slice(-2)),
-        t.days
-      ].filter(e=>e).map((item, index) => `${item}${timeFormat[index]}`).reverse().join(' ');
-      clock.innerHTML = timeRemaining;
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
         clock.innerHTML = "EXPIRED";
       }
+      
+      const timeRemaining = [
+        ...[t.seconds, t.minutes, t.hours].map(e => ('0' + e).slice(-2)),
+        t.days
+      ].filter(e=>e).map((item, index) => `${item}${timeFormat[index]}`).reverse().join(' ');
+
+      clock.innerHTML = timeRemaining;
     }
 
     updateClock();
