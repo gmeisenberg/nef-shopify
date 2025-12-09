@@ -68,7 +68,6 @@ _nef.carousel = () => {
       prevNextButtons: false
     });
   });
-
 };
 
 $(function() {
