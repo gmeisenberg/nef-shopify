@@ -91,10 +91,11 @@ _nef.countdown = () => {
     const timeinterval = setInterval(updateClock, 1000);
 
     function updateClock() {
-      const e = getTimeRemaining(endtime);
-      clock.innerHTML = e.days + "d " + e.hours + "h " + e.minutes + "m " + e.seconds + "s ";
+      const t = getTimeRemaining(endtime);
+      const timeRemaining = [t.days, t.hours, t.minues, t.seconds].filter(e => e).join(' ');
+      clock.innerHTML = timeRemaining;
 
-      if (e.total <= 0) {
+      if (t.total <= 0) {
         clearInterval(timeinterval);
         clock.innerHTML = "EXPIRED";
       }
