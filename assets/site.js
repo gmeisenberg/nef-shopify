@@ -53,8 +53,8 @@ _nef.smoothScroll = () => {
     easing: 'easeOutExpo'
   };
 
-  $(".smooth-scroll a, a.smooth-scroll").on("click", (e) => {
-    // e.target.preventDefault();
+  $(".smooth-scroll a, a.smooth-scroll").on("click", function (e) {
+    e.preventDefault();
     const href = $(this).attr("href");
     $("html, body").animate({ scrollTop: $(href).offset().top - headerHeight }, options);
   });
