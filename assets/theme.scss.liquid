@@ -7511,7 +7511,7 @@ $toolbar-height-small: 46px;
 
 .filters-toolbar__item {
   min-width: 33%;
-  @include flex(1 1 33%);
+  @include flex(0 1 auto);
 
   &:first-child {
     .filters-toolbar__input {
@@ -7543,22 +7543,13 @@ $toolbar-height-small: 46px;
 
 .filters-toolbar__item-wrapper {
   @include display-flexbox();
-  @include flex(1 1 33%);
-
-  @include media-query($small) {
-    @include justify-content(center);
-  }
+  @include flex(0 1 auto);
 }
 
 .filters-toolbar__item--count {
   min-width: 0;
   @include flex(0 1 auto);
   text-align: center;
-
-  @include media-query($small) {
-    @include flex(0 1 50%);
-    text-align: right;
-  }
 }
 
 .filters-toolbar__label {
