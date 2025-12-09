@@ -92,8 +92,11 @@ _nef.countdown = () => {
 
     function updateClock() {
       const t = getTimeRemaining(endtime);
-      const timeRemaining = [t.days, t.hours, t.minutes, t.seconds].filter((e, i) => {
-        return i ? true : false;
+      const timeRemaining = [t.days, t.hours, t.minutes, t.seconds].filter((e, i, a) => {
+        if (i === 0 && e === 0) {
+          return false;
+        }
+        return a[i-1] > 0;
       }).join(' ');
       clock.innerHTML = timeRemaining;
 
