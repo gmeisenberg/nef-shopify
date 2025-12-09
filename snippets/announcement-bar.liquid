@@ -1,8 +1,5 @@
 
 {%- assign show_announcement_bar = true -%}
-{%- if request.page_type == 'collection' and collection.template_suffix == 'product-custom' -%}
-{%- assign show_announcement_bar = false -%}
-{%- endif -%}
 
 {% if settings.message and show_announcement_bar %}
 {% if settings.home_page_only == false or request.page_type == 'index' %}
