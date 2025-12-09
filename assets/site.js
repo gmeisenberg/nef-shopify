@@ -118,9 +118,9 @@ _nef.countdown = () => {
   const countdown = document.querySelectorAll('countdown');
 
   [...countdown].forEach(c => {
-    const d = new Date(c.dataset.deadline);
-    console.log(d);
-    initializeClock(c, d);
+    const deadline = new Date(c.dataset.deadline);
+    const expired = c.dataset.expired;
+    initializeClock(c, deadline);
   });
 }
 
