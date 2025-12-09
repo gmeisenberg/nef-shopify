@@ -89,7 +89,7 @@ _nef.countdown = () => {
 
   const formatTime = (t) => {
     const timeFormat = ['d', 'h', 'm', 's'].reverse();
-    
+
     return [
       ...[t.seconds, t.minutes, t.hours].map(e => ('0' + e).slice(-2)),
       t.days
@@ -116,7 +116,7 @@ _nef.countdown = () => {
   const countdown = document.querySelectorAll('countdown');
 
   [...countdown].forEach(c => {
-    const d = new Date(c.dataset.date);
+    const d = new Date(c.dataset.deadline);
     console.log(d);
     initializeClock(c, d);
   });
