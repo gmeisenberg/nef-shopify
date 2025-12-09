@@ -88,24 +88,13 @@ _nef.countdown = () => {
   }
 
   const initializeClock = (clock, endtime) => {
-    // const daysSpan = clock.querySelector('.days');
-    // const hoursSpan = clock.querySelector('.hours');
-    // const minutesSpan = clock.querySelector('.minutes');
-    // const secondsSpan = clock.querySelector('.seconds');
-    
     const timeinterval = setInterval(updateClock, 1000);
 
     function updateClock() {
-      const t = getTimeRemaining(endtime);
+      const e = getTimeRemaining(endtime);
+      clock.innerHTML = e.days + "d " + e.hours + "h " + e.minutes + "m " + e.seconds + "s ";
 
-      // daysSpan.innerHTML = t.days;
-      // hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-      // minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-      // secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-      clock.innerHTML = t.days + "d " + t.hours + "h " + t.minutes + "m " + t.seconds + "s ";
-
-      if (t.total <= 0) {
+      if (e.total <= 0) {
         clearInterval(timeinterval);
         clock.innerHTML = "EXPIRED";
       }
