@@ -104,7 +104,7 @@ _nef.countdown = () => {
     function updateClock() {
       const t = getTimeRemaining(endtime);
       
-      clock.innerHTML = formatTime(t);
+      clock.innerHTML = [prefix, formatTime(t)].filter(e=>e).join(' ');
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
