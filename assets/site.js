@@ -98,7 +98,7 @@ _nef.countdown = () => {
     ].filter(e=>e).map((item, index) => `${item}${timeFormat[index]}`).reverse().join(' ');
   }
 
-  const initializeClock = (clock, endtime) => {
+  const initializeClock = (clock, endtime, expired, prefix) => {
     const timeinterval = setInterval(updateClock, 1000);
 
     function updateClock() {
@@ -108,7 +108,7 @@ _nef.countdown = () => {
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
-        clock.innerHTML = expiredMsg;
+        clock.innerHTML = expired ? expired : expiredMsg;
       }
     }
 
@@ -120,7 +120,8 @@ _nef.countdown = () => {
   [...countdown].forEach(c => {
     const deadline = new Date(c.dataset.deadline);
     const expired = c.dataset.expired;
-    initializeClock(c, deadline);
+    const prefix = c.dataset.prefix;
+    initializeClock(c, deadline, expired, prefix);
   });
 }
 
