@@ -1313,7 +1313,7 @@
         "default": true
       },
       {
-        "type": "richtext",
+        "type": "html",
         "id": "message_text",
         "label": {
           "da": "Tekst",
