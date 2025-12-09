@@ -89,7 +89,7 @@ _nef.countdown = () => {
 
   const formatTime = (t) => {
     const timeFormat = ['d', 'h', 'm', 's'].reverse();
-    return = [
+    return [
       ...[t.seconds, t.minutes, t.hours].map(e => ('0' + e).slice(-2)),
       t.days
     ].filter(e=>e).map((item, index) => `${item}${timeFormat[index]}`).reverse().join(' ');
