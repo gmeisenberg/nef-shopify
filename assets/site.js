@@ -97,7 +97,7 @@ _nef.countdown = () => {
       const timeRemaining = [
         ...[t.seconds, t.minutes, t.hours].map(e => ('0' + e).slice(-2)),
         t.days
-      ].map((item, index) => `${item}${timeFormat[index]}`).join(' ');
+      ].filter(e=>e).map((item, index) => `${item}${timeFormat[index]}`).join(' ').reverse();
       clock.innerHTML = timeRemaining;
 
       if (t.total <= 0) {
