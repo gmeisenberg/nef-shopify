@@ -6,6 +6,8 @@
 {%- assign max_height = 195 -%}
 {%- assign limit = 100 -%}
 
+{% paginate collection.products by limit %}
+
 <div class="collection--{{ catalog_id | handleize }} collection-release" data-section-type="collection-template">
   <header class="collection-header">
     <div class="collection-hero" style="margin-bottom: 0;">
@@ -42,3 +44,5 @@
     </div>
   </section>
 </div>
+
+{% endpaginate %}
