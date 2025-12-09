@@ -95,7 +95,7 @@ _nef.countdown = () => {
     function updateClock() {
       const t = getTimeRemaining(endtime);
       const timeRemaining = [
-        [t.seconds, t.minutes, t.hours].map(e => ('0' + e).slice(-2)),
+        ...[t.seconds, t.minutes, t.hours].map(e => ('0' + e).slice(-2)),
         t.days
       ].map((item, index) => `${item}${timeFormat[index]}`).join(' ');
       clock.innerHTML = timeRemaining;
