@@ -73,7 +73,7 @@ _nef.carousel = () => {
 _nef.countdown = () => {
   const countdown = document.querySelectorAll('countdown');
 
-  [...countdown].foreach(c => {
+  Array.from(countdown).foreach(c => {
     console.log(c)
     // const cDate = new Date(c.dataset.date).getTime();
       
