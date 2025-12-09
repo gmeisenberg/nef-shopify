@@ -94,11 +94,11 @@ _nef.carousel = function() {
 };
 
 $(function() {
-  _nef.masonry()
-  _nef.stickyHeader()
-  _nef.readMore()
-  _nef.smoothScroll()
-  _nef.carousel()
+  _nef.masonry();
+  _nef.stickyHeader();
+  _nef.readMore();
+  _nef.smoothScroll();
+  _nef.carousel();
 })
 
 })(jQuery)
