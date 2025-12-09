@@ -116,7 +116,7 @@ _nef.countdown = () => {
   const countdown = document.querySelectorAll('countdown');
 
   [...countdown].forEach(c => {
-    const d = new Date(c.dataset.date).getTime();
+    const d = new Date(c.dataset.date);
     console.log(d);
     initializeClock(c, d);
   });
