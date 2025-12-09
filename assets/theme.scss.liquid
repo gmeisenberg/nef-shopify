@@ -5031,11 +5031,11 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 #shopify-section-header {
   transition: transform $transition-duration-slow ease;
   
-  .has-scrolled:not(.mobile-nav--is-open):not(.collection-release, .collection-product-custom) & {
+  .has-scrolled:not(.mobile-nav--is-open):not(.collection-release) & {
     transform: translateY(-#{$header-padding});
   }
 
-  .has-announcement.has-scrolled:not(.mobile-nav--is-open):not(.collection-release, .collection-product-custom) & {
+  .has-announcement.has-scrolled:not(.mobile-nav--is-open):not(.collection-release) & {
     transform: translateY(calc(-#{$header-padding} - #{$header-padding-announcement} - 1px));
   }
 }
