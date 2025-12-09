@@ -20,10 +20,10 @@ _nef.stickyHeader = () => {
     }
   };
   
-  $(window).on('resize', function(e) {
+  $(window).on('resize', () => {
     const scrollTop = $(window).scrollTop();
     (scrollTop > 0) ? scrollDown() : scrollUp();
-  }).on('scroll', function(e) {
+  }).on('scroll', () => {
     const scrollTop = $(window).scrollTop();
     const headerHeight = $('.site-header').height();
 
@@ -36,16 +36,14 @@ _nef.stickyHeader = () => {
   });
 };
 
-_nef.readMore = function() {
-
-  $('.readmore__toggle').on('click', function(e) {
+_nef.readMore = () => {
+  $('.readmore__toggle').on('click', (e) => {
     e.preventDefault();
     $(this).hide();
     $(this).siblings('.readmore__short').hide();
     $(this).siblings('.readmore__full').show();
     $grid.masonry();
   });
-
 };
 
 _nef.smoothScroll = function() {
