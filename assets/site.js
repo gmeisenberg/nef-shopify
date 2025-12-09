@@ -95,7 +95,7 @@ _nef.countdown = () => {
     
     const timeinterval = setInterval(updateClock, 1000);
 
-    const updateClock = () => {
+    function updateClock() {
       const t = getTimeRemaining(endtime);
 
       // daysSpan.innerHTML = t.days;
