@@ -46,21 +46,18 @@ _nef.readMore = () => {
   });
 };
 
-_nef.smoothScroll = function() {
-
-  var headerHeight = $('.site-header').height();
-
-  var options = {
+_nef.smoothScroll = () => {
+  const headerHeight = $('.site-header').height();
+  const options = {
     duration: 100,
     easing: 'easeOutExpo'
   };
 
-  $(".smooth-scroll a, a.smooth-scroll").on("click", function (e) {
+  $(".smooth-scroll a, a.smooth-scroll").on("click", (e) => {
     e.preventDefault();
     const href = $(this).attr("href");
     $("html, body").animate({ scrollTop: $(href).offset().top - headerHeight }, options);
   });
-
 };
 
 _nef.carousel = function() {
