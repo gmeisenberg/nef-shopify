@@ -87,13 +87,13 @@ _nef.countdown = () => {
     };
   }
 
-  function initializeClock(clock, endtime) {
+  const initializeClock = (clock, endtime) => {
     // const daysSpan = clock.querySelector('.days');
     // const hoursSpan = clock.querySelector('.hours');
     // const minutesSpan = clock.querySelector('.minutes');
     // const secondsSpan = clock.querySelector('.seconds');
 
-    function updateClock() {
+    const updateClock = () => {
       const t = getTimeRemaining(endtime);
 
       // daysSpan.innerHTML = t.days;
