@@ -1289,31 +1289,6 @@
       },
       {
         "type": "checkbox",
-        "id": "dicks",
-        "label": {
-          "da": "Kun startside",
-          "de": "Nur Startseite",
-          "en": "Dicks",
-          "es": "Solo página de inicio",
-          "fi": "Vain etusivu",
-          "fr": "Page d'accueil uniquement",
-          "hi": "केवल होमपेज",
-          "it": "Solo home page",
-          "ja": "ホームページのみ",
-          "ko": "홈페이지만",
-          "nb": "Kun på startsiden",
-          "nl": "Alleen homepage",
-          "pt-BR": "Apenas na página inicial",
-          "pt-PT": "Apenas a página inicial",
-          "sv": "Endast hemsida",
-          "th": "หน้าแรกเท่านั้น",
-          "zh-CN": "仅主页",
-          "zh-TW": "僅限首頁"
-        },
-        "default": true
-      },
-      {
-        "type": "checkbox",
         "id": "home_page_only",
         "label": {
           "da": "Kun startside",
