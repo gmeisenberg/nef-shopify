@@ -89,22 +89,23 @@ _nef.countdown = () => {
     };
   }
 
-  const formatTime = (t) => {
+  const formatTime = (t, prefix) => {
     const timeFormat = ['d', 'h', 'm', 's'].reverse();
 
     return [
       ...[t.seconds, t.minutes, t.hours].map(e => ('0' + e).slice(-2)),
-      t.days
+      t.days,
+      prefix
     ].filter(e=>e).map((item, index) => `${item}${timeFormat[index]}`).reverse().join(' ');
   }
 
-  const initializeClock = (clock, endtime, expired, prefix) => {
+  const initializeClock = (clock, endtime, expired = '', prefix = '') => {
     const timeinterval = setInterval(updateClock, 1000);
 
     function updateClock() {
       const t = getTimeRemaining(endtime);
       
-      clock.innerHTML = formatTime(t);
+      clock.innerHTML = formatTime(t), prefix;
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
