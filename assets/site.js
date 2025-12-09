@@ -71,26 +71,53 @@ _nef.carousel = () => {
 };
 
 _nef.countdown = () => {
+  const getTimeRemaining = (t) => {
+    const total = Date.parse(t) - Date.parse(new Date());
+    const seconds = Math.floor( (total/1000) % 60 );
+    const minutes = Math.floor( (total/1000/60) % 60 );
+    const hours = Math.floor( (total/(1000*60*60)) % 24 );
+    const days = Math.floor( total/(1000*60*60*24) );
+
+    return {
+      total,
+      days,
+      hours,
+      minutes,
+      seconds
+    };
+  }
+
+  function initializeClock(clock, endtime) {
+    // const daysSpan = clock.querySelector('.days');
+    // const hoursSpan = clock.querySelector('.hours');
+    // const minutesSpan = clock.querySelector('.minutes');
+    // const secondsSpan = clock.querySelector('.seconds');
+
+    function updateClock() {
+      const t = getTimeRemaining(endtime);
+
+      // daysSpan.innerHTML = t.days;
+      // hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+      // minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+      // secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+      clock.innerHTML = t.days + "d " + t.hours + "h " + t.minutes + "m " + t.seconds + "s ";
+
+      if (t.total <= 0) {
+        clearInterval(timeinterval);
+        clock.innerHTML = "EXPIRED";
+      }
+    }
+
+    updateClock();
+    const timeinterval = setInterval(updateClock, 1000);
+  }
+
   const countdown = document.querySelectorAll('countdown');
 
   [...countdown].forEach(c => {
-    const cDate = new Date(c.dataset.date).getTime();
-      
-    const x = setInterval(() => {
-      var now = new Date().getTime();
-      var dist = cDate - now;
-      var d = Math.floor(dist / (1000 * 60 * 60 * 24));
-      var h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
-      var s = Math.floor((dist % (1000 * 60)) / 1000);
-
-      c.innerHTML = d + "d " + h + "h " + m + "m " + s + "s ";
-
-      if (dist < 0) {
-        clearInterval(x);
-        c.innerHTML = "EXPIRED";
-      }
-    }, 1000);
+    const d = new Date(c.dataset.date).getTime();
+    initializeClock(c, d);
   });
 }
 
