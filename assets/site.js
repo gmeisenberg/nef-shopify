@@ -93,7 +93,7 @@ _nef.countdown = () => {
     // const minutesSpan = clock.querySelector('.minutes');
     // const secondsSpan = clock.querySelector('.seconds');
 
-    const updateClock = () => {
+    function updateClock() => {
       const t = getTimeRemaining(endtime);
 
       // daysSpan.innerHTML = t.days;
