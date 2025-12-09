@@ -21,21 +21,17 @@ _nef.stickyHeader = () => {
   };
   
   $(window).on('resize', function(e) {
-    var scrollTop = $(window).scrollTop();
+    const scrollTop = $(window).scrollTop();
     (scrollTop > 0) ? scrollDown() : scrollUp();
   }).on('scroll', function(e) {
-    var scrollTop = $(window).scrollTop();
-    var headerHeight = $('.site-header').height();
+    const scrollTop = $(window).scrollTop();
+    const headerHeight = $('.site-header').height();
 
     if (Math.abs(scrollPosition - scrollTop) <= delta) {
       return;
     }
     
-    if (scrollTop > scrollPosition && scrollTop > headerHeight) {
-      scrollDown();
-    } else {
-      scrollUp();
-    }
+    (scrollTop > scrollPosition && scrollTop > headerHeight) ? scrollDown() : scrollUp();
     scrollPosition = scrollTop;
   });
 };
