@@ -7497,6 +7497,28 @@ $toolbar-height-small: 46px;
 
   @include media-query($small) {
     border-bottom: none;
+
+    .filters-toolbar__item-wrapper {
+      @include flex-basis(100%);
+    }
+
+    .filters-toolbar__item--count {
+      @include flex-basis(100%);
+      text-align: center;
+    }
+  }
+}
+
+.filters-toolbar__item {
+  min-width: 33%;
+  @include flex(0 1 auto);
+
+  &:first-child {
+    .filters-toolbar__input {
+      @include media-query($small) {
+        padding-left: 0;
+      }
+    }
   }
 }
 
@@ -7517,6 +7539,17 @@ $toolbar-height-small: 46px;
       width: 100%;
     }
   }
+}
+
+.filters-toolbar__item-wrapper {
+  @include display-flexbox();
+  @include flex(0 1 auto);
+}
+
+.filters-toolbar__item--count {
+  min-width: 0;
+  @include flex(0 1 auto);
+  text-align: center;
 }
 
 .filters-toolbar__label {
