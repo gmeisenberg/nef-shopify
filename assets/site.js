@@ -60,9 +60,8 @@ _nef.smoothScroll = () => {
   });
 };
 
-_nef.carousel = function() {
-
-  $(window).on('shopify:section:load', function() {
+_nef.carousel = () => {
+  $(window).on('shopify:section:load', () => {
     $('.carousel').flickity({
       imagesLoaded: true,
       wrapAround: true,
