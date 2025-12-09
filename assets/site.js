@@ -38,7 +38,7 @@ _nef.stickyHeader = () => {
 
 _nef.readMore = () => {
   $('.readmore__toggle').on('click', (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     $(this).hide();
     $(this).siblings('.readmore__short').hide();
     $(this).siblings('.readmore__full').show();
