@@ -132,17 +132,17 @@ _nef.countdown = () => {
 
   const countdown = document.querySelectorAll('countdown');
   [...countdown].forEach(c => {
-    const schedule = c.dataset.schedule;
-    console.log(JSON.parse(schedule))
-    // schedule.forEach(([endDate, startDate ='']) => {
-    //   const startMs = Date.parse(startDate);
-    //   const endMs = Date.parse(endDate);
-    //   const currentMs = Date.parse(new Date());
+    const schedule = JSON.parse(c.dataset.schedule);
+    schedule.forEach(([endDate, startDate ='']) => {
+      console.log(startDate,endDate)
+      // const startMs = Date.parse(startDate);
+      // const endMs = Date.parse(endDate);
+      // const currentMs = Date.parse(new Date());
 
-    //   if (endMs > currentMs && currentMs >= startMs ) {
-    //     initializeClock('clockdiv', endDate);
-    //   }
-    // });
+      // if (endMs > currentMs && currentMs >= startMs ) {
+      //   initializeClock('clockdiv', endDate);
+      // }
+    });
     const deadline = new Date(c.dataset.deadline);
     initializeClock(c, deadline);
   });
