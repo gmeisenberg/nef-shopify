@@ -138,14 +138,10 @@ _nef.countdown = () => {
       const startMs = startDate ? Date.parse(startDate) : currentMs;
       const endMs = Date.parse(endDate);
 
-      console.log(endMs,currentMs,startMs)
-
       if (endMs > currentMs && currentMs >= startMs ) {
         initializeClock(c, endDate);
       }
     });
-    // const deadline = new Date(c.dataset.deadline);
-    // initializeClock(c, deadline);
   });
 }
 
