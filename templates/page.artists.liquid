@@ -11,8 +11,9 @@
 {%- capture productbyvendor -%}
   {%- for vendor in shop.vendors -%}
     {%- assign vendor_handle = vendor | handleize -%}
-    {%- assign product = collection[vendor_handle].products[0] -%}
-    {{ vendor }}|{{ product.title }}::
+    {%- for product in collection[vendor_handle].products -%}
+      {{ vendor }}|{{ product.title }}::
+    {%- endfor -%}
   {%- endfor -%}
 {%- endcapture -%}
 {%- assign productbyvendor = productbyvendor | strip_newlines | split: '::' | sort -%}
