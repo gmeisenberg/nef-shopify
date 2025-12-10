@@ -41,6 +41,8 @@
                         <option value="/collections/{{ collection.handle }}/lp"{% if current_tags contains 'LP' %} selected="selected"{% endif %}>LP / 12"</option>
                         <option value="/collections/{{ collection.handle }}/10in"{% if current_tags contains '10in' %} selected="selected"{% endif %}>10"</option>
                         <option value="/collections/{{ collection.handle }}/7in"{% if current_tags contains '7in' %} selected="selected"{% endif %}>7"</option>
+                        <option value="/collections/{{ collection.handle }}/cd"{% if current_tags contains 'CD' %} selected="selected"{% endif %}>7"</option>
+                        <option value="/collections/{{ collection.handle }}/cassette"{% if current_tags contains 'Cassette' %} selected="selected"{% endif %}>7"</option>
                     </select>
                     {% include 'icon-chevron-down' %}
                   </div>
