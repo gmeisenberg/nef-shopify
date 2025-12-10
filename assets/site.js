@@ -70,6 +70,30 @@ _nef.carousel = () => {
   });
 };
 
+
+/**
+ * Display countdown timer.
+ * -----------------------------------------------------------------------------
+ * 
+ * @attributes
+ * data-schedule: {Array} Array of end/start times - [ ["End", "Start (optional - defaults to NOW)"], [...], [...] ]
+ * data-expired: {String} Text when timer expires, defaults to initial content.
+ * data-inactive: {String} Text while inactive, defaults to initial content.
+ * data-prefix: {String} Prefix text while active.
+ * data-suffix: {String} Suffix text while active.
+ * 
+ * @example // count down to Jan 01, e.g. "1d 10h 00m 30s til 2026!" 
+ * <countdown data-schedule='[["Jan 01 2026 00:00:00 EST"]]' data-expired="Happy New Year!" data-suffix="til 2026!"></countdown>
+ * 
+ * @example // count down multiple sales events starting now, e.g. "Sale ends in 06h 30m 00s"
+ * <countdown 
+ *    data-schedule='[ ["Jan 01 2026 00:00:00 EST"], ["Jan 01 2026 23:59:59 EST", "Jan 01 2026 12:00:00 EST"], ["Jan 02 2026 23:59:59 EST", "Jan 02 2026 12:00:00 EST"] ]'
+ *    data-expired="This sale has ended"
+ *    data-inactive="No active sale right now"
+ *    data-prefix="Sale ends in"
+ *    >Sale beings at noon</countdown>
+ */
+
 _nef.countdown = () => {
   const getTimeRemaining = (t) => {
     const total = Date.parse(t) - Date.parse(new Date());
@@ -88,9 +112,10 @@ _nef.countdown = () => {
   }
 
   const initializeClock = (clock, deadline) => {
+    const initialContent = clock.textContent;
     const expiredMsg = clock.dataset.expired;
     const prefixTxt = clock.dataset.prefix;
-    const initialContent = clock.textContent;
+    const suffixTxt = clock.dataset.suffix;
     
     const d = document.createElement('span');
     const h = document.createElement('span');
@@ -100,12 +125,20 @@ _nef.countdown = () => {
     timer.append(d, h, m, s);
 
     clock.textContent = '';
+    
     if (prefixTxt) {
       const p = document.createElement('prefix');
       p.textContent = prefixTxt;
       clock.append(p);
     }
+
     clock.append(timer);
+
+    if (suffixTxt) {
+      const p = document.createElement('suffix');
+      p.textContent = suffixTxt;
+      clock.append(p);
+    }
     
     const timeinterval = setInterval(updateClock, 1000);
 
