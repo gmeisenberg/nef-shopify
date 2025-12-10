@@ -89,8 +89,8 @@ _nef.countdown = () => {
 
   const initializeClock = (clock) => {
     const deadline = new Date(clock.dataset.deadline);
-    const expired = clock.dataset.expired;
-    const prefix = clock.dataset.prefix;
+    const expiredMsg = clock.dataset.expired;
+    const prefixTxt = clock.dataset.prefix;
     const initialContent = clock.innerText;
     
     const d = document.createElement('span');
@@ -101,9 +101,9 @@ _nef.countdown = () => {
     timer.append(d, h, m, s);
 
     clock.textContent = '';
-    if (prefix) {
+    if (prefixTxt) {
       const p = document.createElement('prefix');
-      p.textContent = prefix;
+      p.textContent = prefixTxt;
       clock.append(p);
     }
     clock.append(timer);
@@ -124,7 +124,7 @@ _nef.countdown = () => {
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
-        clock.textContent = expired ? expired : initialContent;
+        clock.textContent = expiredMsg ? expiredMsg : initialContent;
       }
     }
 
