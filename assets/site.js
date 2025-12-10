@@ -132,8 +132,8 @@ _nef.countdown = () => {
 
   const countdown = document.querySelectorAll('countdown');
   [...countdown].forEach(c => {
-    const schedule = c.dataset.schedule;
-    console.log(JSON.parse({schedule}))
+    const schedule = '{'+c.dataset.schedule+'}';
+    console.log(JSON.parse(schedule))
     // schedule.forEach(([endDate, startDate ='']) => {
     //   const startMs = Date.parse(startDate);
     //   const endMs = Date.parse(endDate);
