@@ -8,17 +8,6 @@
 {%- endcapture -%}
 {%- assign releases = releases | strip_newlines | split: '::' | sort | reverse -%}
 
-{%- capture productbyvendor -%}
-  {%- for vendor in shop.vendors -%}
-    {%- assign vendor_handle = vendor | handleize -%}
-    {%- for product in collection[vendor_handle].products -%}
-      {{ vendor }}|{{ product.title }}
-      {%- if forloop.last == false -%}::{%- endif -%}
-    {%- endfor -%}
-  {%- endfor -%}
-{%- endcapture -%}
-{%- assign productbyvendor = productbyvendor | strip_newlines | split: '::' | sort -%}
-
 <div class="page-width">
   <header class="section-header text-center">
     <h1>{{ page.title }}</h1>
@@ -58,5 +47,4 @@
 <script>
   console.log({{ releases | json }});
   console.log({{ shop.vendors | json }});
-  console.log({{ productbyvendor | json }});
 </script>
