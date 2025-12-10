@@ -119,7 +119,6 @@ _nef.countdown = () => {
       } else {
         d.remove();
       }
-      
       h.textContent = ('0' + t.hours).slice(-2) + 'h';
       m.textContent = ('0' + t.minutes).slice(-2) + 'm';
       s.textContent = ('0' + t.seconds).slice(-2) + 's';
