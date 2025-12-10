@@ -137,14 +137,13 @@ _nef.countdown = () => {
       const startMs = startDate ? Date.parse(startDate) : Date.now();
       const endMs = Date.parse(endDate);
       const currentMs = Date.parse(new Date());
-      console.log('start:',new Date(startMs).toString(),'end:',new Date(endMs).toString())
 
-      // if (endMs > currentMs && currentMs >= startMs ) {
-      //   initializeClock('clockdiv', endDate);
-      // }
+      if (endMs > currentMs && currentMs >= startMs ) {
+        initializeClock(c, endDate);
+      }
     });
-    const deadline = new Date(c.dataset.deadline);
-    initializeClock(c, deadline);
+    // const deadline = new Date(c.dataset.deadline);
+    // initializeClock(c, deadline);
   });
 }
 
