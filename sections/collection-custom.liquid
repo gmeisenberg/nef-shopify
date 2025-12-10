@@ -35,9 +35,6 @@
             <div class="filters-toolbar__item-wrapper">
                 {% unless collection.all_tags.size == 0 %}
                   <div class="filters-toolbar__item-child">
-                    {% unless filter_collection %}
-                      <label class="filters-toolbar__label select-label" for="FilterTags">{{ 'collections.filters.title_tags' | t }}</label>
-                    {% endunless %}
                     <div class="filters-toolbar__input-wrapper select-group">
                       <select class="filters-toolbar__input hidden" name="FilterTags" id="FilterTags" aria-describedby="a11y-refresh-page-message a11y-selection-message">
                         {% if collection.handle == 'vinyl' %}
