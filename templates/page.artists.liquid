@@ -2,7 +2,7 @@
   {%- for c in collections -%}
     {%- if c.template_suffix == 'release' -%}
       {%- for p in c.products -%}
-        {{ c.metafields.nef.catalog_number }}|{{ c.handle }}|{{ p.title }}
+        {{ c.metafields.nef.catalog_number }}|{{ c.title }}|{{ p.title }}
         {%- if forloop.last == false -%}::{%- endif -%}
       {%- endfor -%}
       {%- if forloop.last == false -%}::{%- endif -%}
