@@ -5376,8 +5376,7 @@ theme.Cart = (function() {
     cartLineItems: '[data-cart-line-items]',
     cartNote: '[data-cart-notes]',
     cartQuantityErrorMessage: '[data-cart-quantity-error-message]',
-    cartQuantityErrorMessageWrapper:
-      '[data-cart-quantity-error-message-wrapper]',
+    cartQuantityErrorMessageWrapper: '[data-cart-quantity-error-message-wrapper]',
     cartRemove: '[data-cart-remove]',
     cartStatus: '[data-cart-status]',
     cartSubtotal: '[data-cart-subtotal]',
