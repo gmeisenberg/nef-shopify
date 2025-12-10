@@ -5991,11 +5991,9 @@ theme.Cart = (function() {
     },
 
     _showQuantityErrorMessages: function(itemElement) {
-      $(selectors.cartQuantityErrorMessage, itemElement).text(theme.strings.quantityMinimumMessage);
+      $(selectors.cartQuantityErrorMessage, itemElement).text('asdf');
 
-      $(selectors.cartQuantityErrorMessageWrapper, itemElement).removeClass(
-        classes.hide
-      );
+      $(selectors.cartQuantityErrorMessageWrapper, itemElement).removeClass(classes.hide);
 
       $(selectors.inputQty, itemElement)
         .addClass(classes.inputError)
