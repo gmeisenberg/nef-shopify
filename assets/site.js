@@ -139,6 +139,7 @@ _nef.countdown = () => {
       const currentMs = Date.parse(new Date());
 
       if (endMs > currentMs && currentMs >= startMs ) {
+        console.log('dicks')
         initializeClock(c, endDate);
       }
     });
