@@ -9312,7 +9312,10 @@ countdown {
 
   span {
     display: inline-block;
-    min-width: 2em;
-    text-align: right
+    text-align: right;
+
+    :not(first-of-type) {
+      min-width: 2em;
+    }
   }
 }
