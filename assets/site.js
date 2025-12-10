@@ -91,7 +91,7 @@ _nef.countdown = () => {
     const deadline = new Date(clock.dataset.deadline);
     const expiredMsg = clock.dataset.expired;
     const prefixTxt = clock.dataset.prefix;
-    const initialContent = clock.innerText;
+    const initialContent = clock.textContent;
     
     const d = document.createElement('span');
     const h = document.createElement('span');
