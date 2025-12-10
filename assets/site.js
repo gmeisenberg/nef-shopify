@@ -105,7 +105,8 @@ _nef.countdown = () => {
     const h = document.createElement('span');
     const m = document.createElement('span');
     const s = document.createElement('span');
-    clock.append(d, h, m, s);
+    const timer = document.createElement('timer').append(d, h, m, s);
+    clock.append(timer);
 
     // const d = t.days;
     // const h = ('0' + t.hours).slice(-2);
@@ -115,7 +116,7 @@ _nef.countdown = () => {
     function updateClock() {
       const t = getTimeRemaining(endtime);
       
-      clock.innerHTML = [prefix, `<span>${formatTime(t)}</span>`].filter(e=>e).join(' ');
+      // clock.innerHTML = [prefix, `<span>${formatTime(t)}</span>`].filter(e=>e).join(' ');
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
