@@ -133,10 +133,16 @@ _nef.countdown = () => {
   const countdown = document.querySelectorAll('countdown');
   [...countdown].forEach(c => {
     const schedule = JSON.parse(c.dataset.schedule);
+    const inactiveTxt = c.dataset.inactive;
+    
     schedule.forEach(([endDate, startDate = '']) => {
       const currentMs = Date.now();
       const startMs = startDate ? Date.parse(startDate) : currentMs;
       const endMs = Date.parse(endDate);
+
+      if (inactiveTxt && endMs < currentMs) {
+        c.textContent = inactiveTxt;
+      }
 
       if (endMs > currentMs && currentMs >= startMs ) {
         initializeClock(c, endDate);
