@@ -137,7 +137,7 @@ _nef.countdown = () => {
       const startMs = startDate ? Date.parse(startDate) : Date.now();
       const endMs = Date.parse(endDate);
       const currentMs = Date.parse(new Date());
-      console.log(startMs.toString())
+      console.log(new Date(startMs).toString())
 
       // if (endMs > currentMs && currentMs >= startMs ) {
       //   initializeClock('clockdiv', endDate);
