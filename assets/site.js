@@ -101,7 +101,10 @@ _nef.countdown = () => {
     const timer = document.createElement('timer');
     timer.append(d, h, m, s);
 
-    clock.textContent = prefix;
+    if (prefix) {
+      const prefix = document.createElement('prefix');
+      clock.append(prefix);
+    }
     clock.append(timer);
     
     const timeinterval = setInterval(updateClock, 1000);
