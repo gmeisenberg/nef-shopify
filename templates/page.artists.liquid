@@ -12,7 +12,8 @@
   {%- for vendor in shop.vendors -%}
     {%- assign vendor_handle = vendor | handleize -%}
     {%- for product in collection[vendor_handle].products -%}
-      {{ vendor }}|{{ product.title }}::
+      {{ vendor }}|{{ product.title }}
+      {%- if forloop.last == false -%}::{%- endif -%}
     {%- endfor -%}
   {%- endfor -%}
 {%- endcapture -%}
