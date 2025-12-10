@@ -37,25 +37,10 @@
                   <div class="filters-toolbar__item-child">
                     <div class="filters-toolbar__input-wrapper select-group">
                       <select class="filters-toolbar__input hidden" name="FilterTags" id="FilterTags" aria-describedby="a11y-refresh-page-message a11y-selection-message">
-                        {% if collection.handle == 'vinyl' %}
                           <option value="{{ collection.url }}">All {{ collection.handle }}&nbsp;&nbsp;&nbsp;</option>
                           <option value="/collections/{{ collection.handle }}/lp"{% if current_tags contains 'LP' %} selected="selected"{% endif %}>LP / 12"</option>
                           <option value="/collections/{{ collection.handle }}/10in"{% if current_tags contains '10in' %} selected="selected"{% endif %}>10"</option>
                           <option value="/collections/{{ collection.handle }}/7in"{% if current_tags contains '7in' %} selected="selected"{% endif %}>7"</option>
-                        {% elsif collection.handle == 'merch' %}
-                          <option value="{{ collection.url }}">All {{ collection.handle }}&nbsp;&nbsp;&nbsp;</option>
-                          <option value="/collections/{{ collection.handle }}/t-shirt"{% if current_tags contains 'T-Shirt' %} selected="selected"{% endif %}>T-Shirts</option>
-                          <option value="/collections/{{ collection.handle }}/girls-t-shirt"{% if current_tags contains 'Girls T-Shirt' %} selected="selected"{% endif %}>Girls T-Shirts</option>
-                          <option value="/collections/{{ collection.handle }}/longsleeve"{% if current_tags contains 'Longsleeve' %} selected="selected"{% endif %}>Long Sleeves</option>
-                          <option value="/collections/{{ collection.handle }}/hoodie"{% if current_tags contains 'Hoodie' %} selected="selected"{% endif %}>Hoodies</option>
-                          <option value="/collections/{{ collection.handle }}/bag"{% if current_tags contains 'Bag' %} selected="selected"{% endif %}>Bags</option>
-                        {% else %}
-                          <option value="{{ collection.url }}">{{ 'collections.filters.all_tags' | t }}</option>
-                          {% for tag in collection.all_tags %}
-                            {%- assign new_url = tag | link_to_tag: tag | split: 'href="' | last | split: '"' | first -%}
-                            <option value="{{ new_url }}"{% if current_tags contains tag %} selected="selected"{% endif %}>{{ tag }}</option>
-                          {% endfor %}
-                        {% endif %}
                       </select>
                       {% include 'icon-chevron-down' %}
                     </div>
