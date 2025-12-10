@@ -98,7 +98,7 @@ _nef.countdown = () => {
     const m = document.createElement('span');
     const s = document.createElement('span');
     timer.append(d, h, m, s);
-    clock.innerHTML = timer;
+    clock.append(timer);
 
     // const d = t.days;
     // const h = ('0' + t.hours).slice(-2);
