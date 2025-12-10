@@ -521,6 +521,18 @@
           "cart_ajax_enable": true,
           "cart_notes_enable": true
         }
+      },
+      "collection-custom": {
+        "type": "collection-custom",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 2,
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": false,
+          "tags_enable": true
+        }
       }
     },
     "content_for_index": [
