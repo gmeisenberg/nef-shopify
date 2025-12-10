@@ -27,7 +27,7 @@
       {%- assign product = collection.products[0] -%}
 
       <li class="grid__item small--one-half medium--one-third large-up--one-quarter">
-        {% include 'product-card-grid', product: product, release: collection %}
+        {% render 'product-card-grid', product: product, release: collection %}
       </li>
     {% endfor %}
   </ul>
