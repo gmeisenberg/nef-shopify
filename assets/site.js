@@ -101,11 +101,12 @@ _nef.countdown = () => {
   const initializeClock = (clock, endtime, expired = '', prefix = '') => {
     const timeinterval = setInterval(updateClock, 1000);
 
+    const timer = document.createElement('timer');
     const d = document.createElement('span');
     const h = document.createElement('span');
     const m = document.createElement('span');
     const s = document.createElement('span');
-    const timer = document.createElement('timer').append(d, h, m, s);
+    timer.append(d, h, m, s);
     clock.append(timer);
 
     // const d = t.days;
