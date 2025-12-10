@@ -30,48 +30,29 @@
         </div>
       {% endif %}
 
-        <div class="filters-toolbar-wrapper filters-toolbar--has-filter">
-          <div class="filters-toolbar">
-            <div class="filters-toolbar__item-wrapper">
-                {% unless collection.all_tags.size == 0 %}
-                  <div class="filters-toolbar__item-child">
-                    <div class="filters-toolbar__input-wrapper select-group">
-                      <select class="filters-toolbar__input hidden" name="FilterTags" id="FilterTags" aria-describedby="a11y-refresh-page-message a11y-selection-message">
-                          <option value="{{ collection.url }}">All {{ collection.handle }}&nbsp;&nbsp;&nbsp;</option>
-                          <option value="/collections/{{ collection.handle }}/lp"{% if current_tags contains 'LP' %} selected="selected"{% endif %}>LP / 12"</option>
-                          <option value="/collections/{{ collection.handle }}/10in"{% if current_tags contains '10in' %} selected="selected"{% endif %}>10"</option>
-                          <option value="/collections/{{ collection.handle }}/7in"{% if current_tags contains '7in' %} selected="selected"{% endif %}>7"</option>
-                      </select>
-                      {% include 'icon-chevron-down' %}
-                    </div>
-                  </div>
-                {% endunless %}
-
-              {% if section.settings.sort_enable %}
+      <div class="filters-toolbar-wrapper filters-toolbar--has-filter">
+        <div class="filters-toolbar">
+          <div class="filters-toolbar__item-wrapper">
+            {% unless collection.all_tags.size == 0 %}
                 <div class="filters-toolbar__item-child">
-                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                  <label class="filters-toolbar__label select-label" for="SortBy">{{ 'collections.sorting.title' | t }}</label>
                   <div class="filters-toolbar__input-wrapper select-group">
-                    <select name="sort_by" id="SortBy"
-                      class="filters-toolbar__input hidden"
-                      aria-describedby="a11y-refresh-page-message a11y-selection-message"
-                      data-default-sortby="{{ collection.default_sort_by }}"
-                    >
-                      {%- for option in collection.sort_options -%}
-                        <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>{{ option.name }}</option>
-                      {%- endfor -%}
+                    <select class="filters-toolbar__input hidden" name="FilterTags" id="FilterTags" aria-describedby="a11y-refresh-page-message a11y-selection-message">
+                        <option value="{{ collection.url }}">All {{ collection.handle }}&nbsp;&nbsp;&nbsp;</option>
+                        <option value="/collections/{{ collection.handle }}/lp"{% if current_tags contains 'LP' %} selected="selected"{% endif %}>LP / 12"</option>
+                        <option value="/collections/{{ collection.handle }}/10in"{% if current_tags contains '10in' %} selected="selected"{% endif %}>10"</option>
+                        <option value="/collections/{{ collection.handle }}/7in"{% if current_tags contains '7in' %} selected="selected"{% endif %}>7"</option>
                     </select>
                     {% include 'icon-chevron-down' %}
                   </div>
                 </div>
-              {% endif %}
-            </div>
+            {% endunless %}
+          </div>
 
-            <div class="filters-toolbar__item filters-toolbar__item--count">
-              <span class="filters-toolbar__product-count">{{ 'collections.general.items_with_count' | t: count: collection.products_count }}</span>
-            </div>
+          <div class="filters-toolbar__item filters-toolbar__item--count">
+            <span class="filters-toolbar__product-count">{{ 'collections.general.items_with_count' | t: count: collection.products_count }}</span>
           </div>
         </div>
+      </div>
 
       <ul class="grid grid--flex grid--uniform">
         {% for product in collection.products %}
