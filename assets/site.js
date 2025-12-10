@@ -141,7 +141,7 @@ _nef.countdown = () => {
     //     initializeClock('clockdiv', endDate);
     //   }
     // });
-    const deadline = new Date(clock.dataset.deadline);
+    const deadline = new Date(c.dataset.deadline);
     initializeClock(c, deadline);
   });
 }
