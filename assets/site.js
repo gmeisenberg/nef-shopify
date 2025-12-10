@@ -114,12 +114,12 @@ _nef.countdown = () => {
     function updateClock() {
       const t = getTimeRemaining(deadline);
       
-      // if (t.days) {
-      //   d.textContent = t.days + 'd';
-      // } else {
-      //   d.remove();
-      // }
-      d.textContent = ('00' + t.days).slice(-3) + 'd';
+      if (t.days) {
+        d.textContent = t.days + 'd';
+      } else {
+        d.remove();
+      }
+      
       h.textContent = ('0' + t.hours).slice(-2) + 'h';
       m.textContent = ('0' + t.minutes).slice(-2) + 'm';
       s.textContent = ('0' + t.seconds).slice(-2) + 's';
