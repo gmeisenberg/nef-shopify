@@ -4,7 +4,7 @@
       {%- if collection.metafields.nef.release_date -%}
         {{ collection.metafields.nef.release_date }}
       {%- else -%}
-        {{ collection.products[0].metafields.nef.release_date }}
+        {{ collection.products[0].metafields.nef.catalog_id }}
       {%- endif -%}
       |{{ collection.handle }}
       {%- if forloop.last == false -%}::{%- endif -%}
