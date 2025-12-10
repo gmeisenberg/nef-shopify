@@ -37,7 +37,7 @@
                 <div class="filters-toolbar__item-child">
                   <div class="filters-toolbar__input-wrapper select-group">
                     <select class="filters-toolbar__input hidden" name="FilterTags" id="FilterTags" aria-describedby="a11y-refresh-page-message a11y-selection-message">
-                        <option value="{{ collection.url }}">All products</option>
+                        <option value="{{ collection.url }}">All products &nbsp;&nbsp;&nbsp;</option>
                         <option value="/collections/{{ collection.handle }}/lp"{% if current_tags contains 'LP' %} selected="selected"{% endif %}>LP / 12"</option>
                         <option value="/collections/{{ collection.handle }}/10in"{% if current_tags contains '10in' %} selected="selected"{% endif %}>10"</option>
                         <option value="/collections/{{ collection.handle }}/7in"{% if current_tags contains '7in' %} selected="selected"{% endif %}>7"</option>
