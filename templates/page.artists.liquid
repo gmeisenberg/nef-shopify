@@ -11,13 +11,13 @@
 {%- capture productbyvendor -%}
   {%- for vendor in shop.vendors -%}
     {%- assign vendor_handle = vendor | handleize -%}
-    {%- assign products = collection[vendor_handle].products | limit: 1 -%}
+    {% comment %} {%- assign products = collection[vendor_handle].products | limit: 1 -%}
     {%- for product in products -%}
       {{ vendor }}|{{ product.title }}::
-    {%- endfor -%}
+    {%- endfor -%} {% endcomment %}
   {%- endfor -%}
 {%- endcapture -%}
-{%- assign productbyvendor = productbyvendor | strip_newlines | split: '::' | sort -%}
+{% comment %} {%- assign productbyvendor = productbyvendor | strip_newlines | split: '::' | sort -%} {% endcomment %}
 
 <div class="page-width">
   <header class="section-header text-center">
