@@ -1,3 +1,18 @@
+{%- capture releases -%}
+  {%- for collection in collections -%}
+    {%- if collection.template_suffix == 'release' -%}
+      {%- if collection.metafields.nef.release_date -%}
+        {{ collection.metafields.nef.release_date }}
+      {%- else -%}
+        {{ collection.products[0].metafields.nef.release_date }}
+      {%- endif -%}
+      |{{ collection.handle }}
+      {%- if forloop.last == false -%}::{%- endif -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign releases = releases | strip_newlines | split: '::' | sort | reverse -%}
+
 <div class="page-width">
   <header class="section-header text-center">
     <h1>{{ page.title }}</h1>
@@ -35,5 +50,5 @@
 </div>
 
 <script>
-  console.log({{ page.title | json }});
+  console.log({{ releases | json }});
 </script>
