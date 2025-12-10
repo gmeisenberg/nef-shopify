@@ -87,8 +87,7 @@ _nef.countdown = () => {
     };
   }
 
-  const initializeClock = (clock) => {
-    const deadline = new Date(clock.dataset.deadline);
+  const initializeClock = (clock, deadline) => {
     const expiredMsg = clock.dataset.expired;
     const prefixTxt = clock.dataset.prefix;
     const initialContent = clock.textContent;
@@ -132,7 +131,19 @@ _nef.countdown = () => {
   }
 
   const countdown = document.querySelectorAll('countdown');
-  [...countdown].forEach(c => initializeClock(c));
+  [...countdown].forEach(c => {
+    // schedule.forEach(([endDate, startDate ='']) => {
+    //   const startMs = Date.parse(startDate);
+    //   const endMs = Date.parse(endDate);
+    //   const currentMs = Date.parse(new Date());
+
+    //   if (endMs > currentMs && currentMs >= startMs ) {
+    //     initializeClock('clockdiv', endDate);
+    //   }
+    // });
+    const deadline = new Date(clock.dataset.deadline);
+    initializeClock(c, deadline);
+  });
 }
 
 $(function() {
