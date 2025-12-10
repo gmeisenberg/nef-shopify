@@ -89,29 +89,29 @@ _nef.countdown = () => {
     };
   }
 
-  const initializeClock = (clock, endtime, expired = '', prefix = '') => {
-    const timeinterval = setInterval(updateClock, 1000);
-
-    const timer = document.createElement('timer');
+  const initializeClock = (clock) => {
+    const deadline = new Date(clock.dataset.deadline);
+    const expired = clock.dataset.expired;
+    const prefix = clock.dataset.prefix;
+    
     const d = document.createElement('span');
     const h = document.createElement('span');
     const m = document.createElement('span');
     const s = document.createElement('span');
+    const timer = document.createElement('timer');
     timer.append(d, h, m, s);
+    
     clock.textContent = prefix;
     clock.append(timer);
-
-    // const d = t.days;
-    // const h = ('0' + t.hours).slice(-2);
-    // const m = ('0' + t.minutes).slice(-2);
-    // const s = ('0' + t.seconds).slice(-2);
+    
+    const timeinterval = setInterval(updateClock, 1000);
 
     function updateClock() {
       const t = getTimeRemaining(endtime);
       
-      d.textContent = t.days ? `${t.days}d` : '';
-      h.textContent = `${('0' + t.hours).slice(-2)}h`;
-      m.textContent = `${('0' + t.minutes).slice(-2)}m`;
+      d.textContent = t.days ? t.days + 'd' : '';
+      h.textContent = ('0' + t.hours).slice(-2) + 'h';
+      m.textContent = ('0' + t.minutes).slice(-2) + 'm';
       s.textContent = ('0' + t.seconds).slice(-2) + 's';
 
       if (t.total <= 0) {
@@ -124,13 +124,7 @@ _nef.countdown = () => {
   }
 
   const countdown = document.querySelectorAll('countdown');
-
-  [...countdown].forEach(c => {
-    const deadline = new Date(c.dataset.deadline);
-    const expired = c.dataset.expired;
-    const prefix = c.dataset.prefix;
-    initializeClock(c, deadline, expired, prefix);
-  });
+  [...countdown].forEach(c => initializeClock(c));
 }
 
 $(function() {
