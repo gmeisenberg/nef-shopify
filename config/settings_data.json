@@ -307,7 +307,7 @@
         "type": "collection",
         "settings": {
           "title": "Featured Releases",
-          "collection": "featured-releases",
+          "collection": "featured-releases-copy",
           "grid": 4,
           "rows": 4,
           "show_vendor": true,
