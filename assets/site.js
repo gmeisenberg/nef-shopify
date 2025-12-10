@@ -134,7 +134,7 @@ _nef.countdown = () => {
   [...countdown].forEach(c => {
     const schedule = JSON.parse(c.dataset.schedule);
     schedule.forEach(([endDate, startDate ='']) => {
-      console.log(startDate,endDate)
+      console.log('start:',startDate,'end:',endDate)
       // const startMs = Date.parse(startDate);
       // const endMs = Date.parse(endDate);
       // const currentMs = Date.parse(new Date());
