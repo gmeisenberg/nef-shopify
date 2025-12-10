@@ -91,7 +91,7 @@ _nef.carousel = () => {
  *    data-expired="This sale has ended"
  *    data-inactive="No active sale right now"
  *    data-prefix="Sale ends in"
- *    >Sale beings at noon</countdown>
+ *    >Sale starts at noon</countdown>
  */
 
 _nef.countdown = () => {
