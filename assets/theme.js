@@ -5991,9 +5991,7 @@ theme.Cart = (function() {
     },
 
     _showQuantityErrorMessages: function(itemElement) {
-      $(selectors.cartQuantityErrorMessage, itemElement).text(
-        theme.strings.quantityMinimumMessage
-      );
+      $(selectors.cartQuantityErrorMessage, itemElement).text(theme.strings.quantityMinimumMessage);
 
       $(selectors.cartQuantityErrorMessageWrapper, itemElement).removeClass(
         classes.hide
