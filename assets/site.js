@@ -103,8 +103,9 @@ _nef.countdown = () => {
 
     clock.textContent = '';
     if (prefix) {
-      const prefix = document.createElement('prefix');
-      clock.append(prefix);
+      const p = document.createElement('prefix');
+      p.textContent = prefix;
+      clock.append(p);
     }
     clock.append(timer);
     
