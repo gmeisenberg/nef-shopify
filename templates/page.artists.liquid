@@ -10,14 +10,14 @@
 
 {%- capture productbyvendor -%}
   {%- for vendor in shop.vendors -%}
-    {{ vendor | handleize }}
-    {% comment %} {%- assign products = collection[vendor_handle].products | limit: 1 -%}
+    {%- assign vendor_handle = vendor | handleize -%}
+    {%- assign products = collection[vendor_handle].products limit: 1 -%}
     {%- for product in products -%}
       {{ vendor }}|{{ product.title }}::
-    {%- endfor -%} {% endcomment %}
+    {%- endfor -%}
   {%- endfor -%}
 {%- endcapture -%}
-{% comment %} {%- assign productbyvendor = productbyvendor | strip_newlines | split: '::' | sort -%} {% endcomment %}
+{%- assign productbyvendor = productbyvendor | strip_newlines | split: '::' | sort -%}
 
 <div class="page-width">
   <header class="section-header text-center">
