@@ -89,15 +89,6 @@ _nef.countdown = () => {
     };
   }
 
-  const formatTime = (t) => {
-    const timeFormat = ['d', 'h', 'm', 's'].reverse();
-
-    return [
-      ...[t.seconds, t.minutes, t.hours].map(e => ('0' + e).slice(-2)),
-      t.days
-    ].filter(e=>e).map((item, index) => `${item}${timeFormat[index]}`).reverse().join(' ');
-  }
-
   const initializeClock = (clock, endtime, expired = '', prefix = '') => {
     const timeinterval = setInterval(updateClock, 1000);
 
@@ -117,7 +108,10 @@ _nef.countdown = () => {
     function updateClock() {
       const t = getTimeRemaining(endtime);
       
-      // clock.innerHTML = [prefix, `<span>${formatTime(t)}</span>`].filter(e=>e).join(' ');
+      d.innerHTML = t.days ? `${t.days}d` : '';
+      h.innerHTML = `${('0' + t.hours).slice(-2)}h`;
+      m.innerHTML = `${('0' + t.minutes).slice(-2)}m`;
+      s.innerHTML = ('0' + t.seconds).slice(-2) + 's';
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
