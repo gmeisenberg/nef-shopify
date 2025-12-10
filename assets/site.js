@@ -100,14 +100,14 @@ _nef.countdown = () => {
     const s = document.createElement('span');
     const timer = document.createElement('timer');
     timer.append(d, h, m, s);
-    
+
     clock.textContent = prefix;
     clock.append(timer);
     
     const timeinterval = setInterval(updateClock, 1000);
 
     function updateClock() {
-      const t = getTimeRemaining(endtime);
+      const t = getTimeRemaining(deadline);
       
       d.textContent = t.days ? t.days + 'd' : '';
       h.textContent = ('0' + t.hours).slice(-2) + 'h';
