@@ -179,7 +179,7 @@
                 <div class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--mobile hide" role="alert" data-cart-quantity-error-message-wrapper>
                   <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
                   {% include 'icon-error' %}
-                  <span class="cart__qty-error-message">what the fuck</span>
+                  <span class="cart__qty-error-message" data-cart-quantity-error-message>Quantity error</span>
                 </div>
               </td>
               <td class="cart__quantity-td text-right small--hide">
@@ -192,7 +192,7 @@
                 <div class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--desktop hide" role="alert" data-cart-quantity-error-message-wrapper>
                   <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
                   {% include 'icon-error' %}
-                  <span class="cart__qty-error-message" data-cart-quantity-error-message></span>
+                  <span class="cart__qty-error-message" data-cart-quantity-error-message>Quantity error</span>
                 </div>
               </td>
               <td class="cart__final-price text-right small--hide" data-cart-item-line-price>
