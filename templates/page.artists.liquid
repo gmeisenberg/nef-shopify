@@ -10,7 +10,7 @@
 
 {%- capture productbyvendor -%}
   {%- for vendor in shop.vendors -%}
-    {%- assign vendor_handle = vendor | handleize -%}
+    {{ vendor | handleize }}
     {% comment %} {%- assign products = collection[vendor_handle].products | limit: 1 -%}
     {%- for product in products -%}
       {{ vendor }}|{{ product.title }}::
