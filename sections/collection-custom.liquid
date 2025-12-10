@@ -33,7 +33,6 @@
         <div class="filters-toolbar-wrapper filters-toolbar--has-filter">
           <div class="filters-toolbar">
             <div class="filters-toolbar__item-wrapper">
-              {% if section.settings.tags_enable or filter_collection %}
                 {% unless collection.all_tags.size == 0 %}
                   <div class="filters-toolbar__item-child">
                     {% unless filter_collection %}
@@ -65,7 +64,6 @@
                     </div>
                   </div>
                 {% endunless %}
-              {% endif %}
 
               {% if section.settings.sort_enable %}
                 <div class="filters-toolbar__item-child">
