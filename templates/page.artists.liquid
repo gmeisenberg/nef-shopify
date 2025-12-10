@@ -1,10 +1,7 @@
 {%- capture releases -%}
   {%- for c in collections -%}
     {%- if c.template_suffix == 'release' -%}
-      {%- for p in c.products -%}
-        {{ c.metafields.nef.catalog_number }}|{{ p.vendor }}|{{ p.title }}
-        {%- if forloop.last == false -%}::{%- endif -%}
-      {%- endfor -%}
+      {{ c.metafields.nef.catalog_number }}|{{ c.products[0].vendor }}|{{ c.products[0].title }}
       {%- if forloop.last == false -%}::{%- endif -%}
     {%- endif -%}
   {%- endfor -%}
