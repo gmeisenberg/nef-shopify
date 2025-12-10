@@ -98,7 +98,7 @@ _nef.countdown = () => {
     const m = document.createElement('span');
     const s = document.createElement('span');
     timer.append(d, h, m, s);
-    clock.innerHTML = '';
+    clock.textContent = '';
     clock.append(timer);
 
     // const d = t.days;
@@ -109,14 +109,14 @@ _nef.countdown = () => {
     function updateClock() {
       const t = getTimeRemaining(endtime);
       
-      d.innerHTML = t.days ? `${t.days}d` : '';
-      h.innerHTML = `${('0' + t.hours).slice(-2)}h`;
-      m.innerHTML = `${('0' + t.minutes).slice(-2)}m`;
-      s.innerHTML = ('0' + t.seconds).slice(-2) + 's';
+      d.textContent = t.days ? `${t.days}d` : '';
+      h.textContent = `${('0' + t.hours).slice(-2)}h`;
+      m.textContent = `${('0' + t.minutes).slice(-2)}m`;
+      s.textContent = ('0' + t.seconds).slice(-2) + 's';
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
-        clock.innerHTML = expired ? expired : expiredMsg;
+        clock.textContent = expired ? expired : expiredMsg;
       }
     }
 
