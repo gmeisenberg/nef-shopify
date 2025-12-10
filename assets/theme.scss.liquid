@@ -9301,10 +9301,6 @@ $min-height-disclosure: 92px;
 }
 
 countdown {
-  prefix {
-    margin-right: 0.25em;
-  }
-
   timer {
     font-family: monospace;
     white-space: nowrap;
@@ -9317,5 +9313,13 @@ countdown {
     &:not(:first-of-type) {
       min-width: 2em;
     }
+  }
+
+  prefix {
+    margin-right: 0.25em;
+  }
+
+  suffix {
+    margin-left: 0.25em;
   }
 }
