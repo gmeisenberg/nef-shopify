@@ -71,8 +71,6 @@ _nef.carousel = () => {
 };
 
 _nef.countdown = () => {
-  let expiredMsg = 'EXPIRED';
-
   const getTimeRemaining = (t) => {
     const total = Date.parse(t) - Date.parse(new Date());
     const seconds = Math.floor( (total/1000) % 60 );
@@ -93,6 +91,7 @@ _nef.countdown = () => {
     const deadline = new Date(clock.dataset.deadline);
     const expired = clock.dataset.expired;
     const prefix = clock.dataset.prefix;
+    const initialContent = clock.innerText;
     
     const d = document.createElement('span');
     const h = document.createElement('span');
@@ -125,7 +124,7 @@ _nef.countdown = () => {
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
-        clock.textContent = expired ? expired : expiredMsg;
+        clock.textContent = expired ? expired : initialContent;
       }
     }
 
