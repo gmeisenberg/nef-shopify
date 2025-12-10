@@ -134,10 +134,10 @@ _nef.countdown = () => {
   [...countdown].forEach(c => {
     const schedule = JSON.parse(c.dataset.schedule);
     schedule.forEach(([endDate, startDate ='']) => {
-      const startMs = Date.parse(startDate);
+      const startMs = startDate ? Date.parse(startDate) : Date.now();
       const endMs = Date.parse(endDate);
       const currentMs = Date.parse(new Date());
-      console.log(startMs)
+      console.log(startMs.toString())
 
       // if (endMs > currentMs && currentMs >= startMs ) {
       //   initializeClock('clockdiv', endDate);
