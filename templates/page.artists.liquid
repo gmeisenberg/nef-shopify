@@ -1,7 +1,7 @@
 {%- capture releases -%}
   {%- for collection in collections -%}
     {%- if collection.template_suffix == 'release' -%}
-      {{ collection.metafields.nef.release_date }}|{{ collection.handle }}
+      {{ collection.metafields.nef.catalog_id }}|{{ collection.handle }}
       {%- if forloop.last == false -%}::{%- endif -%}
     {%- endif -%}
   {%- endfor -%}
