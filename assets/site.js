@@ -90,8 +90,9 @@ _nef.carousel = () => {
  *    data-schedule='[ ["Jan 01 2026 00:00:00 EST"], ["Jan 01 2026 23:59:59 EST", "Jan 01 2026 12:00:00 EST"], ["Jan 02 2026 23:59:59 EST", "Jan 02 2026 12:00:00 EST"] ]'
  *    data-expired="This sale has ended"
  *    data-inactive="No active sale right now"
- *    data-prefix="Sale ends in"
- *    >Sale starts at noon</countdown>
+ *    data-prefix="Sale ends in">
+ *    Sale starts at noon
+ * </countdown>
  */
 
 _nef.countdown = () => {
