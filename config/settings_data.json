@@ -140,12 +140,12 @@
           "image_KJ8YhB": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/NEF-Year-End-Sale-1920x640.jpg",
+              "image": "shopify://shop_images/NEF-Flash-Sale-Thu_1920x640_5494ae34-41db-4e85-8b97-bc01e87de7e8.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
               "button_label": "",
-              "button_link": ""
+              "button_link": "shopify://collections/flash-sale"
             }
           },
           "image_jyg8NP": {
