@@ -46,7 +46,7 @@
     "favicon": "shopify://shop_images/nef_circles_outlined.png",
     "message": true,
     "home_page_only": false,
-    "message_text": "<p><strong><a href=\"/flash-sale\">FLASH SALE: ALL PHYSICAL MEDIA ONLY $3 USD</a></strong></p>\n<p><em>Excludes Box Sets &amp; Grab Bags. <countdown data-schedule='[[\"Dec 12 2025 00:00:00 EST\"],[\"Dec 13 2025 00:00:00 EST\",\"Dec 12 2025 00:00:00 EST\"]]' data-expired=\"SALE HAS ENDED\" data-prefix=\"Sale Ends\">Sale Ends Dec 12 23:59 EST</countdown>.</em></p>",
+    "message_text": "<p><strong><a href=\"/flash-sale\">FLASH SALE: ALL PHYSICAL MEDIA ONLY $5 USD</a></strong></p>\n<p><em>Excludes Box Sets &amp; Grab Bags. <countdown data-schedule='[[\"Dec 12 2025 00:00:00 EST\"],[\"Dec 13 2025 00:00:00 EST\",\"Dec 12 2025 00:00:00 EST\"]]' data-expired=\"SALE HAS ENDED\" data-prefix=\"Sale Ends\">Sale Ends Dec 12 23:59 EST</countdown>.</em></p>",
     "message_bg_color": "#cc0000",
     "message_text_color": "#ffffff",
     "enable_ajax": true,
@@ -140,7 +140,7 @@
           "image_KJ8YhB": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/NEF-Flash-Sale-Thu_1920x640_5494ae34-41db-4e85-8b97-bc01e87de7e8.jpg",
+              "image": "shopify://shop_images/NEF-Flash-Sale-Fri_1920x640_aa928423-8312-408f-9c35-90b5ff585920.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
