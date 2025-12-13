@@ -114,7 +114,7 @@ _nef.countdown = () => {
 
   const initializeClock = (clock, deadline) => {
     const initialContent = clock.textContent;
-    const expiredMsg = clock.dataset.expired;
+    const expiredMsg = clock.dataset.expired ? clock.dataset.expired : initialContent;
     const prefixTxt = clock.dataset.prefix;
     const suffixTxt = clock.dataset.suffix;
     
@@ -157,7 +157,7 @@ _nef.countdown = () => {
 
       if (t.total <= 0) {
         clearInterval(timeinterval);
-        clock.textContent = expiredMsg ? expiredMsg : initialContent;
+        clock.textContent = expiredMsg;
       }
     }
 
