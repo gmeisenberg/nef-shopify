@@ -47,7 +47,7 @@
     "message": true,
     "home_page_only": false,
     "message_text": "<p>YEAR END SALE: <strong>25% OFF EVERYTHING</strong> THRU JAN 05</p>\n<p><em>Grab Bags excluded. Discount applied at checkout.</em></p>",
-    "message_bg_color": "#009900",
+    "message_bg_color": "#cc0000",
     "message_text_color": "#ffffff",
     "enable_ajax": true,
     "checkout_header_image": "",
