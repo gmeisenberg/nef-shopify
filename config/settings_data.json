@@ -44,7 +44,7 @@
     "social_bandcamp_link": "https://nefariousindustries.bandcamp.com",
     "social_spotify_link": "",
     "favicon": "shopify://shop_images/nef_circles_outlined.png",
-    "message": true,
+    "message": false,
     "home_page_only": false,
     "message_text": "<p>YEAR END SALE: <strong>25% OFF EVERYTHING</strong> THRU JAN 05</p>\n<p><em>Grab Bags excluded. Discount applied at checkout.</em></p>",
     "message_bg_color": "#cc0000",
@@ -137,17 +137,6 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
-          "image_KJ8YhB": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF-Year-End-Sale-1920x640.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": ""
-            }
-          },
           "image_jyg8NP": {
             "type": "image",
             "settings": {
@@ -227,7 +216,6 @@
           }
         },
         "block_order": [
-          "image_KJ8YhB",
           "image_jyg8NP",
           "image_ViXExJ",
           "image_xmLcRH",
