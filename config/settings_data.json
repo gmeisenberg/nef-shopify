@@ -137,6 +137,17 @@
       "1599935624432": {
         "type": "slideshow",
         "blocks": {
+          "image_4EkEzH": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF119-banner-1920x640.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/nequient-avarice"
+            }
+          },
           "image_xmLcRH": {
             "type": "image",
             "settings": {
@@ -216,6 +227,7 @@
           }
         },
         "block_order": [
+          "image_4EkEzH",
           "image_xmLcRH",
           "image_ViXExJ",
           "image_jyg8NP",
