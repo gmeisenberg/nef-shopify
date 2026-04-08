@@ -1682,7 +1682,7 @@ li {
     @extend h2;
     text-transform: uppercase;
     padding-bottom: 5px;
-    box-shadow: 0 -1px $color-border inset;
+    box-shadow: 0 1px $color-border;
 
     .template-search & {
       box-shadow: none;
@@ -5120,7 +5120,7 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
       color: #FFF;
 
       .section-header h2 {
-        box-shadow: 0 1px #FFF;
+        box-shadow: 0 -1px #FFF inset;
       }
     }
 
