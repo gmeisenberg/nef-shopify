@@ -16,7 +16,7 @@
   {% assign links_array = links_list | split: '::' %}
 
   {% capture sc_digital %}
-    <div>
+    <div class="streaming-links">
       {%- for links in links_array -%}
         {%- assign link = links | split: '||' %}
         {%- assign icon_link = link[0] | handleize | prepend: 'icon-' | downcase -%}
