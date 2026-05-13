@@ -1,4 +1,5 @@
-{{ search.results | sort: "published_at" | reverse }}
+{% assign search_results = search.results | sort: "published_at" %}
+{{ search_results }}
 
 {% paginate search.results by 30 %}
 
