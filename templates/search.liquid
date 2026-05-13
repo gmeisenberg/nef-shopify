@@ -84,7 +84,7 @@
   
                 <div class="list-view-item__title-column">
                   <div class="list-view-item__title" aria-hidden="true">
-                    {{ item.title }}
+                    {{ item.title }} {{ item.published_at }}
                   </div>
                   <div>
                     {{ item.content | strip_html | truncate: 200 }}
