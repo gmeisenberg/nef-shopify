@@ -63,7 +63,9 @@
   <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
 
   <ul class="page-width grid grid--flex grid--uniform grid--view-items">
-    {% for item in search.results %}
+    {% assign search_results = search.results | sort: "published_at" | reverse %}
+
+    {% for item in search_results %}
         {% if item.object_type != 'product' %}
           <li class="list-view-item">
             <div class="product-card product-card--list">
