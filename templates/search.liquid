@@ -1,6 +1,3 @@
-{% assign search_results = search.results | sort: "published_at" %}
-{{ search_results }}
-
 {% paginate search.results by 30 %}
 
 <div class="page-width">
