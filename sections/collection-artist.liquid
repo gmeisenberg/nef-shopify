@@ -75,6 +75,20 @@
     {% if releases.size > 0 or collection.products.size > 0 %}
       <div class="grid-item medium-up--one-half">
 
+      {% if collection.products.size > 0 %}
+        <div class="section-header">
+          <h2>Shop</h2>
+        </div>
+        
+        <ul class="grid grid--uniform">
+          {% for prod in collection.products %}
+            <li class="grid__item small--one-half medium--one-half large-up--one-{% if collection.products_count > 4 %}third{% else %}half{% endif %}">
+              {% include 'product-card-grid', product: prod, show_vendor: true %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
       {% if releases.size > 0 %}
         <div class="section-header">
           <h2>Releases</h2>
@@ -93,20 +107,6 @@
                 {% include 'product-card-grid', product: prod, release: rel %}
               </li>
             {% endif %}
-          {% endfor %}
-        </ul>
-      {% endif %}
-
-      {% if collection.products.size > 0 %}
-        <div class="section-header">
-          <h2>Shop</h2>
-        </div>
-        
-        <ul class="grid grid--uniform">
-          {% for prod in collection.products %}
-            <li class="grid__item small--one-half medium--one-half large-up--one-{% if collection.products_count > 4 %}third{% else %}half{% endif %}">
-              {% include 'product-card-grid', product: prod, show_vendor: true %}
-            </li>
           {% endfor %}
         </ul>
       {% endif %}
