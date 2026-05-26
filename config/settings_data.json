@@ -535,7 +535,7 @@
           "image_UjcRht": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/NEF119-banner-out-now-1920x640.jpg",
+              "image": "shopify://shop_images/NEF119-IG-out-now_4x5_c19e5eed-442d-4336-8b24-2ffa2fb483b5.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
@@ -546,7 +546,7 @@
           "image_hPGMdj": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/NEF117-banner-out-now-1920x640.jpg",
+              "image": "shopify://shop_images/NEF117-IG_4x5_f3cbc5e3-76f2-4359-b62f-bf5631870478.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
@@ -557,7 +557,7 @@
           "image_cN8rea": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/NEF116-banner-out-now-1920x640.jpg",
+              "image": "shopify://shop_images/NEF116-IG_4x5_e3cf8fb9-2bbc-469f-9239-cd62f53139d1.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
@@ -568,7 +568,7 @@
           "image_kUwkYG": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/NEF118-banner-out-now-1920x640.jpg",
+              "image": "shopify://shop_images/NEF118-IG_4x5_83396581-ac39-4ba2-90df-6295dc797a86.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
@@ -579,7 +579,7 @@
           "image_pX8zJW": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/NEF-50-3-banner-out-now-1920x640.jpg",
+              "image": "shopify://shop_images/NEF-50-admat-IG-out-now_4x5_2067f64b-a054-438b-b1ef-54c1dbef48eb.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
@@ -587,32 +587,10 @@
               "button_link": "shopify://collections/gridfailure-sixth-mass-extinction-skulduggery"
             }
           },
-          "image_pdpCqG": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF111-banner-out-now_1600x535_f6246d7f-2dc0-44f1-81cc-73697cd9ff6a.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/miracle-blood-hello-hell"
-            }
-          },
-          "image_nDH89p": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF100-banner-out-now_1600x535_02eb224d-0d48-4c11-91ce-d0b490ce8196.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/nef100-burn-after-hearing"
-            }
-          },
           "image_79myPC": {
             "type": "image",
             "settings": {
-              "image": "shopify://shop_images/NEF107-digital-1600x535.jpg",
+              "image": "shopify://shop_images/NEF107-digital-4x5.jpg",
               "alignment": "center center",
               "slide_title": "",
               "subheading": "",
@@ -627,8 +605,6 @@
           "image_cN8rea",
           "image_kUwkYG",
           "image_pX8zJW",
-          "image_pdpCqG",
-          "image_nDH89p",
           "image_79myPC"
         ],
         "custom_css": [
