@@ -236,7 +236,9 @@
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "image_kFi8Ci"
         ],
-        "custom_css": [],
+        "custom_css": [
+          "@media screen and (max-width: 799px) {.index-section--slideshow {display: none; }}"
+        ],
         "settings": {
           "slideshow_height": "adapt",
           "text_size": "medium",
@@ -526,10 +528,125 @@
       "collection-custom": {
         "type": "collection-custom",
         "settings": {}
+      },
+      "slideshow_zyJNR8": {
+        "type": "slideshow",
+        "blocks": {
+          "image_UjcRht": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF119-banner-out-now-1920x640.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/nequient-avarice"
+            }
+          },
+          "image_hPGMdj": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF117-banner-out-now-1920x640.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/irk-the-seeing-house"
+            }
+          },
+          "image_cN8rea": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF116-banner-out-now-1920x640.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/defigurement-endbryo"
+            }
+          },
+          "image_kUwkYG": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF118-banner-out-now-1920x640.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/lavisher-aligned-vital"
+            }
+          },
+          "image_pX8zJW": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF-50-3-banner-out-now-1920x640.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/gridfailure-sixth-mass-extinction-skulduggery"
+            }
+          },
+          "image_pdpCqG": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF111-banner-out-now_1600x535_f6246d7f-2dc0-44f1-81cc-73697cd9ff6a.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/miracle-blood-hello-hell"
+            }
+          },
+          "image_nDH89p": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF100-banner-out-now_1600x535_02eb224d-0d48-4c11-91ce-d0b490ce8196.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/nef100-burn-after-hearing"
+            }
+          },
+          "image_79myPC": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF107-digital-1600x535.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/psychosomatic-the-salinas-years"
+            }
+          }
+        },
+        "block_order": [
+          "image_UjcRht",
+          "image_hPGMdj",
+          "image_cN8rea",
+          "image_kUwkYG",
+          "image_pX8zJW",
+          "image_pdpCqG",
+          "image_nDH89p",
+          "image_79myPC"
+        ],
+        "custom_css": [
+          "@media screen and (min-width: 800px) {.index-section--slideshow {display: none; }}"
+        ],
+        "settings": {
+          "slideshow_height": "adapt",
+          "text_size": "medium",
+          "text_alignment": "center center",
+          "show_overlay": false,
+          "autorotate": true,
+          "autorotate_speed": 5
+        }
       }
     },
     "content_for_index": [
       "1599935624432",
+      "slideshow_zyJNR8",
       "16554976101df50d3e",
       "1655500218dc123d94",
       "collection",
