@@ -237,7 +237,7 @@
           "image_kFi8Ci"
         ],
         "settings": {
-          "slideshow_height": "large",
+          "slideshow_height": "adapt",
           "text_size": "medium",
           "text_alignment": "center center",
           "show_overlay": false,
