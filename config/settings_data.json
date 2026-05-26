@@ -236,7 +236,9 @@
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
           "image_kFi8Ci"
         ],
-        "custom_css": [],
+        "custom_css": [
+          "@media screen and ($medium-up) {.index-section--slideshow {display: none; }}"
+        ],
         "settings": {
           "slideshow_height": "adapt",
           "text_size": "medium",
