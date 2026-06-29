@@ -276,7 +276,7 @@
                     {% unless current_variant.available %}
                       {{ 'products.product.sold_out' | t }}
                     {% else %}
-                      {% if pre_order or current_variant.inventory_policy == 'continue' %}Pre-order: {% endif %}
+                      {% if pre_order %}Pre-order: {% endif %}
                       {{ 'products.product.add_to_cart' | t }}
                     {% endunless %}
                   </span>
