@@ -19,10 +19,20 @@
   {%- assign release_date = product.metafields.nef.release_date -%}
 {%- endif -%}
 
+{% comment %}
+  Get first variant, or deep linked one
+{% endcomment %}
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign product_image_zoom_size = '1024x1024' -%}
+{%- assign product_image_scale = '2' -%}
+{%- assign enable_image_zoom = section.settings.enable_image_zoom -%}
+{%- assign compare_at_price = current_variant.compare_at_price -%}
+{%- assign price = current_variant.price -%}
+
 {% assign today_date = 'now' | date: '%s' %}
 {% assign pre_date = release_date | date: '%s' %}
 {% assign pre_order = false %}
-{% if today_date < pre_date %}
+{% if today_date < pre_date or current_variant.inventory_policy == 'continue' %}
 	{% assign pre_order = true %}
 {% endif %}
 
@@ -33,16 +43,6 @@
   data-enable-history-state="true"
   data-ajax-enabled="{{ settings.enable_ajax }}"
 >
-  {% comment %}
-    Get first variant, or deep linked one
-  {% endcomment %}
-  {%- assign current_variant = product.selected_or_first_available_variant -%}
-  {%- assign product_image_zoom_size = '1024x1024' -%}
-  {%- assign product_image_scale = '2' -%}
-  {%- assign enable_image_zoom = section.settings.enable_image_zoom -%}
-  {%- assign compare_at_price = current_variant.compare_at_price -%}
-  {%- assign price = current_variant.price -%}
-
   {% case section.settings.media_size %}
     {% when 'small' %}
       {%- assign product_media_width = 'medium-up--one-third' -%}
