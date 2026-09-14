@@ -1,4 +1,4 @@
-{% assign featured_image = [template.name].image %}
+{% assign featured_image = self[template.name].image %}
 
 {%- assign page_dots = false -%}
 {% if section.blocks.size > 1 %}
@@ -74,3 +74,13 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% assign featured_image = [template.name].image %}"
+  to: "{% assign featured_image = self[template.name].image %}"
+  position: 0..55
+{% endcomment %}

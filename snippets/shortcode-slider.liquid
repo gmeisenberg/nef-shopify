@@ -1,4 +1,4 @@
-{% assign featured_image = [request.page_type].image %}
+{% assign featured_image = self[request.page_type].image %}
 
 {% capture sc_slider %} 
   <div class="carousel"
@@ -55,3 +55,13 @@
 {% if echo == true %} 
   {{ sc_slider }}
 {% endif %} 
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% assign featured_image = [request.page_type].image %}"
+  to: "{% assign featured_image = self[request.page_type].image %}"
+  position: 0..59
+{% endcomment %}
