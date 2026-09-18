@@ -148,6 +148,17 @@
               "button_link": "shopify://collections/nequient-avarice"
             }
           },
+          "image_jyg8NP": {
+            "type": "image",
+            "settings": {
+              "image": "shopify://shop_images/NEF118-banner-out-now-1920x640.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": "shopify://collections/lavisher-aligned-vital"
+            }
+          },
           "image_xmLcRH": {
             "type": "image",
             "settings": {
@@ -168,17 +179,6 @@
               "subheading": "",
               "button_label": "",
               "button_link": "shopify://collections/defigurement-endbryo"
-            }
-          },
-          "image_jyg8NP": {
-            "type": "image",
-            "settings": {
-              "image": "shopify://shop_images/NEF118-banner-out-now-1920x640.jpg",
-              "alignment": "center center",
-              "slide_title": "",
-              "subheading": "",
-              "button_label": "",
-              "button_link": "shopify://collections/lavisher-aligned-vital"
             }
           },
           "image_tNTLTc": {
@@ -228,9 +228,9 @@
         },
         "block_order": [
           "image_4EkEzH",
+          "image_jyg8NP",
           "image_xmLcRH",
           "image_ViXExJ",
-          "image_jyg8NP",
           "image_tNTLTc",
           "1b847e47-2e86-422b-87f7-3e5757dd4fec",
           "cc471d03-ecea-4bb3-9231-39fd16339e8c",
