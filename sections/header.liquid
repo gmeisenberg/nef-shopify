@@ -46,7 +46,7 @@
             <a href="{{ routes.root_url }}" class="site-header__logo-image{% if section.settings.align_logo == 'center' %} site-header__logo-image--centered{% endif %}">
               {% capture logo_alt %}{{ section.settings.logo.alt | default: shop.name }}{% endcapture %}
               {%- assign logo = 'NEF-logo.png' -%}
-              <img src="{{ logo | file_img_url }}"  alt="{{ shop.name }}" itemprop="logo" />
+              <img src="{{ logo | file_img_url: '300x300' }}"  alt="{{ shop.name }}" itemprop="logo" />
               {% comment %}
               <img class="lazyload js"
                    src="{{ section.settings.logo | img_url: '300x300' }}"
