@@ -5277,6 +5277,11 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
     margin: 0 auto;
   	height: $header-padding;
   }
+
+  img {
+    width: 100%;
+    transition: max-width $transition-duration ease;
+  }
   
   /*
   .has-scrolled & {
@@ -5290,12 +5295,12 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   
   .collection-release & {
     height: $header-padding-mobile;
-  }
-}
 
-.site-header__logo-image img {
-  width: 100%;
-  transition: max-width $transition-duration ease;
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
 }
 
 .site-header__logo-image--centered img {
