@@ -5277,15 +5277,6 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
     margin: 0 auto;
   	height: $header-padding;
   }
-
-  img {
-    width: 100%;
-    transition: max-width $transition-duration ease;
-  }
-
-  &--centered img {
-    margin: 0 auto;
-  }
   
   /*
   .has-scrolled & {
@@ -5299,12 +5290,16 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
   
   .collection-release & {
     height: $header-padding-mobile;
-
-    img {
-      width: auto;
-      height: 100%;
-    }
   }
+}
+
+.site-header__logo-image img {
+  width: 100%;
+  transition: max-width $transition-duration ease;
+}
+
+.site-header__logo-image--centered img {
+  margin: 0 auto;
 }
 
 ///
